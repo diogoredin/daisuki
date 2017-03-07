@@ -1,0 +1,390 @@
+/********************************************************
+
+TABLE OF CONTENTS
+
+********************************************************/
+
+/******************************************************
+
+1. GENERAL STYLE ELEMENTS
+
+*******************************************************/
+
+/* 1.1. Fonts */
+
+@font-face {
+    font-family: HeeboBlack;
+    src: url(../fonts/Heebo-Black.ttf);
+}
+
+@font-face {
+    font-family: HeeboBold;
+    src: url(../fonts/Heebo-Bold.ttf);
+}
+
+@font-face {
+    font-family: HeeboLight;
+    src: url(../fonts/Heebo-Light.ttf);
+}
+
+@font-face {
+    font-family: HeeboMedium;
+    src: url(../fonts/Heebo-Medium.ttf);
+}
+
+@font-face {
+    font-family: HeeboRegular;
+    src: url(../fonts/Heebo-Regular.ttf);
+}
+
+@font-face {
+    font-family: HeeboThin;
+    src: url(../fonts/Heebo-Thin.ttf);
+}
+
+@font-face {
+    font-family: SignPainterHouse;
+    src: url(../fonts/SignPainter-HouseScript.ttf);
+}
+
+/* 1.2. Link Styles */
+
+a {
+   outline: 0 !important;
+}
+
+/******************************************************
+ 
+2. BODY
+ 
+*******************************************************/
+
+body {
+    background: url("../images/background.png") no-repeat center center fixed #212F41;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    max-height: 720px;
+	padding: 0px;
+	margin: 0px;
+}
+
+header {
+    background-color: #10689F;
+	height: 170px;
+	padding-left: 7.8%;
+}
+
+#logo {
+	background-image: linear-gradient(0deg, rgba(34,50,71,0.00) 0%, #223247 300%);
+	padding-left: 40px;
+	padding-right: 40px;
+	margin-right: 0px;
+	float: left;
+	border-right: 1px solid rgba(244, 237, 255, 0.10);
+	border-left: 1px solid rgba(244, 237, 255, 0.10);
+    height: 170px;
+    width: 290px;
+}
+
+#logo img {
+    float: left;
+    width: 90px;
+}
+
+#logo  .logo_text {
+    float: left;
+	margin-left: 23px;
+}
+
+#logo h1 {
+    font-family: SignPainterHouse, Arial;
+    font-size: 70px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#logo h2 {
+    font-family: HeeboLight, Arial;
+    font-size: 20px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#logo a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#logo a:hover {
+    text-decoration: none;
+}
+
+#user_actions {
+	float: right;
+}
+
+#user_actions a.logged_user {
+	float: left;
+	background-image: linear-gradient(0deg, rgba(34,50,71,0.00) 0%, #223247 300%);
+	padding-left: 40px;
+	padding-right: 40px;
+    border-left: 1px solid rgba(244, 237, 255, 0.10);
+    height: 170px;
+}
+
+#user_actions a.add_user {
+	float: left;
+	background-image: linear-gradient(0deg, rgba(34,50,71,0.00) 0%, #223247 300%);
+	border-right: 1px solid rgba(244, 237, 255, 0.10);
+	border-left: 1px solid rgba(244, 237, 255, 0.10);
+	padding-left: 40px;
+	padding-right: 40px;
+    height: 170px;
+}
+
+#user_actions a.switch {
+	float: left;
+	background-image: linear-gradient(0deg, rgba(34,50,71,0.00) 0%, #223247 300%);
+	padding-left: 40px;
+	padding-right: 40px;
+    height: 170px;
+}
+
+#user_actions a.add_user p {
+	margin-top: 0px;
+}
+
+#user_actions a.add_user img {
+	margin-left: 10px;
+}
+
+#user_actions a.switch p {
+	margin-top: 0px;
+}
+
+a.logged_user img {
+    width: 80px;
+    float: left;
+}
+
+a.logged_user span.user_text {
+    float: left;
+	margin-top: 5px;
+	margin-left: 20px;
+}
+
+a.logged_user p.welcome {
+    font-size: 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: HeeboLight, Arial;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+a.logged_user p.user {
+    font-size: 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: HeeboMedium, Arial;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+a.logged_user, a.logged_user:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a.add_user img, a.switch img {
+	width: 50px;
+}
+
+a.add_user, a.switch {
+	color: #FFFFFF;
+	text-decoration: none;
+	font-family: HeeboLight, Arial;
+}
+
+.logo_wrapper {
+    padding-top: 30px;
+}
+
+.logged_user_wrapper {
+    padding-top: 40px;
+}
+
+.add_user_wrapper {
+    padding-top: 40px;
+}
+
+.switch_wrapper {
+    padding-top: 40px;
+}
+
+/******************************************************
+ 
+3. HEADER
+ 
+*******************************************************/
+
+/* 3.1. Menu */
+
+#menu {
+    height: 100%;
+    background-color: #1C293B;
+    float: left;
+    width: 7.9%;
+}
+
+#menu a img {
+    width: 40px;
+    margin: 0 auto;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* 3.2. Submenu */
+
+#submenu {
+    width: 28.9%;
+    float: left;
+    height: 100%;
+    background-image: -webkit-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
+    background-image: -o-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
+    background-image: linear-gradient(to top, rgba(34,50,71,0.00) 0%, #223247 100%);
+    margin-top: 0px;
+    margin-left: 0px;
+	border-right: 1px solid rgba(244, 237, 255, 0.10);
+}
+
+#submenu h3 {
+    font-size: 24px;
+    color: #8DABC4;
+    text-transform: uppercase;
+    font-family: HeeboRegular, Arial;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+#submenu ul {
+    padding-left: 40px;
+    padding-right: 40px;
+    list-style: none;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+#submenu ul li {
+    font-family: HeeboRegular, Arial;
+    font-size: 36px;
+    color: #FFFFFF;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#submenu ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#submenu ul li a:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#submenu ul li span.submenu_icon {
+    width: 40px;
+}
+
+#submenu ul li p {
+	margin-top: 0px;
+    margin-bottom: 0px;
+	line-height: 40px;
+	letter-spacing: 0.4px;
+}
+
+#submenu ul li img {
+    width: 40px;
+    float: left;
+	padding-right: 13px;
+}
+
+/******************************************************
+ 
+4. RESTAURANT CATEGORIES
+ 
+*******************************************************/
+
+#inner_page {
+    background-image: -webkit-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
+    background-image: -o-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
+    background-image: linear-gradient(to top, rgba(34,50,71,0.00) 0%, #223247 100%);
+    float: left;
+	width: 63.1%;
+}
+
+.inner_page_title {
+    border-bottom: 1px solid rgba(244, 237, 255, 0.10);
+	padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 60px;
+    height: 50px;
+    margin-bottom: 60px;
+}
+
+.inner_page_icon {
+    float: left;
+}
+
+.inner_page_icon img {
+    width: 40px;
+}
+
+.inner_page_title h1 {
+    font-family: HeeboLight, Arial;
+    font-size: 36px;
+    color: #FFFFFF;
+    float: left;
+	margin-top: 2px;
+	margin-left: 20px;
+    margin-bottom: 0px;
+}
+
+.restaurant_categories {
+    float: left;
+    height: 100%;
+    padding-left: 65px;
+}
+
+.restaurant_categories a {
+    width: 220px;
+    background: #26364C;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: HeeboThin, Arial;
+    height: 365px;
+    float: left;
+    text-align: center;
+    margin-right: 20px;
+    border-radius: 4px;
+    border-bottom: 1px solid #39485B;
+	box-shadow: 1px 1px 4px #152335;
+}
+
+.restaurant_categories a h1 {
+    font-size: 24px;
+}
+
+.restaurant_categories a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.restaurant_category_image img {
+    width: 220px;
+}
