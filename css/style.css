@@ -6,6 +6,96 @@ TABLE OF CONTENTS
 
 /******************************************************
 
+0. SIMULATION CONTROLS
+
+*******************************************************/
+
+#simulation_controls {
+    border-top: 45px solid #EEEEEE;
+    background-color: #FFFFFF;
+    color: #000000;
+	height: 210px;
+    display: none;
+    position: absolute;
+}
+
+.simulation_controls_inner {
+    width: 96%;
+    height: 210px;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.simulation_controls_inner span.simulation_control {
+    width: 19%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    height: 150px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    float: left;
+    cursor: pointer;
+}
+
+.simulation_controls_inner span.simulation_control:hover {
+    background: #EEEEEE;
+}
+
+.simulation_controls_inner span.simulation_control img {
+    width: 70px;
+    margin: auto;
+    float: none;
+    display: block;
+}
+
+.simulation_controls_inner span.simulation_control h3 {
+    font-family: HeeboMedium, Arial;
+    text-align: center;
+}
+
+#toggle_simulation_controls_wrapper {
+    height: 50px;
+    display: block;
+    position: absolute;
+}
+
+.toggle_simulation_controls {
+    width: 125px;
+    height: 30px;
+    margin-left: 20px;
+    background: rgba(255,255,255,0.60);
+    display: block;
+    position: absolute;
+    border-radius: 0px 0px 5px 5px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.toggle_simulation_controls.open {
+    border-radius: 0px;
+}
+
+.toggle_simulation_controls img {
+    float: left;
+    width: 20px;
+}
+
+.toggle_simulation_controls img.open {
+    transform: rotate(180deg);
+}
+
+.toggle_simulation_controls p {
+    font-family: HeeboMedium, Arial;
+    color: #000000;
+    float: left;
+    margin-top: 0px;
+    margin-left: 20px;
+	margin-right:10px;
+}
+
+/******************************************************
+
 1. GENERAL STYLE ELEMENTS
 
 *******************************************************/
