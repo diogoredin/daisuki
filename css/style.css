@@ -290,6 +290,9 @@ body {
 *******************************************************/
 
 #inner_page {
+    background-image: -webkit-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
+    background-image: -o-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
+    background-image: linear-gradient(to top, rgba(34,50,71,0.00) 0%, #223247 100%);
     float: right;
     width: 65.9%;
     display: none;
