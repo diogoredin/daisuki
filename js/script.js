@@ -9,12 +9,24 @@ $(document).ready(function() {
 	// Enable User Strict Mode
 	'use strict';
 
-	// Slide Simulation Controls
-	$(".toggle_simulation_controls").click(function(){
-		$("#simulation_controls").slideToggle('fast', function() {
-			$("img.toggle_simulation_icon").toggleClass('open', $(this).is(':visible'));
-            $(".toggle_simulation_controls").toggleClass('open', $(this).is(':visible'));
-		});
-    });
+	// Menu
+	$("#menu ul li").click(function(e) {
+		$(this).parent().children("li.active").toggleClass("active");
+		$(this).toggleClass("active");
+		e.preventDefault();
+	});
+
+	// Sub Menu
+	$("#submenu ul li").click(function(e) {
+		$(this).parent().children("li.active").toggleClass("active");
+		$(this).toggleClass("active");
+		e.preventDefault();
+	});
+
+	// Inner Page
+	$(".new_order").click(function(e) {
+		$("#inner_page").fadeIn(1000);
+		e.preventDefault();
+	});
 
 });

@@ -17,102 +17,8 @@
 
 	<body>
 
-		<!-- Starts Simulation Controls -->
-		<div id="simulation_controls">
-
-			<div class="simulation_controls_inner">
-				<span class="simulation_control">
-					<img src="images/icon_nfc.png" />
-					<h3>Simulate NFC Connected Device</h3>
-				</span>
-
-				<span class="simulation_control">
-					<img src="images/icon_dish_delievered.png" />
-					<h3>Simulate Delievered Dishes</h3>
-				</span>
-
-				<span class="simulation_control">
-					<img src="images/icon_empty_drink.png" />
-					<h3>Simulate Empty Drinks</h3>
-				</span>
-
-				<span class="simulation_control">
-					<img src="images/icon_finished_dishes.png" />
-					<h3>Simulate Finished Dishes</h3>
-				</span>
-
-				<span class="simulation_control">
-					<img src="images/icon_leaving.png" />
-					<h3>Simulate Leaving Customer</h3>
-				</span>
-			</div>
-
-		</div>
-
-		<div id="toggle_simulation_controls_wrapper">
-			<div class="toggle_simulation_controls">
-				<p>Sensors</p>
-				<img class="toggle_simulation_icon" src="images/icon_toggle.png" />
-			</div>
-		</div>
-		<!-- Ends Simulation Controls -->
-
 		<!-- Starts Header -->
 		<header>
-
-			<!-- Starts Logo -->
-			<div id="logo">
-
-				<a href="">
-
-					<div class="logo_wrapper">
-						<img src="images/logo.png" />
-						<span class="logo_text">
-							<h1>daisuki</h1>
-							<h2>Japanese Cuisine</h2>
-						</span>
-					</div>
-
-				</a>
-
-			</div>
-			<!-- Ends Logo -->
-
-			<!-- Starts Users -->
-			<div id="user_actions">
-
-				<a href="" class="logged_user">
-
-					<div class="logged_user_wrapper">
-						<img src="images/profile_pic.png" />
-						<span class="user_text">
-							<p class="welcome">Welcome,</p>
-							<p class="user">Diogo Redin</p>
-						</span>
-					</div>
-
-				</a>
-
-				<a href="" class="add_user">
-
-					<div class="add_user_wrapper">
-						<img src="images/icon_user.png" />
-						<p>Add User</p>
-					</div>
-
-				</a>
-
-				<a href="" class="switch">
-
-					<div class="switch_wrapper">
-						<img src="images/icon_switch.png" />
-						<p>Switch</p>
-					</div>
-
-				</a>
-
-			</div>
-			<!-- Ends Users -->
 
 		</header>
 		<!-- Ends Header -->
@@ -120,55 +26,55 @@
 		<!-- Starts Menu -->
 		<div id="menu">
 
-			<div class="menu_top">
+			<!-- Starts Logo -->
+			<div class="logo">
 
-				<a href=""><img src="images/icon_order.png" /></a>
-				<a href=""><img src="images/icon_news.png" /></a>
-				<a href=""><img src="images/icon_games.png" /></a>
-				<a href=""><img src="images/icon_receipt.png" /></a>
+				<a href="">
 
-			</div>
+					<div class="logo_wrapper">
+						<h1>daisuki</h1>
+					</div>
 
-			<div class="menu_bottom">
-
-				<a href=""><img src="images/icon_settings.png" /></a>
-				<a href=""><img src="images/icon_logout.png" /></a>
+				</a>
 
 			</div>
+			<!-- Ends Logo -->
+
+			<!-- Starts Navigation --> 
+			<ul>
+				<li class="order active">
+					<span class="icon"></span>
+					<p>Order</p>
+				</li>
+
+				<li class="check">
+					<span class="icon"></span>
+					<p>Check</p>
+				</li>
+
+				<li class="waiter">
+					<span class="icon"></span>
+					<p>Call Waiter</p>
+				</li>
+
+				<li class="help">
+					<span class="icon"></span>
+					<p>Help</p>
+				</li>
+			</ul>
+			<!-- Ends Navigation -->
 
 		</div>
 		<!-- Ends Menu -->
 
-		<!-- Starts Submenu -->
-		<div id="submenu">
-
-			<h3>Orders</h3>
-
-			<ul>
-				<li class="active">
-					<a href="">
-					<span class="submenu_icon"><img src="images/icon_new_order.png" /></span>
-					<p>New Order</p></a>
-				</li>
-				<li>
-					<a href="">
-					<span class="submenu_icon"><img src="images/icon_status.png" /></span>
-					<p>Order Status</p></a>
-				</li>
-			</ul>
-
-		</div>
-		<!-- Ends Submenu -->
-
 		<!-- Starts Page -->
 		<div id="inner_page">
 
-			<div class="inner_page_title">
-				<div class="inner_page_icon"><img src="images/icon_order.png" /></div>
-				<h1>Place your Order</h1>
-			</div>
-
 			<div class="restaurant_categories">
+
+				<div class="inner_page_title">
+					<h1>Place your Order</h1>
+				</div>
 
 				<a href="">
 					<div class="restaurant_category_image">
@@ -195,6 +101,27 @@
 
 		</div>
 		<!-- Ends Page -->
+
+		<!-- Starts Submenu -->
+		<div id="submenu">
+
+			<ul>
+				<li class="new_order">
+					<span class="icon"></span>
+					<p>New Order</p>
+				</li>
+				<li class="order_status">
+					<span class="icon"></span>
+					<p>Order Status</p>
+				</li>
+				<li class="order_review">
+					<span class="icon"></span>
+					<p>Order Review</p>
+				</li>
+			</ul>
+
+		</div>
+		<!-- Ends Submenu -->
 
 		<!-- Helper Scripts -->
 		<script src="js/jquery.min.js"></script>

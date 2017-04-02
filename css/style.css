@@ -6,96 +6,6 @@ TABLE OF CONTENTS
 
 /******************************************************
 
-0. SIMULATION CONTROLS
-
-*******************************************************/
-
-#simulation_controls {
-    border-top: 45px solid #EEEEEE;
-    background-color: #FFFFFF;
-    color: #000000;
-	height: 210px;
-    display: none;
-    position: absolute;
-}
-
-.simulation_controls_inner {
-    width: 96%;
-    height: 210px;
-    padding-right: 2%;
-    padding-left: 2%;
-}
-
-.simulation_controls_inner span.simulation_control {
-    width: 19%;
-    margin-right: 0.5%;
-    margin-left: 0.5%;
-    height: 150px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    float: left;
-    cursor: pointer;
-}
-
-.simulation_controls_inner span.simulation_control:hover {
-    background: #EEEEEE;
-}
-
-.simulation_controls_inner span.simulation_control img {
-    width: 70px;
-    margin: auto;
-    float: none;
-    display: block;
-}
-
-.simulation_controls_inner span.simulation_control h3 {
-    font-family: HeeboMedium, Arial;
-    text-align: center;
-}
-
-#toggle_simulation_controls_wrapper {
-    height: 50px;
-    display: block;
-    position: absolute;
-}
-
-.toggle_simulation_controls {
-    width: 125px;
-    height: 30px;
-    margin-left: 20px;
-    background: rgba(255,255,255,0.60);
-    display: block;
-    position: absolute;
-    border-radius: 0px 0px 5px 5px;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    cursor: pointer;
-}
-
-.toggle_simulation_controls.open {
-    border-radius: 0px;
-}
-
-.toggle_simulation_controls img {
-    float: left;
-    width: 20px;
-}
-
-.toggle_simulation_controls img.open {
-    transform: rotate(180deg);
-}
-
-.toggle_simulation_controls p {
-    font-family: HeeboMedium, Arial;
-    color: #000000;
-    float: left;
-    margin-top: 0px;
-    margin-left: 20px;
-	margin-right:10px;
-}
-
-/******************************************************
-
 1. GENERAL STYLE ELEMENTS
 
 *******************************************************/
@@ -149,169 +59,20 @@ a {
  
 *******************************************************/
 
+html {
+    min-height: 100%;
+    position: relative;
+}
+
 body {
     background: url("../images/background.png") no-repeat center center fixed #212F41;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    max-height: 720px;
+    height: 100%;
 	padding: 0px;
 	margin: 0px;
-}
-
-header {
-    background-color: #10689F;
-	height: 170px;
-	padding-left: 7.8%;
-}
-
-#logo {
-	background-image: linear-gradient(0deg, rgba(34,50,71,0.00) 0%, #223247 300%);
-	padding-left: 40px;
-	padding-right: 40px;
-	margin-right: 0px;
-	float: left;
-	border-right: 1px solid rgba(244, 237, 255, 0.10);
-	border-left: 1px solid rgba(244, 237, 255, 0.10);
-    height: 170px;
-    width: 290px;
-}
-
-#logo img {
-    float: left;
-    width: 90px;
-}
-
-#logo  .logo_text {
-    float: left;
-	margin-left: 23px;
-}
-
-#logo h1 {
-    font-family: SignPainterHouse, Arial;
-    font-size: 70px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-
-#logo h2 {
-    font-family: HeeboLight, Arial;
-    font-size: 20px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-
-#logo a {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-#logo a:hover {
-    text-decoration: none;
-}
-
-#user_actions {
-	float: right;
-}
-
-#user_actions a.logged_user {
-	float: left;
-	background-image: linear-gradient(0deg, rgba(34,50,71,0.00) 0%, #223247 300%);
-	padding-left: 40px;
-	padding-right: 40px;
-    border-left: 1px solid rgba(244, 237, 255, 0.10);
-    height: 170px;
-}
-
-#user_actions a.add_user {
-	float: left;
-	background-image: linear-gradient(0deg, rgba(34,50,71,0.00) 0%, #223247 300%);
-	border-right: 1px solid rgba(244, 237, 255, 0.10);
-	border-left: 1px solid rgba(244, 237, 255, 0.10);
-	padding-left: 40px;
-	padding-right: 40px;
-    height: 170px;
-}
-
-#user_actions a.switch {
-	float: left;
-	background-image: linear-gradient(0deg, rgba(34,50,71,0.00) 0%, #223247 300%);
-	padding-left: 40px;
-	padding-right: 40px;
-    height: 170px;
-}
-
-#user_actions a.add_user p {
-	margin-top: 0px;
-}
-
-#user_actions a.add_user img {
-	margin-left: 10px;
-}
-
-#user_actions a.switch p {
-	margin-top: 0px;
-}
-
-a.logged_user img {
-    width: 80px;
-    float: left;
-}
-
-a.logged_user span.user_text {
-    float: left;
-	margin-top: 5px;
-	margin-left: 20px;
-}
-
-a.logged_user p.welcome {
-    font-size: 24px;
-    color: #FFFFFF;
-    text-decoration: none;
-    font-family: HeeboLight, Arial;
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-
-a.logged_user p.user {
-    font-size: 24px;
-    color: #FFFFFF;
-    text-decoration: none;
-    font-family: HeeboMedium, Arial;
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-
-a.logged_user, a.logged_user:hover {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-a.add_user img, a.switch img {
-	width: 50px;
-}
-
-a.add_user, a.switch {
-	color: #FFFFFF;
-	text-decoration: none;
-	font-family: HeeboLight, Arial;
-}
-
-.logo_wrapper {
-    padding-top: 30px;
-}
-
-.logged_user_wrapper {
-    padding-top: 40px;
-}
-
-.add_user_wrapper {
-    padding-top: 40px;
-}
-
-.switch_wrapper {
-    padding-top: 40px;
 }
 
 /******************************************************
@@ -320,88 +81,206 @@ a.add_user, a.switch {
  
 *******************************************************/
 
+/* 3.1. Logo */
+
+.logo {
+    width: 100%;
+    padding-top: 10%;
+}
+
+.logo h1 {
+    font-family: SignPainterHouse, Arial;
+    font-size: 50px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.logo a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
 /* 3.1. Menu */
 
 #menu {
-    height: 100%;
     background-color: #1C293B;
+    width: 7%;
     float: left;
-    width: 7.9%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
-#menu a img {
-    width: 40px;
-    margin: 0 auto;
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+#menu ul {
+    list-style: none;
+    position: absolute;
+    overflow: hidden;
+    padding-left: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#menu ul li {
+    font-family: HeeboBold, Arial;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-right: 15%;
+    padding-left: 15%;
+    width: 70%;
+    cursor: pointer;
+    letter-spacing: 0.4px;
+}
+
+#menu ul li span.icon {
+    width: 56.693px;
+    height: 56.693px;
+    margin-bottom: 6px;
+    float: left;
+}
+
+#menu ul li p {
+    color: #FFFFFF;
+    text-decoration: none;
+    width: 56.693px;
+}
+
+#menu ul li.order span.icon {
+     background: url("../images/icon_order.svg");
+}
+
+#menu ul li.check span.icon {
+    background: url("../images/icon_check.svg");
+}
+
+#menu ul li.waiter span.icon {
+    background: url("../images/icon_waiter.svg");
+}
+
+#menu ul li.help span.icon {
+    background: url("../images/icon_help.svg");
+}
+
+#menu ul li.order.active span.icon {
+     background: url("../images/icon_order_blue.svg");
+}
+
+#menu ul li.check.active span.icon {
+    background: url("../images/icon_check_blue.svg");
+}
+
+#menu ul li.waiter.active span.icon {
+    background: url("../images/icon_waiter_blue.svg");
+}
+
+#menu ul li.help.active span.icon {
+    background: url("../images/icon_help_blue.svg");
+}
+
+#menu ul li.active p {
+    color: #0093EE;
 }
 
 /* 3.2. Submenu */
 
 #submenu {
-    width: 28.9%;
+    background-image: -webkit-linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
+    background-image: -moz-linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
+    background-image: -o-linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
+    background-image: linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
+    border-right: 1px solid rgba(244, 237, 255, 0.10);
+    margin-left: 7%;
+    width: 27%;
     float: left;
-    height: 100%;
-    background-image: -webkit-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
-    background-image: -o-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
-    background-image: linear-gradient(to top, rgba(34,50,71,0.00) 0%, #223247 100%);
-    margin-top: 0px;
-    margin-left: 0px;
-	border-right: 1px solid rgba(244, 237, 255, 0.10);
-}
-
-#submenu h3 {
-    font-size: 24px;
-    color: #8DABC4;
-    text-transform: uppercase;
-    font-family: HeeboRegular, Arial;
-    padding-left: 40px;
-    padding-top: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 #submenu ul {
-    padding-left: 40px;
-    padding-right: 40px;
     list-style: none;
-    margin-left: 0px;
-    margin-top: 0px;
+    position: absolute;
+    overflow: hidden;
+    padding-left: 10%;
+    width: 90%;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 #submenu ul li {
-    font-family: HeeboRegular, Arial;
-    font-size: 36px;
+    font-family: HeeboBold, Arial;
+    text-transform: uppercase;
+    font-size: 16px;
     color: #FFFFFF;
-	padding-top: 20px;
-	padding-bottom: 20px;
+    border-top: 1px solid rgba(244, 237, 255, 0.10);
+    cursor: pointer;
+    width: 90%;
+    height: 8%;
+    line-height: 8%;
+    padding-bottom: 6%;
+    padding-top: 6%;
+    float: none;
+    letter-spacing: 0.4px;
 }
 
-#submenu ul li a {
-    text-decoration: none;
-    color: #FFFFFF;
+#submenu ul li:last-child {
+    margin-bottom: 10%;
+    padding-bottom: 6%;
+    border-bottom: 1px solid rgba(244, 237, 255, 0.10);
 }
 
-#submenu ul li a:hover {
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-#submenu ul li span.submenu_icon {
-    width: 40px;
-}
-
-#submenu ul li p {
-	margin-top: 0px;
-    margin-bottom: 0px;
-	line-height: 40px;
-	letter-spacing: 0.4px;
-}
-
-#submenu ul li img {
-    width: 40px;
+#submenu ul li span.icon {
+    width: 56.693px;
+    height: 56.693px;
     float: left;
-	padding-right: 13px;
+    transform: scale(0.6);
+    margin-top: -12px;
+}
+
+#submenu ul li.new_order span.icon {
+     background: url("../images/icon_new_order.svg");
+}
+
+#submenu ul li.order_status span.icon {
+    background: url("../images/icon_status.svg");
+}
+
+#submenu ul li.order_review span.icon {
+    background: url("../images/icon_review.svg");
+}
+
+#submenu ul li.new_order.active span.icon {
+     background: url("../images/icon_new_order_blue.svg");
+}
+
+#submenu ul li.order_status.active span.icon {
+    background: url("../images/icon_status_blue.svg");
+}
+
+#submenu ul li.order_review.active span.icon {
+    background: url("../images/icon_review_blue.svg");
+}
+
+#submenu ul li.active {
+    color: #0093EE;
 }
 
 /******************************************************
@@ -411,28 +290,17 @@ a.add_user, a.switch {
 *******************************************************/
 
 #inner_page {
-    background-image: -webkit-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
-    background-image: -o-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
-    background-image: linear-gradient(to top, rgba(34,50,71,0.00) 0%, #223247 100%);
-    float: left;
-	width: 63.1%;
+    float: right;
+    width: 65.9%;
+    display: none;
 }
 
 .inner_page_title {
     border-bottom: 1px solid rgba(244, 237, 255, 0.10);
 	padding-top: 50px;
     padding-bottom: 50px;
-    padding-left: 60px;
     height: 50px;
     margin-bottom: 60px;
-}
-
-.inner_page_icon {
-    float: left;
-}
-
-.inner_page_icon img {
-    width: 40px;
 }
 
 .inner_page_title h1 {
@@ -440,9 +308,6 @@ a.add_user, a.switch {
     font-size: 36px;
     color: #FFFFFF;
     float: left;
-	margin-top: 2px;
-	margin-left: 20px;
-    margin-bottom: 0px;
 }
 
 .restaurant_categories {
