@@ -65,7 +65,7 @@ html {
 }
 
 body {
-    background: url("../images/background.png") no-repeat center center fixed #212F41;
+    background: url("../images/background.jpg") no-repeat center center fixed #212F41;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
