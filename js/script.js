@@ -25,7 +25,25 @@ $(document).ready(function() {
 
 	// Inner Page
 	$(".new_order").click(function(e) {
-		$("#inner_page").fadeIn(1000);
+		$("#screen_order_status").hide();
+		$("#screen_order_review").hide();
+		$("#screen_new_order").fadeIn(1000);
+		e.preventDefault();
+	});
+
+	// Inner Page
+	$(".order_status").click(function(e) {
+		$("#screen_new_order").hide();
+		$("#screen_order_review").hide();
+		$("#screen_order_status").fadeIn(1000);
+		e.preventDefault();
+	});
+
+	// Inner Page
+	$(".order_review").click(function(e) {
+		$("#screen_order_status").hide();
+		$("#screen_new_order").hide();
+		$("#screen_order_review").fadeIn(1000);
 		e.preventDefault();
 	});
 

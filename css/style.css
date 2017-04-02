@@ -85,7 +85,7 @@ body {
 
 .logo {
     width: 100%;
-    padding-top: 10%;
+    padding-top: 12%;
 }
 
 .logo h1 {
@@ -289,7 +289,7 @@ body {
  
 *******************************************************/
 
-#inner_page {
+#screen_new_order, #screen_order_status, #screen_order_review {
     background-image: -webkit-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
     background-image: -o-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
     background-image: linear-gradient(to top, rgba(34,50,71,0.00) 0%, #223247 100%);
