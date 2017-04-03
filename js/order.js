@@ -22,8 +22,8 @@ function Order(product) {
             return 0;         
         }
         else {
-            var diff = this.creationTime - $.now;
-            return Math.floor(diff / 1000);
+            var diff = this.creationTime - $.now();
+            return this.product.getTime() + Math.floor(diff / 1000);
         }
     }
 
@@ -35,7 +35,28 @@ function Order(product) {
         if (Number.isInteger(classification)) {
             if (classification > 0 && classification <= 5) {
                 this.classification = classification;
+                this.product.addClassification(classification);
             }
         }
+    }
+
+    this.addReview = function (review) {
+        this.product.addReview(review);
+    }
+
+    this.getPrice = function () {
+        return this.product.getPrice();
+    }
+
+    this.getName = function () {
+        return this.product.getName();
+    }
+
+    this.getAverageClassification = function () {
+        return this.product.getClassification();
+    }
+ 
+    this.getReviews = function () {
+        return this.product.getReviews();
     }
 }
