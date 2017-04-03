@@ -27,7 +27,9 @@ $(document).ready(function() {
 	$(".new_order").click(function(e) {
 		$("#screen_order_status").hide();
 		$("#screen_order_review").hide();
-		$("#screen_new_order").fadeIn(1000);
+		$('#page').load("./new_order.html", function(){
+        	$('#screen_new_order').fadeIn(1000);
+    	});
 		e.preventDefault();
 	});
 
@@ -35,7 +37,9 @@ $(document).ready(function() {
 	$(".order_status").click(function(e) {
 		$("#screen_new_order").hide();
 		$("#screen_order_review").hide();
-		$("#screen_order_status").fadeIn(1000);
+		$('#page').load("order_status.html", function(){
+        	$('#screen_order_status').fadeIn(1000);
+    	});
 		e.preventDefault();
 	});
 
@@ -43,7 +47,9 @@ $(document).ready(function() {
 	$(".order_review").click(function(e) {
 		$("#screen_order_status").hide();
 		$("#screen_new_order").hide();
-		$("#screen_order_review").fadeIn(1000);
+		$('#page').load("order_review.html", function(){
+        	$('#screen_order_review').fadeIn(1000);
+    	});
 		e.preventDefault();
 	});
 
