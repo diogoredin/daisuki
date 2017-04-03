@@ -35,7 +35,6 @@ $(document).ready(function() {
         success: function(data) {dessertsCreate(data);}
      });
 
-
 	 function mainCoursesCreate(data) {
 		var lines = data.split(/\r\n|\n/);
 		var noLines = lines.length();
@@ -79,6 +78,30 @@ $(document).ready(function() {
 	$(".order_review").click(function(e) {
 		$('#page').load("order_review.html", function(){
         	$('#screen_order_review').fadeIn(1000);
+    	});
+		e.preventDefault();
+	});
+
+		// Category 1
+	$("li#restaurant_category1").click(function(e) {
+		$('#page').load("order_category.html", function(){
+        	$('#screen_order_category').fadeIn(1000);
+    	});
+		e.preventDefault();
+	});
+
+	// Category 2
+	$("li#restaurant_category2").click(function(e) {
+		$('#page').load("order_category.html", function(){
+        	$('#screen_order_category').fadeIn(1000);
+    	});
+		e.preventDefault();
+	});
+
+	// Category 3
+	$("li#restaurant_category3").click(function(e) {
+		$('#page').load("order_category.html", function(){
+        	$('#screen_order_category').fadeIn(1000);
     	});
 		e.preventDefault();
 	});
