@@ -45,21 +45,21 @@ $(document).ready(function() {
 	 }
 
 	// Menu
-	$("#menu ul li").click(function(e) {
+	$(document).on('click', "#menu ul li", function(e) {
 		$(this).parent().children("li.active").toggleClass("active");
 		$(this).toggleClass("active");
 		e.preventDefault();
 	});
 
 	// Sub Menu
-	$("#submenu ul li").click(function(e) {
+	$(document).on('click', "#submenu ul li", function(e) {
 		$(this).parent().children("li.active").toggleClass("active");
 		$(this).toggleClass("active");
 		e.preventDefault();
 	});
 
 	// New Order
-	$(".new_order").click(function(e) {
+	$(document).on('click', ".new_order", function(e) {
 		$('#page').load("new_order.html", function(){
         	$('#screen_new_order').fadeIn(1000);
     	});
@@ -67,7 +67,7 @@ $(document).ready(function() {
 	});
 
 	// Order Status
-	$(".order_status").click(function(e) {
+	$(document).on('click', ".order_status", function(e) {
 		$('#page').load("order_status.html", function(data){
         	$('#screen_order_status').fadeIn(1000);
     	});
@@ -75,33 +75,9 @@ $(document).ready(function() {
 	});
 
 	// Order Review
-	$(".order_review").click(function(e) {
+	$(document).on('click', ".order_review", function(e) {
 		$('#page').load("order_review.html", function(){
         	$('#screen_order_review').fadeIn(1000);
-    	});
-		e.preventDefault();
-	});
-
-		// Category 1
-	$("li#restaurant_category1").click(function(e) {
-		$('#page').load("order_category.html", function(){
-        	$('#screen_order_category').fadeIn(1000);
-    	});
-		e.preventDefault();
-	});
-
-	// Category 2
-	$("li#restaurant_category2").click(function(e) {
-		$('#page').load("order_category.html", function(){
-        	$('#screen_order_category').fadeIn(1000);
-    	});
-		e.preventDefault();
-	});
-
-	// Category 3
-	$("li#restaurant_category3").click(function(e) {
-		$('#page').load("order_category.html", function(){
-        	$('#screen_order_category').fadeIn(1000);
     	});
 		e.preventDefault();
 	});
