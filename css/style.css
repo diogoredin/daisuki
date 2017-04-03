@@ -289,7 +289,7 @@ body {
  
 *******************************************************/
 
-#screen_new_order, #screen_order_status, #screen_order_review {
+#screen_new_order, #screen_order_status, #screen_order_review, #screen_order_category {
     background-image: -webkit-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
     background-image: -o-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
     background-image: linear-gradient(to top, rgba(34,50,71,0.00) 0%, #223247 100%);
@@ -377,13 +377,14 @@ body {
     background: url("../images/icon_new_order.svg");
 }
 
-.restaurant_categories {
+ul.restaurant_categories {
     float: left;
     height: 100%;
     padding-left: 65px;
+    list-style: none;
 }
 
-.restaurant_categories a {
+ul.restaurant_categories li {
     width: 220px;
     background: #26364C;
     color: #FFFFFF;
@@ -398,11 +399,11 @@ body {
 	box-shadow: 1px 1px 4px #152335;
 }
 
-.restaurant_categories a h1 {
+ul.restaurant_categories li h1 {
     font-size: 24px;
 }
 
-.restaurant_categories a:hover {
+ul.restaurant_categories li:hover {
     color: #FFFFFF;
     text-decoration: none;
 }
@@ -410,6 +411,15 @@ body {
 .restaurant_category_image img {
     width: 220px;
     border-radius: 4px 4px 0px 0px;
+}
+
+/******************************************************
+ 
+4.1. NEW ORDER SCREEN
+ 
+*******************************************************/
+
+#screen_order_category {
 }
 
 /******************************************************
