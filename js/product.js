@@ -1,12 +1,13 @@
 // Product Object
 
-function Product(name, price, type, time, ingredients, calories) {
+function Product(name, price, type, time, ingredients, calories, imgSrc) {
     this.name = name;
     this.price = price;
     this.type = type;
     this.time = time;
     this.ingredients = ingredients;
     this.calories = calories;
+    this.imgSrc = imgSrc;
     this.numberOfReviews = 0;
     this.totalClassification = 0;
     this.reviews = [];
@@ -33,6 +34,10 @@ function Product(name, price, type, time, ingredients, calories) {
 
     this.getCalories = function () {
         return this.calories;
+    }
+
+    this.getImgSrc = function () {
+        return this.imgSrc;
     }
 
     this.getClassification = function () {
