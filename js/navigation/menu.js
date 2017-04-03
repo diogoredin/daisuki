@@ -16,31 +16,42 @@ $(document).ready(function() {
 
     $.ajax({
         type: "GET",
-        url: "mainCourses.txt",
+        url: "data/mainCourses.txt",
         dataType: "text",
-        success: function(data) {mainCoursesCreate(data);}
+        success: function(data) {productsCreation(data, mainCourses);}
      });
 
     $.ajax({
         type: "GET",
-        url: "drinks.txt",
+        url: "data/drinks.txt",
         dataType: "text",
-        success: function(data) {drinksCreate(data);}
+        success: function(data) {productsCreation(data, drinks);}
      });
 
     $.ajax({
         type: "GET",
-        url: "desserts.txt",
+        url: "data/desserts.txt",
         dataType: "text",
-        success: function(data) {dessertsCreate(data);}
+        success: function(data) {productsCreation(data, orders);}
      });
 
-	 function mainCoursesCreate(data) {
+	 function productsCreation(data, array) {
 		var lines = data.split(/\r\n|\n/);
-		var noLines = lines.length();
+		var noLines = lines.length;
+		var i;
 
 		for (i = 0; i < noLines; i++) {
-			var properties = lines[i].split(',')
+			var properties = lines[i].split(',');
+			var product = new Product(
+				properties[0],
+				properties[1],
+				properties[2],
+				properties[3],
+				properties[4],
+				properties[5]
+			);
+
+			array.push(product);
 		}
 	 }
 
