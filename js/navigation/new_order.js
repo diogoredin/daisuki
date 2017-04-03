@@ -6,9 +6,6 @@
 
 $(document).ready(function() {
 
-	// Enable User Strict Mode
-	'use strict';
-
 	// Category 1
 	$("#restaurant_category1").click(function(e) {
 		$('#page').load("order_category.html", function(){

@@ -6,9 +6,6 @@
 
 $(document).ready(function() {
 
-	// Enable User Strict Mode
-	'use strict';
-
 	// Menu
 	$("#menu ul li").click(function(e) {
 		$(this).parent().children("li.active").toggleClass("active");
