@@ -73,7 +73,6 @@ body {
     height: 100%;
 	padding: 0px;
 	margin: 0px;
-    overflow: hidden;
 }
 
 /******************************************************
@@ -424,9 +423,6 @@ ul.restaurant_categories li:hover {
 *******************************************************/
 
 #screen_order_category {
-    min-height: 100vh;
-    max-height: 100vh;
-    height: 100vh;
 }
 
 #screen_order_category .inner_page_title span.icon_cat {
@@ -435,10 +431,8 @@ ul.restaurant_categories li:hover {
 
 ul.restaurant_products {
     float: left;
-    height: 60%;
-    padding-left: 65px;
     list-style: none;
-    overflow-y: scroll;
+    padding-left: 65px;
 }
 
 ul.restaurant_products li {
@@ -449,7 +443,7 @@ ul.restaurant_products li {
     font-family: HeeboThin, Arial;
     height: 365px;
     float: left;
-    text-align: center;
+    text-align: left;
     margin-right: 20px;
     margin-bottom: 20px;
     border-radius: 4px;
@@ -496,4 +490,4 @@ ul.restaurant_products li:hover {
 
 #screen_order_review .inner_page_title span.icon_cat {
     background: url("../images/icon_review.svg");
-}   
+}

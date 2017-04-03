@@ -30,4 +30,8 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 
+	$('.restaurant_products').slimScroll({
+   		height: '100hv'
+	});
+
 });
