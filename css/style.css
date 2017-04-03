@@ -291,7 +291,11 @@ body {
     height: 100%;
 }
 
-#screen_new_order, #screen_order_status, #screen_order_review, #screen_order_category {
+#screen_new_order, 
+#screen_order_status, 
+#screen_order_review, 
+#screen_order_category,
+#screen_product {
     background-image: -webkit-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
     background-image: -o-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
     background-image: linear-gradient(to top, rgba(34,50,71,0.00) 0%, #223247 100%);
@@ -321,6 +325,7 @@ body {
     float: left;
     padding-top: 50px;
     padding-bottom: 50px;
+    margin-left: 6%;
 }
 
 .inner_page_title .page_title span.icon_cat {
@@ -351,7 +356,6 @@ body {
     text-align: center;
     padding-top: 45px;
     padding-bottom: 50px;
-    margin-right: 40px;
     background: rgba(15,29,48,0.30);
     padding-left: 25px;
     padding-right: 25px;
@@ -382,7 +386,7 @@ body {
 ul.restaurant_categories {
     float: left;
     height: 100%;
-    padding-left: 65px;
+    padding-left: 6%;
     list-style: none;
 }
 
@@ -433,7 +437,7 @@ ul.restaurant_categories li:hover {
 ul.restaurant_products {
     float: left;
     list-style: none;
-    padding-left: 65px;
+    padding-left: 6%;
     overflow-y: scroll;
     height: 60vh;
 }
@@ -492,5 +496,18 @@ ul.restaurant_products li:hover {
 }
 
 #screen_order_review .inner_page_title span.icon_cat {
+    background: url("../images/icon_review.svg");
+}
+
+/******************************************************
+ 
+4.1. PRODUCT SCREEN
+ 
+*******************************************************/
+
+#screen_product {
+}
+
+#screen_product .inner_page_title span.icon_cat {
     background: url("../images/icon_review.svg");
 }
