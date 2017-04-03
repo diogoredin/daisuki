@@ -301,9 +301,7 @@ body {
 .inner_page_title {
     border-bottom: 1px solid rgba(244, 237, 255, 0.10);
     width: 100%;
-    height: 50px;
-	padding-top: 50px;
-    padding-bottom: 50px;
+    height: 150px;
     margin-bottom: 60px;
 }
 
@@ -312,13 +310,58 @@ body {
     font-size: 36px;
     color: #FFFFFF;
     float: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    letter-spacing: 0.4px;
 }
 
-.inner_page_title span.icon {
+.inner_page_title .page_title {
+    float: left;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.inner_page_title .page_title span.icon_cat {
     width: 56.693px;
     height: 56.693px;
+    margin-right: 10px;
+    margin-top: -2px;
     float: left;
-    transform: scale(0.6);
+}
+
+.inner_page_title .back_button span.icon {
+    width: 50px;
+    height: 36px;
+    margin-bottom: 5px;
+    float: left;
+    background: url("../images/icon_back.svg") ;
+}
+
+.inner_page_title .back_button {
+    cursor: pointer;
+    font-family: HeeboLight, Arial;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    height: 55px;
+    width: 50px;
+    float: left;
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 50px;
+    margin-right: 40px;
+    background: rgba(15,29,48,0.30);
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.inner_page_title .back_button:active {
+    color: #0093EE;
+    background: rgba(15,29,48,0.70);
+}
+
+.inner_page_title .back_button:active span.icon {
+    background: url("../images/icon_back_blue.svg");
 }
 
 /******************************************************
@@ -330,9 +373,9 @@ body {
 #screen_new_order {
 }
 
-.inner_page_title span.icon {
+#screen_new_order .inner_page_title span.icon_cat {
     background: url("../images/icon_new_order.svg");
-}   
+}
 
 .restaurant_categories {
     float: left;
@@ -366,6 +409,7 @@ body {
 
 .restaurant_category_image img {
     width: 220px;
+    border-radius: 4px 4px 0px 0px;
 }
 
 /******************************************************
@@ -377,8 +421,8 @@ body {
 #screen_order_status {
 }
 
-.inner_page_title span.icon {
-    background: url("../images/icon_new_order.svg");
+#screen_order_status .inner_page_title span.icon_cat {
+    background: url("../images/icon_status.svg");
 }
 
 /******************************************************
@@ -390,6 +434,6 @@ body {
 #screen_order_review {
 }
 
-.inner_page_title span.icon {
-    background: url("../images/icon_new_order.svg");
+#screen_order_review .inner_page_title span.icon_cat {
+    background: url("../images/icon_review.svg");
 }   

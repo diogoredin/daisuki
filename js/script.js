@@ -60,30 +60,24 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 
-	// Inner Page
+	// New Order
 	$(".new_order").click(function(e) {
-		$("#screen_order_status").hide();
-		$("#screen_order_review").hide();
-		$('#page').load("./new_order.html", function(){
+		$('#page').load("new_order.html", function(){
         	$('#screen_new_order').fadeIn(1000);
     	});
 		e.preventDefault();
 	});
 
-	// Inner Page
+	// Order Status
 	$(".order_status").click(function(e) {
-		$("#screen_new_order").hide();
-		$("#screen_order_review").hide();
-		$('#page').load("order_status.html", function(){
+		$('#page').load("order_status.html", function(data){
         	$('#screen_order_status').fadeIn(1000);
     	});
 		e.preventDefault();
 	});
 
-	// Inner Page
+	// Order Review
 	$(".order_review").click(function(e) {
-		$("#screen_order_status").hide();
-		$("#screen_new_order").hide();
 		$('#page').load("order_review.html", function(){
         	$('#screen_order_review').fadeIn(1000);
     	});
