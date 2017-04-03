@@ -423,6 +423,7 @@ ul.restaurant_categories li:hover {
 *******************************************************/
 
 #screen_order_category {
+    height: 100%;
 }
 
 #screen_order_category .inner_page_title span.icon_cat {
@@ -433,6 +434,8 @@ ul.restaurant_products {
     float: left;
     list-style: none;
     padding-left: 65px;
+    overflow-y: scroll;
+    height: 60vh;
 }
 
 ul.restaurant_products li {

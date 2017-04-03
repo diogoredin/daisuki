@@ -6,6 +6,8 @@
 
 $(document).ready(function() {
 
+	$(".restaurant_products").mCustomScrollbar();
+
 	// Category 1
 	$(document).on('click', "#restaurant_category1", function(e) {
 		$('#page').load("order_category.html", function(){
@@ -28,10 +30,6 @@ $(document).ready(function() {
         	$('#screen_order_category').fadeIn(1000);
     	});
 		e.preventDefault();
-	});
-
-	$('.restaurant_products').slimScroll({
-   		height: '100hv'
 	});
 
 });
