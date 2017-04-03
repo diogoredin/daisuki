@@ -289,6 +289,12 @@ body {
  
 *******************************************************/
 
+#page {
+    min-height: 100%;
+    max-height: 100%;
+    height: 100%;
+}
+
 #screen_new_order, #screen_order_status, #screen_order_review, #screen_order_category {
     background-image: -webkit-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
     background-image: -o-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
@@ -416,11 +422,57 @@ ul.restaurant_categories li:hover {
 
 /******************************************************
  
-4.1. NEW ORDER SCREEN
+4.1. NEW ORDER > CATEGORY SCREEN
  
 *******************************************************/
 
 #screen_order_category {
+    overflow-y: scroll;
+    min-height: 100vh;
+    max-height: 100vh;
+    height: 100vh;
+}
+
+#screen_order_category .inner_page_title span.icon_cat {
+    background: url("../images/icon_new_order.svg");
+}
+
+ul.restaurant_products {
+    float: left;
+    height: 100%;
+    padding-left: 65px;
+    list-style: none;
+}
+
+ul.restaurant_products li {
+    width: 220px;
+    background: #26364C;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: HeeboThin, Arial;
+    height: 365px;
+    float: left;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border-bottom: 1px solid #39485B;
+	box-shadow: 1px 1px 4px #152335;
+    cursor: pointer;
+}
+
+ul.restaurant_products li h1 {
+    font-size: 24px;
+}
+
+ul.restaurant_products li:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.product_image img {
+    width: 220px;
+    border-radius: 4px 4px 0px 0px;
 }
 
 /******************************************************
