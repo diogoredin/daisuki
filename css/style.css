@@ -435,7 +435,7 @@ ul.restaurant_categories li:hover {
 
 ul.restaurant_products {
     float: left;
-    height: 100%;
+    height: 60%;
     padding-left: 65px;
     list-style: none;
     overflow-y: scroll;
