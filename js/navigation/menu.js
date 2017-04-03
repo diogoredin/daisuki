@@ -1,6 +1,6 @@
 /*
 *
-* script.js
+* menu.js
 *
 */
 
