@@ -285,7 +285,7 @@ body {
 
 /******************************************************
  
-4. RESTAURANT CATEGORIES
+4. ORDER SCREENS
  
 *******************************************************/
 
@@ -300,9 +300,10 @@ body {
 
 .inner_page_title {
     border-bottom: 1px solid rgba(244, 237, 255, 0.10);
+    width: 100%;
+    height: 50px;
 	padding-top: 50px;
     padding-bottom: 50px;
-    height: 50px;
     margin-bottom: 60px;
 }
 
@@ -312,6 +313,26 @@ body {
     color: #FFFFFF;
     float: left;
 }
+
+.inner_page_title span.icon {
+    width: 56.693px;
+    height: 56.693px;
+    float: left;
+    transform: scale(0.6);
+}
+
+/******************************************************
+ 
+4.1. NEW ORDER SCREEN
+ 
+*******************************************************/
+
+#screen_new_order {
+}
+
+.inner_page_title span.icon {
+    background: url("../images/icon_new_order.svg");
+}   
 
 .restaurant_categories {
     float: left;
@@ -346,3 +367,29 @@ body {
 .restaurant_category_image img {
     width: 220px;
 }
+
+/******************************************************
+ 
+4.2. ORDER STATUS SCREEN
+ 
+*******************************************************/
+
+#screen_order_status {
+}
+
+.inner_page_title span.icon {
+    background: url("../images/icon_new_order.svg");
+}
+
+/******************************************************
+ 
+4.1. ORDER REVIEW SCREEN
+ 
+*******************************************************/
+
+#screen_order_review {
+}
+
+.inner_page_title span.icon {
+    background: url("../images/icon_new_order.svg");
+}   
