@@ -3,11 +3,10 @@
 /* untitled-font-1 */
 @font-face {
   font-family: "untitled-font-1";
-  src:url("https://file.myfontastic.com/F2HkoDT4bWzCVjbryzQPLR/fonts/1491270513.eot");
-  src:url("https://file.myfontastic.com/F2HkoDT4bWzCVjbryzQPLR/fonts/1491270513.eot?#iefix") format("embedded-opentype"),
-    url("https://file.myfontastic.com/F2HkoDT4bWzCVjbryzQPLR/fonts/1491270513.woff") format("woff"),
-    url("https://file.myfontastic.com/F2HkoDT4bWzCVjbryzQPLR/fonts/1491270513.ttf") format("truetype"),
-    url("https://file.myfontastic.com/F2HkoDT4bWzCVjbryzQPLR/fonts/1491270513.svg#1491270513") format("svg");
+  src:url("icons_aux/1491270513.eot");
+  src:url("icons_aux/1491270513.woff") format("woff"),
+    url("icons_aux/1491270513.ttf") format("truetype"),
+    url("icons_aux/1491270513.svg#1491270513") format("svg");
   font-weight: normal;
   font-style: normal;
 }
