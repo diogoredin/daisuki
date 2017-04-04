@@ -65,7 +65,7 @@ html {
 }
 
 body {
-    background: url("../images/background.jpg") no-repeat center center fixed #212F41;
+    background: url("../placeholders/background.jpg") no-repeat center center fixed #212F41;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -83,19 +83,11 @@ body {
 
 /* 3.1. Logo */
 
-.logo {
-    width: 100%;
-    padding-top: 12%;
-}
-
 .logo h1 {
     font-family: SignPainterHouse, Arial;
-    font-size: 50px;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
+    font-size: 55px;
+    text-align: center;
+    width: 100%;
 }
 
 .logo a {
@@ -111,9 +103,11 @@ body {
 
 #menu {
     background-color: #1C293B;
-    width: 7%;
+    width: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
     float: left;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -123,38 +117,37 @@ body {
 #menu ul {
     list-style: none;
     position: absolute;
+    padding-right: 0px;
     padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
     bottom: 0;
     left: 0;
     right: 0;
 }
 
 #menu ul li {
-    font-family: HeeboBold, Arial;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 14px;
-    color: #FFFFFF;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    padding-right: 15%;
-    padding-left: 15%;
-    width: 70%;
+    width: 56.693px;
+    padding-bottom: 1%;
     cursor: pointer;
-    letter-spacing: 0.4px;
+    margin: 0 auto;
 }
 
 #menu ul li span.icon {
     width: 56.693px;
     height: 56.693px;
-    margin-bottom: 6px;
+    padding-bottom: 2px;
     float: left;
 }
 
 #menu ul li p {
+    font-family: HeeboBold, Arial;
+    text-transform: uppercase;
+    font-size: 14px;
     color: #FFFFFF;
-    text-decoration: none;
-    width: 56.693px;
+    letter-spacing: 0.4px;
+    text-align: center;
+    padding-top: 5px;
 }
 
 #menu ul li.order span.icon {
@@ -200,11 +193,10 @@ body {
     background-image: -moz-linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
     background-image: -o-linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
     background-image: linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
-    border-right: 1px solid rgba(244, 237, 255, 0.10);
     margin-left: 7%;
     width: 27%;
     float: left;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -228,7 +220,7 @@ body {
     color: #FFFFFF;
     border-top: 1px solid rgba(244, 237, 255, 0.10);
     cursor: pointer;
-    width: 90%;
+    width: 88%;
     height: 8%;
     line-height: 8%;
     padding-bottom: 6%;
@@ -281,93 +273,83 @@ body {
 
 /******************************************************
  
-4. ORDER SCREENS
+4. INNER MAIN SCREEN
  
 *******************************************************/
 
-#page {
-    min-height: 100%;
-    max-height: 100%;
-    height: 100%;
-}
-
-#screen_new_order, 
-#screen_order_status, 
-#screen_order_review, 
-#screen_order_category,
-#screen_product {
-    background-image: -webkit-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
-    background-image: -o-linear-gradient(bottom, rgba(34,50,71,0.00) 0%, #223247 100%);
-    background-image: linear-gradient(to top, rgba(34,50,71,0.00) 0%, #223247 100%);
-    float: right;
-    width: 65.9%;
+#screen_new_order, #screen_order_status, #screen_order_review, #screen_order_category, #screen_product {
+    background-image: linear-gradient(to top, rgba(34, 50, 71, 0) 0%, #223247 100%);
     display: none;
+    float: right;
+    width: 66%;
 }
 
 .inner_page_title {
-    border-bottom: 1px solid rgba(244, 237, 255, 0.10);
+    background: rgba(15, 29, 48, 0.6) none repeat scroll 0 0;
+    padding-bottom: 2.4%;
+    padding-left: 2.4%;
+    padding-top: 2.4%;
+    position: fixed;
     width: 100%;
-    height: 150px;
-    margin-bottom: 60px;
 }
 
 .inner_page_title h1 {
-    font-family: HeeboLight, Arial;
-    font-size: 36px;
-    color: #FFFFFF;
+    color: #ffffff;
     float: left;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    font-family: HeeboRegular,Arial;
+    font-size: 26px;
     letter-spacing: 0.4px;
+    line-height: 26px;
+    margin-left: 10px;
+    margin-top: 18px;
+    text-transform: uppercase;
 }
 
 .inner_page_title .page_title {
     float: left;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-left: 6%;
 }
 
 .inner_page_title .page_title span.icon_cat {
-    width: 56.693px;
-    height: 56.693px;
-    margin-right: 10px;
-    margin-top: -2px;
     float: left;
+    height: 56.693px;
+    width: 56.693px;
 }
 
 .inner_page_title .back_button span.icon {
-    width: 50px;
-    height: 36px;
-    margin-bottom: 5px;
+    background: rgba(0, 0, 0, 0) url("../images/icon_back.svg") no-repeat scroll 0 0;
     float: left;
-    background: url("../images/icon_back.svg") ;
+    height: 36px;
+    margin-left: 4px;
+    margin-bottom: 5px;
+    width: 50px;
 }
 
 .inner_page_title .back_button {
+    background: rgba(15, 29, 48, 0.8) none repeat scroll 0 0;
+    color: #ffffff;
     cursor: pointer;
-    font-family: HeeboLight, Arial;
-    font-size: 14px;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    height: 55px;
-    width: 50px;
     float: left;
+    font-family: HeeboLight,Arial;
+    font-size: 14px;
+    height: 62px;
+    margin: -2.4% 2.4% -2.4% -2.4%;
+    padding: 2.4%;
     text-align: center;
-    padding-top: 45px;
-    padding-bottom: 50px;
-    background: rgba(15,29,48,0.30);
-    padding-left: 25px;
-    padding-right: 25px;
+    text-transform: uppercase;
+    width: 50px;
 }
 
 .inner_page_title .back_button:active {
-    color: #0093EE;
-    background: rgba(15,29,48,0.70);
+    background: rgba(15, 29, 48, 0.7) none repeat scroll 0 0;
+    color: #0093ee;
 }
 
 .inner_page_title .back_button:active span.icon {
-    background: url("../images/icon_back_blue.svg");
+    background: rgba(0, 0, 0, 0) url("../images/icon_back_blue.svg") repeat scroll 0 0;
+}
+
+#screen_new_order .inner_page_title span.icon_cat {
+    background: rgba(0, 0, 0, 0) url("../images/icon_new_order.svg") repeat scroll 0 0;
 }
 
 /******************************************************
@@ -376,48 +358,47 @@ body {
  
 *******************************************************/
 
-#screen_new_order {
-}
-
 #screen_new_order .inner_page_title span.icon_cat {
-    background: url("../images/icon_new_order.svg");
+    background: rgba(0, 0, 0, 0) url("../images/icon_new_order.svg") repeat scroll 0 0;
 }
 
 ul.restaurant_categories {
     float: left;
-    height: 100%;
-    padding-left: 6%;
-    list-style: none;
+    list-style: outside none none;
+    padding-left: 4%;
+    padding-top: 20%;
 }
 
 ul.restaurant_categories li {
-    width: 220px;
-    background: #26364C;
-    color: #FFFFFF;
-    text-decoration: none;
-    font-family: HeeboThin, Arial;
-    height: 365px;
-    float: left;
-    text-align: center;
-    margin-right: 20px;
+    background: #26364c none repeat scroll 0 0;
     border-radius: 4px;
-    border-bottom: 1px solid #39485B;
-	box-shadow: 1px 1px 4px #152335;
     cursor: pointer;
+    float: left;
+    margin-right: 3.3%;
+    width: 30%;
+    height: 45%;
 }
 
 ul.restaurant_categories li h1 {
-    font-size: 24px;
+    font-size: 18px;
+    font-family: HeeboLight,Arial;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    letter-spacing: 0.6px;
+    margin-top: 8px;
 }
 
 ul.restaurant_categories li:hover {
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
 }
 
 .restaurant_category_image img {
-    width: 220px;
-    border-radius: 4px 4px 0px 0px;
+    border-radius: 4px 4px 0 0;
+    width: 100%;
+    height: 100%;
 }
 
 /******************************************************
@@ -426,51 +407,63 @@ ul.restaurant_categories li:hover {
  
 *******************************************************/
 
-#screen_order_category {
-    height: 100%;
-}
-
 #screen_order_category .inner_page_title span.icon_cat {
     background: url("../images/icon_new_order.svg");
 }
 
 ul.restaurant_products {
     float: left;
-    list-style: none;
-    padding-left: 6%;
+    list-style: outside none none;
+    padding-left: 4%;
+    padding-top: 20%;
     overflow-y: scroll;
-    height: 60vh;
 }
 
 ul.restaurant_products li {
-    width: 220px;
-    background: #26364C;
-    color: #FFFFFF;
-    text-decoration: none;
-    font-family: HeeboThin, Arial;
-    height: 365px;
-    float: left;
-    text-align: left;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    background: #26364c none repeat scroll 0 0;
     border-radius: 4px;
-    border-bottom: 1px solid #39485B;
-	box-shadow: 1px 1px 4px #152335;
     cursor: pointer;
+    float: left;
+    margin-right: 3.3%;
+    margin-bottom: 3.3%;
+    width: 30%;
+    height: 45%;
 }
 
 ul.restaurant_products li h1 {
-    font-size: 24px;
+    font-size: 18px;
+    font-family: HeeboLight,Arial;
+    text-transform: uppercase;
+    text-align: left;
+    padding-left: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    letter-spacing: 0.6px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+ul.restaurant_products li p.price {
+    font-size: 14px;
+    font-family: HeeboLight,Arial;
+    text-align: left;
+    padding-left: 20px;
+    text-decoration: none;
+    color: #CCCCCC;
+    letter-spacing: 0.6px;
+    margin-bottom: 15px;
+    margin-top: 0px;
 }
 
 ul.restaurant_products li:hover {
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
 }
 
 .product_image img {
-    width: 220px;
-    border-radius: 4px 4px 0px 0px;
+    border-radius: 4px 4px 0 0;
+    width: 100%;
+    height: 100%;
 }
 
 /******************************************************
@@ -478,9 +471,6 @@ ul.restaurant_products li:hover {
 4.2. ORDER STATUS SCREEN
  
 *******************************************************/
-
-#screen_order_status {
-}
 
 #screen_order_status .inner_page_title span.icon_cat {
     background: url("../images/icon_status.svg");
@@ -492,9 +482,6 @@ ul.restaurant_products li:hover {
  
 *******************************************************/
 
-#screen_order_review {
-}
-
 #screen_order_review .inner_page_title span.icon_cat {
     background: url("../images/icon_review.svg");
 }
@@ -504,9 +491,6 @@ ul.restaurant_products li:hover {
 4.1. PRODUCT SCREEN
  
 *******************************************************/
-
-#screen_product {
-}
 
 #screen_product .inner_page_title span.icon_cat {
     background: url("../images/icon_review.svg");
