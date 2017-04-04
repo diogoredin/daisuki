@@ -53,6 +53,10 @@ a {
    outline: 0 !important;
 }
 
+.hide {
+    display: none;
+}
+
 /******************************************************
  
 2. BODY
@@ -492,6 +496,12 @@ ul.restaurant_products li:hover {
  
 *******************************************************/
 
+.picker_share,
+picker_calories,
+picker_review {
+    display: none;
+}
+
 #screen_product .inner_page_title span.icon_cat {
     background: url("../images/icon_review.svg");
 }
@@ -501,20 +511,23 @@ ul.restaurant_products li:hover {
 }
 
 #picker {
-    padding-top: 20%;
     width: 50%;
     float: left;
+    margin-top: 15vh;
+    height: 75vh;
 }
 
-#picker_details {
-    width: 50%;
+.picker_details {
+    width: 40%;
+    padding-left: 5%;
+    padding-right: 5%;
     float: left;
     background-image: -webkit-linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
     background-image: -moz-linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
     background-image: -o-linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
     background-image: linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
-    margin-top: 30vh;
-    height: 70vh;
+    margin-top: 25vh;
+    height: 75vh;
 }
 
 .circle-menu {
@@ -526,7 +539,7 @@ ul.restaurant_products li:hover {
 
 .circle-menu .center {
     background: #ffffff url("../placeholders/product1.jpg") no-repeat scroll 50% 50% / 100px 100px;
-    border: 2px solid #34495e;
+    border: 2px solid #FFFFFF;
     border-radius: 50%;
     height: 120px;
     left: 135px;
@@ -595,18 +608,13 @@ ul.restaurant_products li:hover {
     background: rgba(15, 29, 48, 0.6) none repeat scroll 0 0 !important;
 }
 
-.circle-menu li.active a,
-.circle-menu li.active a:hover  {
-    display: block;
-    background: rgba(15, 29, 48, 0.9) none repeat scroll 0 0 !important;
-}
-
 .circle-menu li:nth-child(even) a {
     background-color:  rgba(15, 29, 48, 0.8);
 }
 
-.circle-menu li a:hover {
-    background-color:  rgba(15, 29, 48, 0.9);
+.circle-menu li a.active,
+.circle-menu li.active a {
+    background-color:  #0093EE !important;
 }
 
 [class^="icon-"]:before {
@@ -621,4 +629,135 @@ a.icon_settings {
     width: 50px;
     height: 50px;
     background: url("../images/icon_settings.svg");
+}
+
+.picker_details h1 {
+    color: rgba(15, 29, 48, 0.8);;
+    font-family: HeeboBold,Arial;
+    font-size: 26px;
+    letter-spacing: 0.6px;
+    margin-bottom: 25px;
+    margin-top: 0;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.4);
+}
+
+.picker_configure ul {
+    list-style: outside none none;
+    margin-left: 0;
+    padding-left: 0;
+    width: 100%;
+}
+
+.picker_configure ul li {
+    color: #FFFFFF;
+    float: none;
+    font-family: HeeboRegular,Arial;
+    height: 50px;
+    margin-top: 10px;
+    text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.4);
+    width: 100%;
+}
+
+.picker_configure ul li button.minus, .picker_configure ul li button.plus {
+    background: rgba(15, 29, 48, 0.8);
+    border: medium none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    font-family: HeeboRegular,Arial;
+    font-size: 14px;
+    line-height: 14px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    text-align: center;
+    width: 15%;
+}
+.picker_configure ul li button.minus:active, .picker_configure ul li button.plus:active {
+    background: #1e74aa none repeat scroll 0 0;
+    box-shadow: none;
+    border: none;
+}
+
+.picker_configure ul li p {
+    float: left;
+    font-size: 18px;
+    height: 5%;
+    letter-spacing: 0.4px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 70%;
+}
+
+.picker_configure button.confirm {
+    background: #52ad20 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 0.6px;
+    margin-top: 20px;
+    padding: 15px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.picker_configure button.confirm:active {
+    background: #45921A none repeat scroll 0 0;
+    box-shadow: none;
+    border: none;
+}
+
+select.picker_options {
+    background-color: rgba(15, 29, 48, 0.8);
+    border: medium none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    height: 50px;
+    width: 100%;
+    margin-bottom: -5px;
+    user-select: none;
+}
+
+select.picker_options:active,
+.picker_configure ul li button.minus:active,
+.picker_configure ul li button.plus:active,
+.picker_configure button.confirm:active,
+select.picker_options:focus,
+.picker_configure ul li button.minus:focus,
+.picker_configure ul li button.plus:focus,
+.picker_configure button.confirm:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+.circle-menu ul.active_configure {
+    transform: rotate(30deg);
+}
+
+.circle-menu ul.active_review {
+    transform: rotate(50deg);
+}
+
+.circle-menu ul.active_share {
+    transform: rotate(60deg);
+}
+
+.circle-menu ul.active_calories {
+    transform: rotate(40deg);
 }
