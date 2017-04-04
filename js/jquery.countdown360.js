@@ -21,7 +21,7 @@
       seconds: 10,                     // the number of seconds to count down
       label: ["second", "seconds"],    // the label to use or false if none
       startOverAfterAdding: true,      // Start the timer over after time is added with addSeconds
-      smooth: false,                   // should the timer be smooth or stepping
+      smooth: true,                   // should the timer be smooth or stepping
       onComplete: function () {}
     };
 
@@ -119,7 +119,7 @@
 
     _drawCountdownLabel: function (secondsElapsed) {
       this.ariaText.text(secondsLeft);
-      this.pen.font         = this.settings.fontWeight + " " + this.settings.fontSize + "px " + this.settings.fontFamily;
+      this.pen.font = this.settings.fontWeight + " " + this.settings.fontSize + "px " + this.settings.fontFamily;
       var secondsLeft = this._secondsLeft(secondsElapsed),
           label = secondsLeft === 1 ? this.settings.label[0] : this.settings.label[1],
           drawLabel = this.settings.label && this.settings.label.length === 2,

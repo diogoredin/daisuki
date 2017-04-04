@@ -480,6 +480,11 @@ ul.restaurant_products li:hover {
     background: url("../images/icon_status.svg");
 }
 
+.order_status_timers {
+    padding-left: 4%;
+    padding-top: 20%;
+}
+
 /******************************************************
  
 4.1. ORDER REVIEW SCREEN
