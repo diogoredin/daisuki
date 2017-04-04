@@ -100,11 +100,15 @@ $(document).ready(function() {
 	});
 
 	$(document).on('click', "#screen_order_category .back_button", function(e) {
-		$("#page").replaceWith(depth_one);
+		$("#page").replaceWith(function() {
+			return $(depth_one).hide().fadeIn(1000);
+		});
 	});
 
 	$(document).on('click', "#screen_product .back_button", function(e) {
-		$("#page").replaceWith(depth_two);
+		$("#page").replaceWith(function() {
+			return $(depth_two).hide().fadeIn(1000);
+		});
 	});
 
 });

@@ -495,3 +495,130 @@ ul.restaurant_products li:hover {
 #screen_product .inner_page_title span.icon_cat {
     background: url("../images/icon_review.svg");
 }
+
+#screen_product {
+    background: transparent;
+}
+
+#picker {
+    padding-top: 20%;
+    width: 50%;
+    float: left;
+}
+
+#picker_details {
+    width: 50%;
+    float: left;
+    background-image: -webkit-linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
+    background-image: -moz-linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
+    background-image: -o-linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
+    background-image: linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
+    margin-top: 30vh;
+    height: 70vh;
+}
+
+.circle-menu {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;   
+}
+
+.circle-menu .center {
+    background: #ffffff url("../placeholders/product1.jpg") no-repeat scroll 50% 50% / 100px 100px;
+    border: 2px solid #34495e;
+    border-radius: 50%;
+    height: 120px;
+    left: 135px;
+    position: absolute;
+    top: 140px;
+    width: 120px;
+    z-index: 1000;
+}
+
+.circle-menu ul {
+    border-radius: 50%;
+    height: 300px;
+    list-style: outside none none;
+    margin: 50px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    transform: rotate(30deg);
+    width: 300px;
+}
+
+.circle-menu li {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 160px;
+    height: 160px;
+    transform-origin: 100% 100%;
+    overflow: hidden;
+}
+
+.circle-menu li:nth-child(1) {
+    transform: rotate(0deg) skew(30deg);
+}
+.circle-menu li:nth-child(2) {
+     transform: rotate(60deg) skew(30deg);
+}
+.circle-menu li:nth-child(3) {
+    transform: rotate(120deg) skew(30deg);
+}
+.circle-menu li:nth-child(4) {
+    transform: rotate(180deg) skew(30deg);
+}
+.circle-menu li:nth-child(5) {
+    transform: rotate(240deg) skew(30deg);
+}
+.circle-menu li:nth-child(6) {
+    transform: rotate(300deg) skew(30deg);
+}
+
+.circle-menu li a {
+    display: block;
+    width: 160px;
+    height: 160px;
+    margin-top: 40px;
+    margin-left: 40px;
+    background: rgba(15, 29, 48, 0.8) none repeat scroll 0 0;
+    transform: skew(-30deg) rotate(-60deg);
+    transition: background-color 0.5s;
+}
+
+.circle-menu li.inactive a,
+.circle-menu li.inactive a:hover  {
+    display: block;
+    cursor: default !important;
+    background: rgba(15, 29, 48, 0.6) none repeat scroll 0 0 !important;
+}
+
+.circle-menu li.active a,
+.circle-menu li.active a:hover  {
+    display: block;
+    background: rgba(15, 29, 48, 0.9) none repeat scroll 0 0 !important;
+}
+
+.circle-menu li:nth-child(even) a {
+    background-color:  rgba(15, 29, 48, 0.8);
+}
+
+.circle-menu li a:hover {
+    background-color:  rgba(15, 29, 48, 0.9);
+}
+
+[class^="icon-"]:before {
+    position: absolute;
+    font-size: 3em;
+    bottom: 50%;
+    right: 35%;
+    color: rgba(240, 240, 240, 1);
+}
+
+a.icon_settings {
+    width: 50px;
+    height: 50px;
+    background: url("../images/icon_settings.svg");
+}
