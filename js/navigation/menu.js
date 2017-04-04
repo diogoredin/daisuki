@@ -37,6 +37,7 @@ $(document).ready(function() {
 	$(document).on('click', ".order_status", function(e) {
 		$('#page').load("order_status.html", function(data){
         	$('#screen_order_status').fadeIn(1000);
+			timer();
     	});
 		e.preventDefault();
 	});
