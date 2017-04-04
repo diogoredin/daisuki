@@ -416,7 +416,7 @@ ul.restaurant_products {
     list-style: outside none none;
     padding-left: 4%;
     padding-top: 20%;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 ul.restaurant_products li {
