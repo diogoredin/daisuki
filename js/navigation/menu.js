@@ -23,6 +23,8 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 
+	$('#screen_new_order').fadeIn(1000);
+
 	// New Order
 	$(document).on('click', ".new_order", function(e) {
 		$('#page').load("new_order.html", function(){
