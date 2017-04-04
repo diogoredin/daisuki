@@ -2,6 +2,34 @@
 
 TABLE OF CONTENTS
 
+1. GENERAL STYLE ELEMENTS
+    1.1. Fonts
+    1.2. General
+    1.3. Body
+
+2. NAVIGATION
+    2.1. Logotype
+    2.2. Menu
+    2.3. Submenu
+        2.3.1. Submenu Order
+        2.3.2. Submenu Check
+
+3. MAIN PAGE
+    3.1. Page Title
+    3.2. Back Button
+
+4. ORDER
+    4.1. New Order
+        4.1.2. New Order > Category
+        4.1.3. New Order > Category > Product
+    4.2. Order Status
+    4.3. Order Review
+
+5. CHECK
+    5.1. Check Review
+    5.2. Tax Information
+    5.3. Pay
+
 ********************************************************/
 
 /******************************************************
@@ -42,12 +70,7 @@ TABLE OF CONTENTS
     src: url(../fonts/Heebo-Thin.ttf);
 }
 
-@font-face {
-    font-family: SignPainterHouse;
-    src: url(../fonts/SignPainter-HouseScript.ttf);
-}
-
-/* 1.2. Link Styles */
+/* 1.2. General */
 
 a {
    outline: 0 !important;
@@ -57,11 +80,7 @@ a {
     display: none;
 }
 
-/******************************************************
- 
-2. BODY
- 
-*******************************************************/
+/* 1.3. Body */
 
 html {
     min-height: 100%;
@@ -69,7 +88,7 @@ html {
 }
 
 body {
-    background: url("../placeholders/background.jpg") no-repeat center center fixed #212F41;
+    background: url("../data/images/background.jpg") no-repeat center center fixed #212F41;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -81,14 +100,14 @@ body {
 
 /******************************************************
  
-3. HEADER
+2. NAVIGATION
  
 *******************************************************/
 
-/* 3.1. Logo */
+/* 2.1. Logotype */
 
 .logo h1 {
-    font-family: SignPainterHouse, Arial;
+    font-family: HeeboLight, Arial;
     font-size: 55px;
     text-align: center;
     width: 100%;
@@ -103,7 +122,7 @@ body {
     text-decoration: none;
 }
 
-/* 3.1. Menu */
+/* 2.2. Menu */
 
 #menu {
     background-color: #1C293B;
@@ -155,42 +174,42 @@ body {
 }
 
 #menu ul li.order span.icon {
-     background: url("../images/icon_order.svg");
+     background: url("../graphics/icon_order.svg");
 }
 
 #menu ul li.check span.icon {
-    background: url("../images/icon_check.svg");
+    background: url("../graphics/icon_check.svg");
 }
 
 #menu ul li.waiter span.icon {
-    background: url("../images/icon_waiter.svg");
+    background: url("../graphics/icon_waiter.svg");
 }
 
 #menu ul li.help span.icon {
-    background: url("../images/icon_help.svg");
+    background: url("../graphics/icon_help.svg");
 }
 
 #menu ul li.order.active span.icon {
-     background: url("../images/icon_order_blue.svg");
+     background: url("../graphics/icon_order_blue.svg");
 }
 
 #menu ul li.check.active span.icon {
-    background: url("../images/icon_check_blue.svg");
+    background: url("../graphics/icon_check_blue.svg");
 }
 
 #menu ul li.waiter.active span.icon {
-    background: url("../images/icon_waiter_blue.svg");
+    background: url("../graphics/icon_waiter_blue.svg");
 }
 
 #menu ul li.help.active span.icon {
-    background: url("../images/icon_help_blue.svg");
+    background: url("../graphics/icon_help_blue.svg");
 }
 
 #menu ul li.active p {
     color: #0093EE;
 }
 
-/* 3.2. Submenu */
+/* 2.3. Submenu */
 
 #submenu {
     background-image: -webkit-linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
@@ -247,46 +266,91 @@ body {
     margin-top: -12px;
 }
 
-#submenu ul li.new_order span.icon {
-     background: url("../images/icon_new_order.svg");
-}
-
-#submenu ul li.order_status span.icon {
-    background: url("../images/icon_status.svg");
-}
-
-#submenu ul li.order_review span.icon {
-    background: url("../images/icon_review.svg");
-}
-
-#submenu ul li.new_order.active span.icon {
-     background: url("../images/icon_new_order_blue.svg");
-}
-
-#submenu ul li.order_status.active span.icon {
-    background: url("../images/icon_status_blue.svg");
-}
-
-#submenu ul li.order_review.active span.icon {
-    background: url("../images/icon_review_blue.svg");
-}
-
 #submenu ul li.active {
     color: #0093EE;
 }
 
+/* 2.3.1. Submenu Order */
+
+#submenu ul li.new_order span.icon {
+     background: url("../graphics/icon_new_order.svg");
+}
+
+#submenu ul li.order_status span.icon {
+    background: url("../graphics/icon_status.svg");
+}
+
+#submenu ul li.order_review span.icon {
+    background: url("../graphics/icon_review.svg");
+}
+
+#submenu ul li.new_order.active span.icon {
+     background: url("../graphics/icon_new_order_blue.svg");
+}
+
+#submenu ul li.order_status.active span.icon {
+    background: url("../graphics/icon_status_blue.svg");
+}
+
+#submenu ul li.order_review.active span.icon {
+    background: url("../graphics/icon_review_blue.svg");
+}
+
+/* 2.3.2. Submenu Check */
+
+#submenu ul li.check_review span.icon {
+     background: url("../graphics/icon_check.svg");
+}
+
+#submenu ul li.tax_information span.icon {
+    background: url("../graphics/icon_tax.svg");
+    width: 42px;
+    height: 50px;
+}
+
+#submenu ul li.pay span.icon {
+    background: url("../graphics/icon_pay.svg");
+    width: 51px;
+    height: 50px;
+}
+
+#submenu ul li.check_review.active span.icon {
+     background: url("../graphics/icon_check_blue.svg");
+}
+
+#submenu ul li.tax_information.active span.icon {
+    background: url("../graphics/icon_tax_blue.svg");
+    width: 42px;
+    height: 50px;
+}
+
+#submenu ul li.pay.active span.icon {
+    background: url("../graphics/icon_pay_blue.svg");
+    width: 51px;
+    height: 50px;
+}
+
 /******************************************************
  
-4. INNER MAIN SCREEN
+3. MAIN PAGE
  
 *******************************************************/
 
-#screen_new_order, #screen_order_status, #screen_order_review, #screen_order_category, #screen_product {
+#screen_new_order, 
+#screen_order_status, 
+#screen_order_review, 
+#screen_order_category, 
+#screen_product,
+#screen_check_review,
+#screen_tax_information,
+#screen_pay {
     background-image: linear-gradient(to top, rgba(34, 50, 71, 0) 0%, #223247 100%);
     display: none;
     float: right;
     width: 66%;
 }
+
+/* 3.1. Page Title */
 
 .inner_page_title {
     background: rgba(15, 29, 48, 0.6) none repeat scroll 0 0;
@@ -306,7 +370,6 @@ body {
     line-height: 26px;
     margin-left: 10px;
     margin-top: 18px;
-    text-transform: uppercase;
 }
 
 .inner_page_title .page_title {
@@ -320,13 +383,15 @@ body {
 }
 
 .inner_page_title .back_button span.icon {
-    background: rgba(0, 0, 0, 0) url("../images/icon_back.svg") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("../graphics/icon_back.svg") no-repeat scroll 0 0;
     float: left;
     height: 36px;
     margin-left: 4px;
     margin-bottom: 5px;
     width: 50px;
 }
+
+/* 3.2. Back Button */
 
 .inner_page_title .back_button {
     background: rgba(15, 29, 48, 0.8) none repeat scroll 0 0;
@@ -349,21 +414,23 @@ body {
 }
 
 .inner_page_title .back_button:active span.icon {
-    background: rgba(0, 0, 0, 0) url("../images/icon_back_blue.svg") repeat scroll 0 0;
-}
-
-#screen_new_order .inner_page_title span.icon_cat {
-    background: rgba(0, 0, 0, 0) url("../images/icon_new_order.svg") repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("../graphics/icon_back_blue.svg") repeat scroll 0 0;
 }
 
 /******************************************************
  
-4.1. NEW ORDER SCREEN
+4. ORDER
+ 
+*******************************************************/
+
+/******************************************************
+ 
+4.1. NEW ORDER
  
 *******************************************************/
 
 #screen_new_order .inner_page_title span.icon_cat {
-    background: rgba(0, 0, 0, 0) url("../images/icon_new_order.svg") repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("../graphics/icon_new_order.svg") repeat scroll 0 0;
 }
 
 ul.restaurant_categories {
@@ -386,7 +453,6 @@ ul.restaurant_categories li {
 ul.restaurant_categories li h1 {
     font-size: 18px;
     font-family: HeeboLight,Arial;
-    text-transform: uppercase;
     text-align: center;
     text-decoration: none;
     color: #ffffff;
@@ -405,14 +471,10 @@ ul.restaurant_categories li:hover {
     height: 100%;
 }
 
-/******************************************************
- 
-4.1. NEW ORDER > CATEGORY SCREEN
- 
-*******************************************************/
+/* 4.1.2. New Order > Category Screen */
 
 #screen_order_category .inner_page_title span.icon_cat {
-    background: url("../images/icon_new_order.svg");
+    background: url("../graphics/icon_new_order.svg");
 }
 
 ul.restaurant_products {
@@ -437,7 +499,6 @@ ul.restaurant_products li {
 ul.restaurant_products li h1 {
     font-size: 18px;
     font-family: HeeboLight,Arial;
-    text-transform: uppercase;
     text-align: left;
     padding-left: 20px;
     text-decoration: none;
@@ -470,36 +531,7 @@ ul.restaurant_products li:hover {
     height: 100%;
 }
 
-/******************************************************
- 
-4.2. ORDER STATUS SCREEN
- 
-*******************************************************/
-
-#screen_order_status .inner_page_title span.icon_cat {
-    background: url("../images/icon_status.svg");
-}
-
-.order_status_timers {
-    padding-left: 4%;
-    padding-top: 20%;
-}
-
-/******************************************************
- 
-4.1. ORDER REVIEW SCREEN
- 
-*******************************************************/
-
-#screen_order_review .inner_page_title span.icon_cat {
-    background: url("../images/icon_review.svg");
-}
-
-/******************************************************
- 
-4.1. PRODUCT SCREEN
- 
-*******************************************************/
+/* 4.1.3. New Order > Category > Product */
 
 .picker_share,
 .picker_calories,
@@ -508,7 +540,7 @@ ul.restaurant_products li:hover {
 }
 
 #screen_product .inner_page_title span.icon_cat {
-    background: url("../images/icon_review.svg");
+    background: url("../graphics/icon_review.svg");
 }
 
 #screen_product {
@@ -543,7 +575,7 @@ ul.restaurant_products li:hover {
 }
 
 .circle-menu .center {
-    background: #ffffff url("../placeholders/product1.jpg") no-repeat scroll 50% 50% / 100px 100px;
+    background: #ffffff url("../data/images/product1.jpg") no-repeat scroll 50% 50% / 100px 100px;
     border: 2px solid #FFFFFF;
     border-radius: 50%;
     height: 120px;
@@ -633,7 +665,7 @@ ul.restaurant_products li:hover {
 a.icon_settings {
     width: 50px;
     height: 50px;
-    background: url("../images/icon_settings.svg");
+    background: url("../graphics/icon_settings.svg");
 }
 
 .picker_details h1 {
@@ -645,7 +677,6 @@ a.icon_settings {
     margin-top: 0;
     text-align: left;
     text-decoration: none;
-    text-transform: uppercase;
     text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.4);
 }
 
@@ -694,7 +725,6 @@ a.icon_settings {
     letter-spacing: 0.4px;
     line-height: 15px;
     text-align: center;
-    text-transform: uppercase;
     width: 70%;
 }
 
@@ -753,9 +783,67 @@ select.picker_options:focus,
 
 /******************************************************
  
-5. SMALL SCREENS
+4.2. ORDER STATUS
  
 *******************************************************/
 
-.small_help {
+#screen_order_status .inner_page_title span.icon_cat {
+    background: url("../graphics/icon_status.svg");
+}
+
+.order_status_timers {
+    padding-left: 4%;
+    padding-top: 20%;
+}
+
+/******************************************************
+ 
+4.3. ORDER REVIEW
+ 
+*******************************************************/
+
+#screen_order_review .inner_page_title span.icon_cat {
+    background: url("../graphics/icon_review.svg");
+}
+
+/******************************************************
+ 
+5. CHECK
+ 
+*******************************************************/
+
+/******************************************************
+ 
+5.1. CHECK REVIEW
+ 
+*******************************************************/
+
+#screen_check_review .inner_page_title span.icon_cat {
+    background: url("../graphics/icon_check.svg");
+}
+
+/******************************************************
+ 
+5.2. TAX INFORMATION
+ 
+*******************************************************/
+
+#screen_tax_information .inner_page_title span.icon_cat {
+    background: url("../graphics/icon_tax.svg");
+    width: 42px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/******************************************************
+ 
+5.3. PAY
+ 
+*******************************************************/
+
+#screen_pay .inner_page_title span.icon_cat {
+    background: url("../graphics/icon_pay.svg");
+    width: 51px;
+    height: 50px;
+    margin-right: 7px;
 }
