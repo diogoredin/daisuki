@@ -746,8 +746,10 @@ select.picker_options:focus,
             box-shadow: none;
 }
 
-.circle-menu ul.active_configure {
-    transform: rotate(30deg);
+.circle-menu ul.active_configure_rot {
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
 }
 
 .circle-menu ul.active_review {
@@ -761,3 +763,7 @@ select.picker_options:focus,
 .circle-menu ul.active_calories {
     transform: rotate(40deg);
 }
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(30deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(30deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(30deg); transform:rotate(30deg); } }
