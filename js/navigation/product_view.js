@@ -10,6 +10,7 @@ $(document).ready(function() {
 	$(document).on('click', ".circle-menu ul li a.icon-configure", function(e) {
 		$(".circle-menu>ul>li.active").removeClass("active");
 		$(this).parent().addClass('active');
+		$(this).parent().parent().addClass('active_configure_rot');
 
 		$('.picker_share').hide();
 		$('.picker_calories').hide();
