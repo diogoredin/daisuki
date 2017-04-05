@@ -70,6 +70,11 @@ TABLE OF CONTENTS
     src: url(../fonts/Heebo-Thin.ttf);
 }
 
+@font-face {
+    font-family: HeeboThin;
+    src: url(../fonts/Heebo-Thin.ttf);
+}
+
 /* 1.2. General */
 
 a {
@@ -107,7 +112,7 @@ body {
 /* 2.1. Logotype */
 
 .logo h1 {
-    font-family: HeeboLight, Arial;
+    font-family: HeeboRegular, Arial;
     font-size: 55px;
     text-align: center;
     width: 100%;
