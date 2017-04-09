@@ -1,31 +1,20 @@
 @charset "UTF-8";
 
-/* untitled-font-1 */
 @font-face {
-  font-family: "untitled-font-1";
-  src:url("icons_aux/1491270513.eot");
-  src:url("icons_aux/1491270513.woff") format("woff"),
-    url("icons_aux/1491270513.ttf") format("truetype"),
-    url("icons_aux/1491270513.svg#1491270513") format("svg");
+  font-family: "daisuki";
+  src:url("fonts/daisuki.eot");
+  src:url("fonts/daisuki.eot?#iefix") format("embedded-opentype"),
+    url("fonts/daisuki.woff") format("woff"),
+    url("fonts/daisuki.ttf") format("truetype"),
+    url("fonts/daisuki.svg#daisuki") format("svg");
   font-weight: normal;
   font-style: normal;
+
 }
 
 [data-icon]:before {
-  font-family: "untitled-font-1" !important;
+  font-family: "daisuki" !important;
   content: attr(data-icon);
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: "untitled-font-1" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -36,15 +25,88 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-share:before {
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "daisuki" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-order:before {
   content: "\61";
 }
-.icon-calories:before {
-  content: "\62";
-}
-.icon-configure:before {
+.icon-add-review:before {
   content: "\63";
 }
-.icon-review:before {
+.icon-waiter:before {
   content: "\64";
+}
+.icon-back:before {
+  content: "\65";
+}
+.icon-status:before {
+  content: "\66";
+}
+.icon-check:before {
+  content: "\67";
+}
+.icon-plus:before {
+  content: "\68";
+}
+.icon-warning:before {
+  content: "\6a";
+}
+.icon-configure:before {
+  content: "\6b";
+}
+.icon-pay:before {
+  content: "\6c";
+}
+.icon-tax-info:before {
+  content: "\6d";
+}
+.icon-receipt:before {
+  content: "\6e";
+}
+.icon-info:before {
+  content: "\6f";
+}
+.icon-help:before {
+  content: "\71";
+}
+.icon-maincourses:before {
+  content: "\75";
+}
+.icon-deserts:before {
+  content: "\76";
+}
+.icon-drinks:before {
+  content: "\77";
+}
+.icon-review:before {
+  content: "\74";
+}
+.icon-food:before {
+  content: "\78";
+}
+.icon-chef:before {
+  content: "\69";
+}
+.icon-my-order:before {
+  content: "\70";
+}
+.icon-menu:before {
+  content: "\62";
+}
+.icon-share:before {
+  content: "\7a";
+}
+.icon-calories:before {
+  content: "\79";
 }

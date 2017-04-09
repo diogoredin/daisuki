@@ -1,0 +1,134 @@
+[ 
+    { "maincourses" : [ 
+                        {   "id"    : 1,
+                            "name"  : "Alaska Roll", 
+                            "price" : 5.50,
+                            "photo" : "product1.jpg" 
+                        },
+                        {   "id"    : 2,
+                            "name"  : "Asagagas", 
+                            "price" : 6.50,
+                            "photo" : "product2.jpg" 
+                        },
+                        {   "id"    : 3,
+                            "name"  : "Crab Sticks", 
+                            "price" : 15, 
+                            "photo" : "product3.jpg" 
+                        },
+                        {   "id"    : 4,
+                            "name"  : "Mango Roll",
+                            "price" : 4.50, 
+                            "photo" : "product4.jpg" 
+                        },
+                        {   "id"    : 5,
+                            "name"  : "Tuna Roll", 
+                            "price" : 4.50, 
+                            "photo" : "product5.jpg" 
+                        },
+                        {   "id"    : 6,
+                            "name"  : "Salmon Roll", 
+                            "price" : 4.50, 
+                            "photo" : "product6.jpg" 
+                        },
+                        {   "id"    : 7,
+                            "name"  : "Avocado Roll", 
+                            "price" : 4.50,
+                            "photo" : "product7.jpg" 
+                        },
+                        {   "id"    : 8,
+                            "name"  : "Flamed Salmon Roll", 
+                            "price" : 15,
+                            "photo" : "product8.jpg" 
+                        },
+                        {   "id"    : 9,
+                            "name"  : "Tuna & Shrimp Roll", 
+                            "price" : 6.50,
+                            "photo" : "product9.jpg" 
+                        },
+                        {   "id"    : 10,
+                            "name"  : "Nigiri Salmon", 
+                            "price" : 4.50, 
+                            "photo" : "product10.jpg" 
+                        },
+                        {   "id"    : 11,
+                            "name"  : "Nigiri King Fish", 
+                            "price" : 4.50, 
+                            "photo" : "product11.jpg" 
+                        },
+                        {   "id"    : 12,
+                            "name"  : "Nigiri Tuna", 
+                            "price" : 4.50, 
+                            "photo" : "product12.jpg" 
+                        },
+                        {   "id"    : 13,
+                            "name"  : "Nigiri Pineapple", 
+                            "price" : 4.50, 
+                            "photo" : "product13.jpg" 
+                        },
+                        {   "id"    : 14,
+                            "name"  : "Sashimi Salmon", 
+                            "price" : 7.50, 
+                            "photo" : "product14.jpg" 
+                        },
+                        {   "id"    : 15,
+                            "name"  : "Sashimi Special", 
+                            "price" : 14.50,
+                            "photo" : "product15.jpg" 
+                        },
+                        {   "id"    : 16,
+                            "name"  : "Sashimi White Fish", 
+                            "price" : 7.50, 
+                            "photo" : "product16.jpg" 
+                        },
+                        {   "id"    : 17,
+                            "name"  : "Sashimi Tuna", 
+                            "price" : 7.50, 
+                            "photo" : "product17.jpg" 
+                        },
+                        {   "id"    : 18,
+                            "name"  : "Sashimi Red Fish", 
+                            "price" : 7.50, 
+                            "photo" : "product18.jpg" 
+                        }
+                    ]
+    },
+
+    { "drinks" : [
+                        {   "id"    : 19,
+                            "name"  : "Orange Juice",
+                            "price" : 6.00, 
+                            "photo" : "product19.jpg" 
+                        },
+                        {   "id"    : 20,
+                            "name"  : "Coke", 
+                            "price" : 4.70, 
+                            "photo" : "product20.jpg" 
+                        },
+                        {   "id"    : 21,
+                            "name"  : "Coke Life", 
+                            "price" : 4.90, 
+                            "photo" : "product21.jpg" 
+                        }
+                    ]
+    },
+
+    { "deserts" : [ 
+                        {   "id"    : 22,
+                            "name"  : "Chocolate Mousse", 
+                            "price" : 6.00, 
+                            "photo" : "product22.jpg" 
+                        },
+                        {   "id"    : 23,
+                            "name"  : "Chocolate Mousse", 
+                            "price" : 6.00, 
+                            "photo" : "product22.jpg" 
+                        },
+                        {   "id"    : 24,
+                            "name"  : "Chocolate Mousse", 
+                            "price" : 6.00, 
+                            "photo" : "product22.jpg" 
+                        }
+                    ]
+    }
+
+]

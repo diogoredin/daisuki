@@ -42,37 +42,37 @@ TABLE OF CONTENTS
 
 @font-face {
     font-family: HeeboBlack;
-    src: url(../fonts/Heebo-Black.ttf);
+    src: url(fonts/Heebo-Black.ttf);
 }
 
 @font-face {
     font-family: HeeboBold;
-    src: url(../fonts/Heebo-Bold.ttf);
+    src: url(fonts/Heebo-Bold.ttf);
 }
 
 @font-face {
     font-family: HeeboLight;
-    src: url(../fonts/Heebo-Light.ttf);
+    src: url(fonts/Heebo-Light.ttf);
 }
 
 @font-face {
     font-family: HeeboMedium;
-    src: url(../fonts/Heebo-Medium.ttf);
+    src: url(fonts/Heebo-Medium.ttf);
 }
 
 @font-face {
     font-family: HeeboRegular;
-    src: url(../fonts/Heebo-Regular.ttf);
+    src: url(fonts/Heebo-Regular.ttf);
 }
 
 @font-face {
     font-family: HeeboThin;
-    src: url(../fonts/Heebo-Thin.ttf);
+    src: url(fonts/Heebo-Thin.ttf);
 }
 
 @font-face {
     font-family: HeeboThin;
-    src: url(../fonts/Heebo-Thin.ttf);
+    src: url(fonts/Heebo-Thin.ttf);
 }
 
 /* 1.2. General */
@@ -111,15 +111,39 @@ body {
 
 /* 2.1. Logotype */
 
+.logo_wrapper img {
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+}
+
 .logo h1 {
-    font-family: HeeboRegular, Arial;
-    font-size: 55px;
+    font-family: HeeboThin,Arial;
+    font-size: 15px;
     text-align: center;
     width: 100%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-top: 3px;
+    color: #B4ED50;
+}
+
+.logo p {
+    font-family: HeeboThin, Arial;
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    color: #eeeeee;
+    margin-top: 0px;
+    padding-top: 0px;
 }
 
 .logo a {
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -156,19 +180,9 @@ body {
 
 #menu ul li {
     width: 56.693px;
-    padding-bottom: 1%;
+    padding-bottom: 25%;
     cursor: pointer;
     margin: 0 auto;
-}
-
-#menu ul li span.icon {
-    width: 56.693px;
-    height: 56.693px;
-    padding-bottom: 2px;
-    float: left;
-}
-
-#menu ul li p {
     font-family: HeeboBold, Arial;
     text-transform: uppercase;
     font-size: 14px;
@@ -178,39 +192,14 @@ body {
     padding-top: 5px;
 }
 
-#menu ul li.order span.icon {
-     background: url("../graphics/icon_order.svg");
+#menu ul li.icon-order::before,
+#menu ul li.icon-check::before,
+#menu ul li.icon-waiter::before,
+#menu ul li.icon-help::before {
+    font-size: 50px !important;
 }
 
-#menu ul li.check span.icon {
-    background: url("../graphics/icon_check.svg");
-}
-
-#menu ul li.waiter span.icon {
-    background: url("../graphics/icon_waiter.svg");
-}
-
-#menu ul li.help span.icon {
-    background: url("../graphics/icon_help.svg");
-}
-
-#menu ul li.order.active span.icon {
-     background: url("../graphics/icon_order_blue.svg");
-}
-
-#menu ul li.check.active span.icon {
-    background: url("../graphics/icon_check_blue.svg");
-}
-
-#menu ul li.waiter.active span.icon {
-    background: url("../graphics/icon_waiter_blue.svg");
-}
-
-#menu ul li.help.active span.icon {
-    background: url("../graphics/icon_help_blue.svg");
-}
-
-#menu ul li.active p {
+#menu ul li.active {
     color: #0093EE;
 }
 
@@ -257,82 +246,26 @@ body {
     letter-spacing: 0.4px;
 }
 
+#submenu ul li.icon-menu::before, 
+#submenu ul li.icon-my-order::before, 
+#submenu ul li.icon-status::before, 
+#submenu ul li.icon-add-review::before,
+#submenu ul li.icon-receipt::before,
+#submenu ul li.icon-tax-info::before,
+#submenu ul li.icon-pay::before {
+    font-size: 33px !important;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
 #submenu ul li:last-child {
     margin-bottom: 10%;
     padding-bottom: 6%;
     border-bottom: 1px solid rgba(244, 237, 255, 0.10);
 }
 
-#submenu ul li span.icon {
-    width: 56.693px;
-    height: 56.693px;
-    float: left;
-    transform: scale(0.6);
-    margin-top: -12px;
-}
-
 #submenu ul li.active {
     color: #0093EE;
-}
-
-/* 2.3.1. Submenu Order */
-
-#submenu ul li.new_order span.icon {
-     background: url("../graphics/icon_new_order.svg");
-}
-
-#submenu ul li.order_status span.icon {
-    background: url("../graphics/icon_status.svg");
-}
-
-#submenu ul li.order_review span.icon {
-    background: url("../graphics/icon_review.svg");
-}
-
-#submenu ul li.new_order.active span.icon {
-     background: url("../graphics/icon_new_order_blue.svg");
-}
-
-#submenu ul li.order_status.active span.icon {
-    background: url("../graphics/icon_status_blue.svg");
-}
-
-#submenu ul li.order_review.active span.icon {
-    background: url("../graphics/icon_review_blue.svg");
-}
-
-/* 2.3.2. Submenu Check */
-
-#submenu ul li.check_review span.icon {
-     background: url("../graphics/icon_check.svg");
-}
-
-#submenu ul li.tax_information span.icon {
-    background: url("../graphics/icon_tax.svg");
-    width: 42px;
-    height: 50px;
-}
-
-#submenu ul li.pay span.icon {
-    background: url("../graphics/icon_pay.svg");
-    width: 51px;
-    height: 50px;
-}
-
-#submenu ul li.check_review.active span.icon {
-     background: url("../graphics/icon_check_blue.svg");
-}
-
-#submenu ul li.tax_information.active span.icon {
-    background: url("../graphics/icon_tax_blue.svg");
-    width: 42px;
-    height: 50px;
-}
-
-#submenu ul li.pay.active span.icon {
-    background: url("../graphics/icon_pay_blue.svg");
-    width: 51px;
-    height: 50px;
 }
 
 /******************************************************
@@ -341,14 +274,15 @@ body {
  
 *******************************************************/
 
-#screen_new_order, 
-#screen_order_status, 
+#screen_order_categories, 
+#screen_order_status,
+#screen_order_current, 
 #screen_order_review, 
 #screen_order_category, 
 #screen_product,
 #screen_check_review,
-#screen_tax_information,
-#screen_pay {
+#screen_check_tax,
+#screen_check_pay {
     background-image: linear-gradient(to top, rgba(34, 50, 71, 0) 0%, #223247 100%);
     display: none;
     float: right;
@@ -359,67 +293,26 @@ body {
 
 .inner_page_title {
     background: rgba(15, 29, 48, 0.6) none repeat scroll 0 0;
-    padding-bottom: 2.4%;
-    padding-left: 2.4%;
-    padding-top: 2.4%;
+    padding: 2.4%;
     position: fixed;
-    width: 100%;
+    width: 61.2%;
 }
 
-.inner_page_title h1 {
+.page_title h1 {
     color: #ffffff;
-    float: left;
     font-family: HeeboRegular,Arial;
     font-size: 26px;
     letter-spacing: 0.4px;
     line-height: 26px;
-    margin-left: 10px;
-    margin-top: 18px;
-}
-
-.inner_page_title .page_title {
-    float: left;
-}
-
-.inner_page_title .page_title span.icon_cat {
-    float: left;
-    height: 56.693px;
-    width: 56.693px;
-}
-
-.inner_page_title .back_button span.icon {
-    background: rgba(0, 0, 0, 0) url("../graphics/icon_back.svg") no-repeat scroll 0 0;
-    float: left;
-    height: 36px;
-    margin-left: 4px;
-    margin-bottom: 5px;
-    width: 50px;
-}
-
-/* 3.2. Back Button */
-
-.inner_page_title .back_button {
-    background: rgba(15, 29, 48, 0.8) none repeat scroll 0 0;
-    color: #ffffff;
-    cursor: pointer;
-    float: left;
-    font-family: HeeboLight,Arial;
-    font-size: 14px;
-    height: 62px;
-    margin: -2.4% 2.4% -2.4% -2.4%;
-    padding: 2.4%;
     text-align: center;
-    text-transform: uppercase;
-    width: 50px;
+    vertical-align: middle;
 }
 
-.inner_page_title .back_button:active {
-    background: rgba(15, 29, 48, 0.7) none repeat scroll 0 0;
-    color: #0093ee;
-}
-
-.inner_page_title .back_button:active span.icon {
-    background: rgba(0, 0, 0, 0) url("../graphics/icon_back_blue.svg") repeat scroll 0 0;
+.page_title h1::before {
+    font-size: 45px;
+    padding-right: 10px;
+    position: inherit;
+    vertical-align: middle;
 }
 
 /******************************************************
@@ -433,10 +326,6 @@ body {
 4.1. NEW ORDER
  
 *******************************************************/
-
-#screen_new_order .inner_page_title span.icon_cat {
-    background: rgba(0, 0, 0, 0) url("../graphics/icon_new_order.svg") repeat scroll 0 0;
-}
 
 ul.restaurant_categories {
     float: left;
@@ -477,10 +366,6 @@ ul.restaurant_categories li:hover {
 }
 
 /* 4.1.2. New Order > Category Screen */
-
-#screen_order_category .inner_page_title span.icon_cat {
-    background: url("../graphics/icon_new_order.svg");
-}
 
 ul.restaurant_products {
     float: left;
@@ -540,12 +425,10 @@ ul.restaurant_products li:hover {
 
 .picker_share,
 .picker_calories,
-.picker_review {
+.picker_review,
+.picker_information,
+.picker_chef {
     display: none;
-}
-
-#screen_product .inner_page_title span.icon_cat {
-    background: url("../graphics/icon_review.svg");
 }
 
 #screen_product {
@@ -580,7 +463,6 @@ ul.restaurant_products li:hover {
 }
 
 .circle-menu .center {
-    background: #ffffff url("../data/images/product1.jpg") no-repeat scroll 50% 50% / 100px 100px;
     border: 2px solid #FFFFFF;
     border-radius: 50%;
     height: 120px;
@@ -670,7 +552,6 @@ ul.restaurant_products li:hover {
 a.icon_settings {
     width: 50px;
     height: 50px;
-    background: url("../graphics/icon_settings.svg");
 }
 
 .picker_details h1 {
@@ -792,10 +673,6 @@ select.picker_options:focus,
  
 *******************************************************/
 
-#screen_order_status .inner_page_title span.icon_cat {
-    background: url("../graphics/icon_status.svg");
-}
-
 .order_status_timers {
     padding-left: 4%;
     padding-top: 20%;
@@ -806,10 +683,6 @@ select.picker_options:focus,
 4.3. ORDER REVIEW
  
 *******************************************************/
-
-#screen_order_review .inner_page_title span.icon_cat {
-    background: url("../graphics/icon_review.svg");
-}
 
 /******************************************************
  
@@ -823,32 +696,14 @@ select.picker_options:focus,
  
 *******************************************************/
 
-#screen_check_review .inner_page_title span.icon_cat {
-    background: url("../graphics/icon_check.svg");
-}
-
 /******************************************************
  
 5.2. TAX INFORMATION
  
 *******************************************************/
 
-#screen_tax_information .inner_page_title span.icon_cat {
-    background: url("../graphics/icon_tax.svg");
-    width: 42px;
-    height: 50px;
-    margin-right: 10px;
-}
-
 /******************************************************
  
 5.3. PAY
  
 *******************************************************/
-
-#screen_pay .inner_page_title span.icon_cat {
-    background: url("../graphics/icon_pay.svg");
-    width: 51px;
-    height: 50px;
-    margin-right: 7px;
-}

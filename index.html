@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Title -->
-		<title>Daisuki | Japanese Cuisine</title>
+		<title>Daisuki | Sushi Cafe</title>
 
 		<!-- Style -->
 		<link href="css/style.css" rel="stylesheet">
@@ -27,7 +27,9 @@
 				<a href="">
 
 					<div class="logo_wrapper">
-						<h1>ほ お</h1>
+						<img src="graphics/logo.svg">
+						<h1>Daisuki</h1>
+						<p>Sushi Cafe</p>
 					</div>
 
 				</a>
@@ -37,32 +39,20 @@
 
 			<!-- Starts Navigation --> 
 			<ul>
-				<li class="order active">
-					<div class"menu_item">
-						<span class="icon"></span>
-						<p>Order</p>
-					</div>
+				<li class="order icon-order active">
+					Order
 				</li>
 
-				<li class="check">
-					<div class"menu_item">
-						<span class="icon"></span>
-						<p>Check</p>
-					</div>
+				<li class="check icon-check">
+					Check
 				</li>
 
-				<li class="waiter">
-					<div class"menu_item">
-						<span class="icon"></span>
-						<p>Call Waiter</p>
-					</div>
+				<li class="waiter icon-waiter">
+					Call Waiter
 				</li>
 
-				<li class="help">
-					<div class"menu_item">
-						<span class="icon"></span>
-						<p>Help</p>
-					</div>
+				<li class="help icon-help">
+					Help
 				</li>
 			</ul>
 			<!-- Ends Navigation -->
@@ -82,17 +72,17 @@
 		<div id="submenu">
 
 			<ul>
-				<li class="new_order">
-					<span class="icon"></span>
-					<p>New Order</p>
+				<li class="order_categories icon-menu">
+					Menu
 				</li>
-				<li class="order_status">
-					<span class="icon"></span>
-					<p>Order Status</p>
+				<li class="order_current icon-my-order">
+					My Order
 				</li>
-				<li class="order_review">
-					<span class="icon"></span>
-					<p>Order Review</p>
+				<li class="order_status icon-status">
+					Order Status
+				</li>
+				<li class="order_review icon-add-review">
+					Review Order
 				</li>
 			</ul>
 
@@ -100,21 +90,15 @@
 		<!-- Ends Submenu -->
 
 		<!-- Libraries -->
-		<script src="js/jquery.min.js"></script>
+		<script src="js/libraries/jquery.min.js"></script>
 		<script src="js/libraries/jquery.countdown360.js"></script>
 
-		<!-- Navigation -->
-		<script src="js/nav/main.js"></script>
-		<script src="js/nav/check.js"></script>
-		<script src="js/nav/order.js"></script>
-		<script src="js/nav/order_categories.js"></script>
-		<script src="js/nav/order_status.js"></script>
-		<script src="js/nav/product_view.js"></script>
-
-		<!-- Object Scripts --> 
-		<script src="js/app/product.js"></script>
-		<script src="js/app/order.js"></script>
-		<script src="js/app/app.js"></script>
+		<!-- Views -->
+		<script src="js/menu_views.js"></script>
+		<script src="js/product_views.js"></script>
+		<script src="js/category_views.js"></script>
+		<script src="js/order_views.js"></script>
+		<script src="js/check_views.js"></script>
 
 	</body>
 
