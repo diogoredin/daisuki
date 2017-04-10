@@ -17,4 +17,6 @@ $(document).ready(function() {
 		localStorage.setItem(name, JSON.stringify(data));
 	 }
 
+     localStorage.setItem("NoOrders", "0");
+
 });

@@ -81,7 +81,10 @@ $(document).ready(function() {
 	});
 
 	$(document).on('click', "button.confirm", function(e) {
-		
+		var NoOrders = localStorage.getItem("NoOrders");
+		// [Product ID, Time of Creation (to be changed later), Status, Review, Classification]
+		var orderProperties = [e.target.id, 0, "", "", 0];
+		localStorage.setItem(NoOrders, JSON.stringify(orderProperties));
 	});
 
 });
