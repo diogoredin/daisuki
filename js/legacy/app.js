@@ -6,6 +6,8 @@
 
 $(document).ready(function() {
 
+    localStorage.clear();
+
     $.ajax({
         type: "GET",
         url: "data/products.json",
