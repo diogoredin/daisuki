@@ -48,11 +48,15 @@ function loadProduct(id, categoryName) {
 	// Display the product name
 	$('.page_title').append('<h1>' + object.name + '</h1>');
 
+	//Display the confirm button
+	$('.picker_configure').append('<button class="confirm" id=\"' + object.id + '\"> Add to Order </button>')
+
 	// Update the Product Image
 	$('.center').css( "background", "#ffffff url('data/images/" + object.photo + "') no-repeat scroll 50% 50% / 100px 100px" );
 
 	// Display Product
 	$('#screen_product').fadeIn(300);
+
 }
 
 $(document).ready(function() {
@@ -74,6 +78,10 @@ $(document).ready(function() {
 		});
 
 		e.preventDefault();
+	});
+
+	$(document).on('click', "button.confirm", function(e) {
+		
 	});
 
 });
