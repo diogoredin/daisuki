@@ -8,7 +8,7 @@
 function loadProduct(id, categoryName) {
 
 	// Parse the list of products saved on localStorage
-	var products = JSON.parse( localStorage.getItem('products') );
+	var products = JSON.parse( sessionStorage.getItem('products') );
 
 	// Get the list of products for the correct category
 	var categories, category, category_tag, category_name;
@@ -49,7 +49,7 @@ function loadProduct(id, categoryName) {
 	$('.page_title').append('<h1>' + object.name + '</h1>');
 
 	//Display the confirm button
-	$('.picker_configure').append('<button class="confirm" id=\"' + object.id + '\"> Add to Order </button>')
+	$('.picker_configure').append('<button class="confirm ' + categoryName + '" id=\"' + object.id + '\"> Add to Order </button>')
 
 	// Update the Product Image
 	$('.center').css( "background", "#ffffff url('data/images/" + object.photo + "') no-repeat scroll 50% 50% / 100px 100px" );
@@ -81,12 +81,15 @@ $(document).ready(function() {
 	});
 
 	$(document).on('click', "button.confirm", function(e) {
-		var NoOrders = localStorage.getItem("NoOrders");
-		// [Product ID, Time of Creation (to be changed later), 
+		var NoOrders = sessionStorage.getItem("NoOrders");
+		var category = $( this ).attr('class').split(' ')[1]
+		// [Product ID, {0: MainCourses, 1: Drinks, 2: Deserts}, Time of Creation (to be changed later), 
 		//	Status, Review, Classification, {-1: Removed, 0: Added not confirmed, 1:Ordered}]
-		var orderProperties = [e.target.id, 0, "", "", 0, 0];
-		localStorage.setItem(NoOrders, JSON.stringify(orderProperties));
-		localStorage.setItem("NoOrders", parseInt(NoOrders) + 1);
+		var orderProperties = [e.target.id, category, 0, "", "", 0, 0];
+		sessionStorage.setItem(NoOrders, JSON.stringify(orderProperties));
+		sessionStorage.setItem("NoOrders", parseInt(NoOrders) + 1);
+
+		e.preventDefault();
 	});
 
 });
