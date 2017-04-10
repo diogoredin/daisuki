@@ -94,17 +94,17 @@
     },
 
     { "drinks" : [
-                        {   "id"    : 19,
+                        {   "id"    : 0,
                             "name"  : "Orange Juice",
                             "price" : 6.00, 
                             "photo" : "product19.jpg" 
                         },
-                        {   "id"    : 20,
+                        {   "id"    : 1,
                             "name"  : "Coke", 
                             "price" : 4.70, 
                             "photo" : "product20.jpg" 
                         },
-                        {   "id"    : 21,
+                        {   "id"    : 2,
                             "name"  : "Coke Life", 
                             "price" : 4.90, 
                             "photo" : "product21.jpg" 
@@ -113,17 +113,17 @@
     },
 
     { "deserts" : [ 
-                        {   "id"    : 22,
+                        {   "id"    : 0,
                             "name"  : "Chocolate Mousse", 
                             "price" : 6.00, 
                             "photo" : "product22.jpg" 
                         },
-                        {   "id"    : 23,
+                        {   "id"    : 1,
                             "name"  : "Chocolate Mousse", 
                             "price" : 6.00, 
                             "photo" : "product22.jpg" 
                         },
-                        {   "id"    : 24,
+                        {   "id"    : 2,
                             "name"  : "Chocolate Mousse", 
                             "price" : 6.00, 
                             "photo" : "product22.jpg" 

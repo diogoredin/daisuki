@@ -36,7 +36,7 @@ $(document).ready(function() {
 		$('#page').load(link, function() {
 
 			// Parse the list of products saved on localStorage
-			var products = JSON.parse( localStorage.getItem('products') );
+			var products = JSON.parse( sessionStorage.getItem('products') );
 
 			var categories, category, category_tag, category_name;
 

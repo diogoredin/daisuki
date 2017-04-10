@@ -34,16 +34,7 @@ function loadProduct(id, categoryName) {
 			break;
 	}
 
-	// Find the product with the matching id
-	for (var i = 0; i < category.length; i++) {
-		var object = category[i];
-
-		// Found it
-		if ( object.id == id ) {
-			break;
-		}
-
-	}
+	var object = category[id];
 
 	// Display the product name
 	$('.page_title').append('<h1>' + object.name + '</h1>');
