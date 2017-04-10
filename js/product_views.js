@@ -67,7 +67,6 @@ $(document).ready(function() {
 			
 			if (!$(this).hasClass('picker_' + option)) {
 				$(this).hide();
-				console.log(option);
 			} else {
 				$(this).show();
 			}
