@@ -85,14 +85,13 @@ $(document).ready(function() {
 			// Display all the products from the category
 			for (var i = 0; i < category.length; i++) {
 				var object = category[i];
-
 				$("ul.restaurant_products").append('\
 					<li class="product id_' + object.id + ' ' + category_tag + '">\
             			<div class="product_image">\
                 			<img src="./data/images/' + object.photo + '" />\
            				</div>\
             			<h1>' + object.name + '</h1>\
-            				<p class="price">' + object.price + '$</p>\
+            				<p class="price">' + Number(object.price).toFixed(2) + '$</p>\
         				</li>');
 				}
 
