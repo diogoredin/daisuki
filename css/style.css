@@ -328,7 +328,7 @@ body {
 *******************************************************/
 
 .go_back {
-    background: rgba(15, 29, 48, 0.4) none repeat scroll 0 0;
+    background: rgba(15, 29, 48, 0.8);
     color: #ffffff;
     display: none;
     font-family: HeeboBold,Arial;
@@ -339,8 +339,8 @@ body {
     position: fixed;
     text-transform: uppercase;
     width: 21%;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 2%;
+    padding-right: 4%;
     line-height: 16px;
     vertical-align: middle;
     cursor: pointer;
@@ -353,9 +353,9 @@ body {
 
 .go_back span::before {
     position: unset;
-    font-size: 49px;
+    font-size: 35px;
     vertical-align: middle;
-    padding-right: 6px;
+    padding-right: 10px;
 }
 
 ul.restaurant_categories {
@@ -418,7 +418,7 @@ ul.restaurant_products li {
 }
 
 ul.restaurant_products li:first-child:nth-last-child(1) {
-    width: 39%;
+    width: 39% !important;
 }
 
 ul.restaurant_products li h1 {
@@ -867,7 +867,7 @@ ul.order_products li {
 }
 
 ul.order_products li:first-child:nth-last-child(1) {
-    width: 39%;
+    width: 39% !important;
 }
 
 ul.order_products li h1 {

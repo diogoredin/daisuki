@@ -47,9 +47,6 @@
 .icon-waiter:before {
   content: "\64";
 }
-.icon-back:before {
-  content: "\65";
-}
 .icon-status:before {
   content: "\66";
 }
@@ -109,4 +106,7 @@
 }
 .icon-calories:before {
   content: "\73";
+}
+.icon-back:before {
+  content: "\72";
 }

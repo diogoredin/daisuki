@@ -12,7 +12,7 @@
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
                             },
-                            "info" : ""
+                            "info" : "Small cylindrical piece, with nori on the outside. A typical hosomaki has a diameter of about two and a half centimeters."
                         },
                         {   "id"    : 1,
                             "name"  : "Asagagas", 
@@ -26,7 +26,7 @@
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
                             },
-                            "info" : ""
+                            "info" : "Large cone-shaped piece of nori on the outside and the ingredients spilling out the wide end. A typical temaki is about ten centimeters."
                         },
                         {   "id"    : 2,
                             "name"  : "Crab Sticks", 
@@ -40,7 +40,7 @@
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
                             },
-                            "info" : ""
+                            "info" : "Traditional form of fermented sushi. Skinned and gutted fish are stuffed with salt, placed in a wooden barrel, doused with salt again."
                         },
                         {   "id"    : 3,
                             "name"  : "Mango Roll",
@@ -54,7 +54,7 @@
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
                             },
-                            "info" : ""
+                            "info" : "variation of sushi within the United States, and comes in variations that take their names from their place of origin. Other rolls may."
                         },
                         {   "id"    : 4,
                             "name"  : "Tuna Roll", 
@@ -68,7 +68,7 @@
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
                             },
-                            "info" : ""
+                            "info" : "Consists of an oblong mound of sushi rice that the chef presses between the palms of the hands to form an oval-shaped ball, and a topping."
                         },
                         {   "id"    : 5,
                             "name"  : "Salmon Roll", 
@@ -82,7 +82,7 @@
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
                             },
-                            "info" : "" 
+                            "info" : "The oshibako with the toppings, covers them with sushi rice, and then presses the lid of the mold down to create a compact, rectilinear block." 
                         },
                         {   "id"    : 6,
                             "name"  : "Avocado Roll", 
@@ -95,7 +95,8 @@
                                 "Carbohydrates (g)" : 7.2,
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
-                            } 
+                            },
+                            "info" : "Medium-sized cylindrical piece with two or more fillings, and was innovated as a result of the creation of the California roll."
                         },
                         {   "id"    : 7,
                             "name"  : "Flamed Salmon Roll", 
@@ -109,7 +110,7 @@
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
                             },
-                            "info" : "" 
+                            "info" : "variation of sushi within the United States, and comes in variations that take their names from their place of origin." 
                         },
                         {   "id"    : 8,
                             "name"  : "Tuna & Shrimp Roll", 
@@ -267,7 +268,7 @@
                                 "Fiber (g)" : 0,
                                 "Sodium (g)" : 0
                             },
-                            "info" : "" 
+                            "info" : "Great juice, made with real oranges from real trees. Buy it!" 
                         },
                         {   "id"    : 1,
                             "name"  : "Coke", 
@@ -281,7 +282,7 @@
                                 "Fiber (g)" : 0,
                                 "Sodium (g)" : 0
                             },
-                            "info" : "" 
+                            "info" : "Really great coke. I love it, everybody loves it. Make coke great again." 
                         },
                         {   "id"    : 2,
                             "name"  : "Coke Life", 
@@ -295,7 +296,7 @@
                                 "Fiber (g)" : 0,
                                 "Sodium (g)" : 0
                             },
-                            "info" : "" 
+                            "info" : "Excelent Coke, great served with ice and lemon." 
                         }
                     ]
     },
@@ -313,7 +314,7 @@
                                 "Fiber (g)" : 0,
                                 "Sodium (g)" : 0
                             },
-                            "info" : "" 
+                            "info" : "Super-b delicious." 
                         },
                         {   "id"    : 1,
                             "name"  : "Chocolate Mousse", 
@@ -327,7 +328,7 @@
                                 "Fiber (g)" : 0,
                                 "Sodium (g)" : 0
                             },
-                            "info" : "" 
+                            "info" : "Super-b delicious." 
                         },
                         {   "id"    : 2,
                             "name"  : "Chocolate Mousse", 
@@ -341,7 +342,7 @@
                                 "Fiber (g)" : 0,
                                 "Sodium (g)" : 0
                             },
-                            "info" : ""  
+                            "info" : "Super-b delicious."  
                         }
                     ]
     }

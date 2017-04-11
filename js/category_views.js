@@ -91,7 +91,7 @@ $(document).ready(function() {
 		$('#page').load(link, function() {
 
 			$(".go_back").removeClass().addClass("go_back go_back_categories");
-			$("div.go_back span").text("Back to Menu");
+			$("div.go_back span").text("Go Back to Menu");
 
 			// Parse the list of products saved on localStorage
 			var products = JSON.parse( sessionStorage.getItem('products') );
@@ -173,7 +173,7 @@ $(document).ready(function() {
 
 		// Update back button
 		$(".go_back").removeClass("go_back_categories").addClass("go_back_product " + categoryTag );
-		$("div.go_back span").text("Back to " + categoryName );
+		$("div.go_back span").text("Go Back to " + categoryName );
 
 		// Load the Product page view
 		var link = "./order_product.html";
