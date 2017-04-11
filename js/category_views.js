@@ -58,13 +58,11 @@ $(document).ready(function() {
      });
 
 	 function storeData(name, data) {
-		localStorage.setItem(name, JSON.stringify(data));
+		sessionStorage.setItem(name, JSON.stringify(data));
 	 }
 
 	/*
 	*
-=======
->>>>>>> origin/master
 	*	CATEGORY VIEW
 	*
 	*/
