@@ -306,6 +306,7 @@ body {
     line-height: 26px;
     text-align: center;
     vertical-align: middle;
+    z-index: 1000;
 }
 
 .page_title h1::before {
@@ -487,11 +488,11 @@ ul.restaurant_products li:hover {
     background-image: -o-linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
     background-image: linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
     margin-top: 25vh;
-    height: 75vh;
+    min-height: 75vh;
 }
 
 .circle-menu {
-    position: relative;
+    position: fixed;
     width: 400px;
     height: 400px;
     margin: 50px auto;   
@@ -946,6 +947,37 @@ ul.order_products li a.remove_request {
 
 ul.order_products li a.remove_request:active {
     background: #A90D0D none repeat scroll 0 0;
+}
+
+.picker_review ul {
+    list-style: none;
+    padding-left: 0px;
+    padding-bottom: 10px;
+}
+
+.picker_review ul li {
+    font-family: HeeboBold,Arial;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 15px;
+    margin-top: 0;
+    background: #FFFFFF;
+    opacity: 0.8;
+    border-radius: 4px;
+    color: rgba(15, 29, 48, 0.8);
+    padding: 15px;
+}
+
+.picker_review ul li .rating span {
+}
+
+.picker_review ul li .rating span {
+    position: absolute;
+    float: left;
+    font-size: 16px;
+    height: 16px;
+    width: 16px;
+    color: #2196F3;
 }
 
 /******************************************************

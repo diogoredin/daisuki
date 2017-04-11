@@ -80,7 +80,7 @@ $(document).ready(function() {
 
 	// Plus Button
 	$(document).on('click', ".picker_configure ul li button.plus", function(e) {
-		var value = parseInt($(this).parent().find("p span").append("test").text()) + 1;
+		var value = parseInt($(this).parent().find("p span").text()) + 1;
 		$(this).parent().find("p span").text(value);
 
 		if ( value >= 0 ) {
@@ -92,7 +92,7 @@ $(document).ready(function() {
 	// Minus Button
 	$(document).on('click', ".picker_configure ul li button.minus", function(e) {
 
-		var value = parseInt($(this).parent().find("p span").text() - 1);
+		var value = parseInt($(this).parent().find("p span").text()) - 1;
 
 		if ( value == 0 ) {
 			$(this).addClass("disable");
@@ -112,6 +112,13 @@ $(document).ready(function() {
 		var orderProperties = [e.target.id, category, 0, "", "", 0, 0];
 		sessionStorage.setItem(NoOrders, JSON.stringify(orderProperties));
 		sessionStorage.setItem("NoOrders", parseInt(NoOrders) + 1);
+
+		// Animation and Submenu Increase
+		var menu_item = $('#submenu ul li.order_current');
+		var value = parseInt(menu_item.find("span").text()) + 1;
+
+		menu_item.effect( "highlight", {color:"rgba(0,147,238,0.40)"}, 700 );
+		menu_item.find("span").text(value);
 
 		e.preventDefault();
 
