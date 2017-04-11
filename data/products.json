@@ -3,92 +3,236 @@
                         {   "id"    : 0,
                             "name"  : "Alaska Roll", 
                             "price" : 5.50,
-                            "photo" : "product1.jpg" 
+                            "photo" : "product1.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            }
                         },
                         {   "id"    : 1,
                             "name"  : "Asagagas", 
                             "price" : 6.50,
-                            "photo" : "product2.jpg" 
+                            "photo" : "product2.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            } 
                         },
                         {   "id"    : 2,
                             "name"  : "Crab Sticks", 
                             "price" : 15, 
-                            "photo" : "product3.jpg" 
+                            "photo" : "product3.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            } 
                         },
                         {   "id"    : 3,
                             "name"  : "Mango Roll",
                             "price" : 4.50, 
-                            "photo" : "product4.jpg" 
+                            "photo" : "product4.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            } 
                         },
                         {   "id"    : 4,
                             "name"  : "Tuna Roll", 
                             "price" : 4.50, 
-                            "photo" : "product5.jpg" 
+                            "photo" : "product5.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            } 
                         },
                         {   "id"    : 5,
                             "name"  : "Salmon Roll", 
                             "price" : 4.50, 
-                            "photo" : "product6.jpg" 
+                            "photo" : "product6.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            } 
                         },
                         {   "id"    : 6,
                             "name"  : "Avocado Roll", 
                             "price" : 4.50,
-                            "photo" : "product7.jpg" 
+                            "photo" : "product7.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            } 
                         },
                         {   "id"    : 7,
                             "name"  : "Flamed Salmon Roll", 
                             "price" : 15,
-                            "photo" : "product8.jpg" 
+                            "photo" : "product8.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            } 
                         },
                         {   "id"    : 8,
                             "name"  : "Tuna & Shrimp Roll", 
                             "price" : 6.50,
-                            "photo" : "product9.jpg" 
+                            "photo" : "product9.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            } 
                         },
                         {   "id"    : 9,
                             "name"  : "Nigiri Salmon", 
                             "price" : 4.50, 
-                            "photo" : "product10.jpg" 
+                            "photo" : "product10.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            } 
                         },
                         {   "id"    : 10,
                             "name"  : "Nigiri King Fish", 
                             "price" : 4.50, 
-                            "photo" : "product11.jpg" 
+                            "photo" : "product11.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            } 
                         },
                         {   "id"    : 11,
                             "name"  : "Nigiri Tuna", 
                             "price" : 4.50, 
-                            "photo" : "product12.jpg" 
+                            "photo" : "product12.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            } 
                         },
                         {   "id"    : 12,
                             "name"  : "Nigiri Pineapple", 
                             "price" : 4.50, 
-                            "photo" : "product13.jpg" 
+                            "photo" : "product13.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            } 
                         },
                         {   "id"    : 13,
                             "name"  : "Sashimi Salmon", 
                             "price" : 7.50, 
-                            "photo" : "product14.jpg" 
+                            "photo" : "product14.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            } 
                         },
                         {   "id"    : 14,
                             "name"  : "Sashimi Special", 
                             "price" : 14.50,
-                            "photo" : "product15.jpg" 
+                            "photo" : "product15.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            } 
                         },
                         {   "id"    : 15,
                             "name"  : "Sashimi White Fish", 
                             "price" : 7.50, 
-                            "photo" : "product16.jpg" 
+                            "photo" : "product16.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            } 
                         },
                         {   "id"    : 16,
                             "name"  : "Sashimi Tuna", 
                             "price" : 7.50, 
-                            "photo" : "product17.jpg" 
+                            "photo" : "product17.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            } 
                         },
                         {   "id"    : 17,
                             "name"  : "Sashimi Red Fish", 
                             "price" : 7.50, 
-                            "photo" : "product18.jpg" 
+                            "photo" : "product18.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            } 
                         }
                     ]
     },
@@ -97,17 +241,41 @@
                         {   "id"    : 0,
                             "name"  : "Orange Juice",
                             "price" : 6.00, 
-                            "photo" : "product19.jpg" 
+                            "photo" : "product19.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 139,
+                                "Proteins (g)" : 0,
+                                "Lipids (g)" : 0,
+                                "Carbohydrates (g)" : 35,
+                                "Fiber (g)" : 0,
+                                "Sodium (g)" : 0
+                            } 
                         },
                         {   "id"    : 1,
                             "name"  : "Coke", 
                             "price" : 4.70, 
-                            "photo" : "product20.jpg" 
+                            "photo" : "product20.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 139,
+                                "Proteins (g)" : 0,
+                                "Lipids (g)" : 0,
+                                "Carbohydrates (g)" : 35,
+                                "Fiber (g)" : 0,
+                                "Sodium (g)" : 0
+                            } 
                         },
                         {   "id"    : 2,
                             "name"  : "Coke Life", 
                             "price" : 4.90, 
-                            "photo" : "product21.jpg" 
+                            "photo" : "product21.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 139,
+                                "Proteins (g)" : 0,
+                                "Lipids (g)" : 0,
+                                "Carbohydrates (g)" : 35,
+                                "Fiber (g)" : 0,
+                                "Sodium (g)" : 0
+                            } 
                         }
                     ]
     },
@@ -116,17 +284,41 @@
                         {   "id"    : 0,
                             "name"  : "Chocolate Mousse", 
                             "price" : 6.00, 
-                            "photo" : "product22.jpg" 
+                            "photo" : "product22.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 225,
+                                "Proteins (g)" : 4.1,
+                                "Lipids (g)" : 0,
+                                "Carbohydrates (g)" : 16,
+                                "Fiber (g)" : 0,
+                                "Sodium (g)" : 0
+                            } 
                         },
                         {   "id"    : 1,
                             "name"  : "Chocolate Mousse", 
                             "price" : 6.00, 
-                            "photo" : "product22.jpg" 
+                            "photo" : "product22.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 225,
+                                "Proteins (g)" : 4.1,
+                                "Lipids (g)" : 0,
+                                "Carbohydrates (g)" : 16,
+                                "Fiber (g)" : 0,
+                                "Sodium (g)" : 0
+                            } 
                         },
                         {   "id"    : 2,
                             "name"  : "Chocolate Mousse", 
                             "price" : 6.00, 
-                            "photo" : "product22.jpg" 
+                            "photo" : "product22.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 225,
+                                "Proteins (g)" : 4.1,
+                                "Lipids (g)" : 0,
+                                "Carbohydrates (g)" : 16,
+                                "Fiber (g)" : 0,
+                                "Sodium (g)" : 0
+                            }  
                         }
                     ]
     }
