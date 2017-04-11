@@ -8,7 +8,7 @@
 function loadProduct(id, categoryName) {
 
 	// Parse the list of products saved on localStorage
-	var products = JSON.parse( localStorage.getItem('products') );
+	var products = JSON.parse( sessionStorage.getItem('products') );
 
 	// Get the list of products for the correct category
 	var categories, category, category_tag, category_name;
@@ -34,25 +34,20 @@ function loadProduct(id, categoryName) {
 			break;
 	}
 
-	// Find the product with the matching id
-	for (var i = 0; i < category.length; i++) {
-		var object = category[i];
-
-		// Found it
-		if ( object.id == id ) {
-			break;
-		}
-
-	}
+	var object = category[id];
 
 	// Display the product name
 	$('.page_title').append('<h1 class="icon-' + category_tag +'">' + category_name + ' > ' + object.name + '</h1>');
+
+	//Display the confirm button
+	$('.picker_configure').append('<button class="confirm ' + categoryName + '" id=\"' + object.id + '\"> Add to Order </button>')
 
 	// Update the Product Image
 	$('.center').css( "background", "#ffffff url('data/images/" + object.photo + "') no-repeat scroll 50% 50% / 100px 100px" );
 
 	// Display Product
 	$('#screen_product').fadeIn(300);
+
 }
 
 $(document).ready(function() {
@@ -76,6 +71,7 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 
+<<<<<<< HEAD
 	// Plus Button
 	$(document).on('click', ".picker_configure ul li button.plus", function(e) {
 		var value = parseInt($(this).parent().find("p span").append("test").text()) + 1;
@@ -100,6 +96,18 @@ $(document).ready(function() {
 			$(this).parent().find("p span").text(value);
 		}
 
+=======
+	$(document).on('click', "button.confirm", function(e) {
+		var NoOrders = sessionStorage.getItem("NoOrders");
+		var category = $( this ).attr('class').split(' ')[1]
+		// [Product ID, {0: MainCourses, 1: Drinks, 2: Deserts}, Time of Creation (to be changed later), 
+		//	Status, Review, Classification, {-1: Removed, 0: Added not confirmed, 1:Ordered}]
+		var orderProperties = [e.target.id, category, 0, "", "", 0, 0];
+		sessionStorage.setItem(NoOrders, JSON.stringify(orderProperties));
+		sessionStorage.setItem("NoOrders", parseInt(NoOrders) + 1);
+
+		e.preventDefault();
+>>>>>>> origin/master
 	});
 
 });

@@ -6,15 +6,17 @@
 
 $(document).ready(function() {
 
-    $.ajax({
+	$.ajax({
         type: "GET",
-        url: "data/products.json",
+        url: "./data/products.json",
         dataType: "json",
         success: function(data) {storeData("products", data);}
      });
 
 	 function storeData(name, data) {
-		localStorage.setItem(name, JSON.stringify(data));
+		sessionStorage.setItem(name, JSON.stringify(data));
 	 }
+
+     sessionStorage.setItem("NoOrders", "0");
 
 });

@@ -78,6 +78,8 @@ $(document).ready(function() {
 				case "order_status":
 					loadOrderStatus();
 					break;
+				case "order_current":
+					loadCurrentOrder();
 			}
 
     	});
