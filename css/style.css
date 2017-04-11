@@ -918,16 +918,26 @@ ul.order_products .product_image img {
 }
 
 ul.order_products li a.remove_request {
-    border: 0px;
-    width: 100%;
-    background: #000;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #FFFFFF;
-    font-family: HeeboBold,Arial;
-    text-align: center;
+    background: #b33a3a none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 0 0 4px 4px;
+    color: #ffffff;
     cursor: pointer;
-    width: 30%;
+    display: block;
+    font-family: HeeboLight,Arial;
+    font-size: 14px;
+    height: 35px;
+    letter-spacing: 0.6px;
+    line-height: 43px;
+    padding-bottom: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+
+ul.order_products li a.remove_request:active {
+    background: #A90D0D none repeat scroll 0 0;
 }
 
 /******************************************************
