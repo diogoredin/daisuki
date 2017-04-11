@@ -13,12 +13,12 @@
         <nav class="circle-menu">
             <div class="center"></div>
             <ul>
-                <li><a href="chef" class="icon-chef"></a></li>
-                <li><a href="calories" class="icon-calories"></a></li>
-                <li class="active"><a href="configure" class="icon-configure"></a></li>
+                <li class="inactive"><a href=""></a></li>
                 <li><a href="review" class="icon-review"></a></li>
+                <li class="active"><a href="configure" class="icon-configure"></a></li>
                 <li><a href="information" class="icon-info"></a></li>
-                <li><a href="share" class="icon-share"></a></li>
+                <li class="inactive"><a href=""></a></li>
+                <li class="inactive"><a href=""></a></li>
             </ul>
         </nav>
 
@@ -29,10 +29,31 @@
         <h1>Configure</h1>
 
         <ul>
-            <li>
+            <li class="quantity">
                 <button class="minus">-</button>
                 <p><span>1</span> x Quantity</p>
                 <button class="plus">+</button>
+            </li>
+            <li class="on_off">
+                <label class="switch">
+                    <input type="checkbox">
+                    <div class="slider round"></div>
+                </label>
+                <p>Fish Eggs</p>
+            </li>
+            <li class="on_off">
+                <label class="switch">
+                    <input type="checkbox">
+                    <div class="slider round"></div>
+                </label>
+                <p>Wasabi</p>
+            </li>
+            <li class="on_off">
+                <label class="switch">
+                    <input type="checkbox">
+                    <div class="slider round"></div>
+                </label>
+                <p>Teriaky</p>
             </li>
         </ul>
 
@@ -48,22 +69,6 @@
 
     </div>
 
-    <div class="picker_details picker_calories">
-        
-        <h1>Calories</h1>
-        <!--
-        Informação nutricional
-        Por dose%
-        VDR*
-        Valor energético (kcal/kJ)	218/916	10,9%
-        Proteínas (g)	8,9	17,9%
-        Lípidos (g)	9,4	13,4%
-        Hidartos de Carbono (g)	23,8	8,8%
-        Fibra (g)	0,7	2,7%
-        Sódio (mg)	275,2	11,5% -->
-
-    </div>
-
     <div class="picker_details picker_share">
         
         <h1>Share Meal</h1>
@@ -74,11 +79,40 @@
         
         <h1>Information</h1>
 
-    </div>
+        <p class="desc">Funazushi, a strongly-flavoured and odoured narezushi made near Lake Biwa in Japan.</p>
 
-    <div class="picker_details picker_chef">
-        
-        <h1>Chef</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nutritional Info</th>
+                    <th>Per dose</th>
+                </tr>
+            </thead>
+            <tr>
+                <td><strong>Energetic Value (kcal)</strong></td>
+                <td>192</td>
+            </tr>
+            <tr>
+                <td><strong>Proteins (g)</strong></td>
+                <td>192</td>
+            </tr>
+            <tr>
+                <td><strong>Lipids (g)</strong></td>
+                <td>7.2</td>
+            </tr>
+            <tr>
+                <td><strong>Carbohydrates (g)</strong></td>
+                <td>7.2</td>
+            </tr>
+            <tr>
+                <td><strong>Fiber (g)</strong></td>
+                <td>23.9</td>
+            </tr>
+            <tr>
+                <td><strong>Sodium (g)</strong></td>
+                <td>1.2</td>
+            </tr>
+        </table>
 
     </div>
 

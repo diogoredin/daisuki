@@ -14,39 +14,39 @@ $(document).ready(function() {
 
 	$(document).on('click', "#menu ul li", function(e) {
 
-		if (!$(this).hasClass('active')) {
-			$(this).parent().children("li.active").toggleClass("active");
-			$(this).toggleClass("active");
+		$(this).parent().children("li.active").toggleClass("active");
+		$(this).toggleClass("active");
 
-			// Main Screens
-			if ($(this).hasClass('order') || $(this).hasClass('check')) {
+		// Disable Back
+		$(".go_back").removeClass().addClass("go_back").hide();
 
-				// Get the menu to be loaded from the class
-				var screen = $( this ).attr('class').split(' ')[0];
+		// Main Screens
+		if ($(this).hasClass('order') || $(this).hasClass('check')) {
 
-				// Load the Menu
-				$('#submenu').load('menu_' + screen + '.html', function(data){
-					$('#page').hide();
-					$('#page').replaceWith( "<div id='page'></div>" );
-					$('#submenu').hide();
-					$('#submenu').fadeIn(300);
-				});
+			// Get the menu to be loaded from the class
+			var screen = $( this ).attr('class').split(' ')[0];
 
-			}
+			// Load the Menu
+			$('#submenu').load('menu_' + screen + '.html', function(data){
+				$('#page').hide();
+				$('#page').replaceWith( "<div id='page'></div>" );
+				$('#submenu').hide();
+				$('#submenu').fadeIn(300);
+			});
 
-			// Help & Waiter
-			if ($(this).hasClass('waiter') || $(this).hasClass('help')) {
+		}
 
-				// Get the menu to be loaded from the class
-				var screen = $( this ).attr('class').split(' ')[0];
+		// Help & Waiter
+		if ($(this).hasClass('waiter') || $(this).hasClass('help')) {
 
-				// Load the Menu
-				$('#submenu').load('side_' + screen + '.html', function(data){
-					$('#submenu').hide();
-					$('#submenu').fadeIn(300);
-				});
-			}
+			// Get the menu to be loaded from the class
+			var screen = $( this ).attr('class').split(' ')[0];
 
+			// Load the Menu
+			$('#submenu').load('side_' + screen + '.html', function(data){
+				$('#submenu').hide();
+				$('#submenu').fadeIn(300);
+			});
 		}
 
 		e.preventDefault();
@@ -59,8 +59,12 @@ $(document).ready(function() {
 	*/
 
 	$(document).on('click', "#submenu ul li", function(e) {
+		
 		$(this).parent().children("li.active").toggleClass("active");
 		$(this).toggleClass("active");
+
+		// Disable back
+		$(".go_back").removeClass().addClass("go_back").hide();
 
 		// Get the page to be loaded from the class
 		var screen = $( this ).attr('class').split(' ')[0];

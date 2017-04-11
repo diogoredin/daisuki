@@ -8,6 +8,43 @@ $(document).ready(function() {
 
 	/*
 	*
+	*	BACK BUTTON
+	*
+	*/
+
+	// Single Category
+	$(document).on('click', ".go_back_product", function(e) {
+
+		// Get the category to return to
+		var categoryName = $( this ).attr('class').split(' ')[2];
+
+		// Return to the category
+		if (categoryName == "maincourses") {
+			loadCategory(0);
+		} else if (categoryName == "drinks") {
+			loadCategory(1);
+		} else if (categoryName == "deserts") {
+			loadCategory(2);
+		}
+
+		e.preventDefault();
+	});
+
+	// Categories
+	$(document).on('click', ".go_back_categories", function(e) {
+		$(this).hide();
+		$(this).removeClass().addClass("go_back");
+		var link = "./order_categories.html";
+
+		$('#page').load(link, function() {
+			$('#screen_order_categories').fadeIn(300);
+		});
+
+		e.preventDefault();
+	});
+
+	/*
+	*
 	*	STORES PRODUCTS LOCALLY
 	*
 	*/
@@ -46,11 +83,15 @@ $(document).ready(function() {
 	});
 
 	function loadCategory(categoryIndex) {
+		$(".go_back").show();
 
 		// Load the Category page view
 		var link = "./order_category.html";
 
 		$('#page').load(link, function() {
+
+			$(".go_back").removeClass().addClass("go_back go_back_categories");
+			$("div.go_back span").text("Back to Menu");
 
 			// Parse the list of products saved on localStorage
 			var products = JSON.parse( localStorage.getItem('products') );
@@ -96,6 +137,7 @@ $(document).ready(function() {
         				</li>');
 				}
 
+			// Display Category
 			$('#screen_order_category').fadeIn(300);
 
 		});
@@ -119,14 +161,27 @@ $(document).ready(function() {
 		id = id.join("");
 
 		// Get the category of the product
-		var categoryName = $( this ).attr('class').split(' ')[2];
+		var categoryTag = $( this ).attr('class').split(' ')[2];
+
+		// Return to the category
+		if (categoryTag == "maincourses") {
+			categoryName = "Main Courses";
+		} else if (categoryTag == "drinks") {
+			categoryName = "Drinks";
+		} else if (categoryTag == "deserts") {
+			categoryName = "Deserts";
+		}
+
+		// Update back button
+		$(".go_back").removeClass("go_back_categories").addClass("go_back_product " + categoryTag );
+		$("div.go_back span").text("Back to " + categoryName );
 
 		// Load the Product page view
 		var link = "./order_product.html";
 
 		// Load Product Page
 		$('#page').load(link, function() {
-			loadProduct(id, categoryName);
+			loadProduct(id, categoryTag);
 		});
 
 		e.preventDefault();

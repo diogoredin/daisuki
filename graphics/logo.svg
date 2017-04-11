@@ -4,9 +4,10 @@
     <title>Group</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
-            <stop stop-color="#B4ED50" offset="0%"></stop>
-            <stop stop-color="#429321" offset="100%"></stop>
+        <linearGradient x1="0.25781251%" y1="49.7500002%" x2="101.257813%" y2="49.7500002%" id="linearGradient-1">
+            <stop stop-color="#7FB4D3" stop-opacity="0.975486866" offset="0%"></stop>
+            <stop stop-color="#53A0FE" offset="47.5247532%"></stop>
+            <stop stop-color="#50EDDD" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

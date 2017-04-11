@@ -128,7 +128,7 @@ body {
     padding-bottom: 0px;
     margin-bottom: 0px;
     margin-top: 3px;
-    color: #B4ED50;
+    color: #0093EE;
 }
 
 .logo p {
@@ -326,6 +326,37 @@ body {
 4.1. NEW ORDER
  
 *******************************************************/
+
+.go_back {
+    background: rgba(15, 29, 48, 0.4) none repeat scroll 0 0;
+    color: #ffffff;
+    display: none;
+    font-family: HeeboBold,Arial;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    position: fixed;
+    text-transform: uppercase;
+    width: 21%;
+    padding-left: 3%;
+    padding-right: 3%;
+    line-height: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+    text-align: center;
+}
+
+.go_back:active {
+    background: #0093EE;
+}
+
+.go_back span::before {
+    position: unset;
+    font-size: 49px;
+    vertical-align: middle;
+    padding-right: 6px;
+}
 
 ul.restaurant_categories {
     float: left;
@@ -555,7 +586,7 @@ a.icon_settings {
 }
 
 .picker_details h1 {
-    color: rgba(15, 29, 48, 0.8);;
+    color: rgba(15, 29, 48, 0.8);
     font-family: HeeboBold,Arial;
     font-size: 26px;
     letter-spacing: 0.6px;
@@ -574,13 +605,20 @@ a.icon_settings {
 }
 
 .picker_configure ul li {
-    color: #FFFFFF;
+    color: #ffffff;
     float: none;
     font-family: HeeboRegular,Arial;
-    height: 50px;
+    height: 45px;
     margin-top: 10px;
     text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.4);
     width: 100%;
+    border-bottom: 1px solid rgba(244, 237, 255, 0.20);
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.picker_configure ul li.quantity {
+    padding-bottom: 20px;
 }
 
 .picker_configure ul li button.minus, .picker_configure ul li button.plus {
@@ -598,10 +636,25 @@ a.icon_settings {
     text-align: center;
     width: 15%;
 }
+
 .picker_configure ul li button.minus:active, .picker_configure ul li button.plus:active {
     background: #1e74aa none repeat scroll 0 0;
     box-shadow: none;
     border: none;
+}
+
+.picker_configure ul li button.minus.disable, 
+.picker_configure ul li button.plus.disable {
+    background: rgba(15, 29, 48, 0.8);
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.picker_configure ul li button.minus.disable:active, 
+.picker_configure ul li button.plus.disable:active {
+    background: rgba(15, 29, 48, 0.8);
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .picker_configure ul li p {
@@ -665,6 +718,130 @@ select.picker_options:focus,
     outline: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
+}
+
+.picker_configure ul li.on_off p {
+    width: 82%;
+    text-align: left;
+    line-height: 34px;
+    margin-top: 0px;
+    height: 34px;
+}
+
+.picker_configure ul li.on_off .switch {
+    width: 18%;
+}
+
+.switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+    display:none; 
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 29, 48, 0.8);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #eeeeee;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.picker_details p.desc {
+    font-family: HeeboBold,Arial;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 15px;
+    margin-top: 0;
+    background: #FFFFFF;
+    opacity: 0.8;
+    border-radius: 4px;
+    color: rgba(15, 29, 48, 0.8);
+    padding: 15px;
+}
+
+.picker_details table {
+    background: #FFFFFF;
+    opacity: 0.8;
+    border-radius: 4px;
+    color: rgba(15, 29, 48, 0.8);
+    font-family: HeeboRegular,Arial;
+    font-size: 15px;
+    padding: 15px;
+    text-align: left;
+    text-shadow: none;
+    width: 100%;
+}
+
+.picker_details table thead {
+    font-family: HeeboBold,Arial;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: rgba(15, 29, 48, 1);
+}
+
+.picker_details table th {
+    font-family: HeeboBold,Arial;
+    font-size: 16px;
+}
+
+.picker_details table td {
+    padding-bottom: 5px;
+    padding-right: 15px;
+    padding-top: 5px;
 }
 
 /******************************************************

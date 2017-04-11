@@ -46,7 +46,7 @@ function loadProduct(id, categoryName) {
 	}
 
 	// Display the product name
-	$('.page_title').append('<h1>' + object.name + '</h1>');
+	$('.page_title').append('<h1 class="icon-' + category_tag +'">' + category_name + ' > ' + object.name + '</h1>');
 
 	// Update the Product Image
 	$('.center').css( "background", "#ffffff url('data/images/" + object.photo + "') no-repeat scroll 50% 50% / 100px 100px" );
@@ -74,6 +74,32 @@ $(document).ready(function() {
 		});
 
 		e.preventDefault();
+	});
+
+	// Plus Button
+	$(document).on('click', ".picker_configure ul li button.plus", function(e) {
+		var value = parseInt($(this).parent().find("p span").append("test").text()) + 1;
+		$(this).parent().find("p span").text(value);
+
+		if ( value >= 0 ) {
+			$(this).parent().find("button.minus").removeClass("disable");
+		}
+
+	});
+
+	// Minus Button
+	$(document).on('click', ".picker_configure ul li button.minus", function(e) {
+
+		var value = parseInt($(this).parent().find("p span").text() - 1);
+
+		if ( value == 0 ) {
+			$(this).addClass("disable");
+			$(this).parent().find("p span").text("0");
+		} else if ( value > 0 ) {
+			$(this).removeClass("disable");
+			$(this).parent().find("p span").text(value);
+		}
+
 	});
 
 });
