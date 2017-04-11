@@ -71,7 +71,6 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 
-<<<<<<< HEAD
 	// Plus Button
 	$(document).on('click', ".picker_configure ul li button.plus", function(e) {
 		var value = parseInt($(this).parent().find("p span").append("test").text()) + 1;
@@ -95,8 +94,9 @@ $(document).ready(function() {
 			$(this).removeClass("disable");
 			$(this).parent().find("p span").text(value);
 		}
+	
+	});
 
-=======
 	$(document).on('click', "button.confirm", function(e) {
 		var NoOrders = sessionStorage.getItem("NoOrders");
 		var category = $( this ).attr('class').split(' ')[1]
@@ -107,7 +107,7 @@ $(document).ready(function() {
 		sessionStorage.setItem("NoOrders", parseInt(NoOrders) + 1);
 
 		e.preventDefault();
->>>>>>> origin/master
+
 	});
 
 });
