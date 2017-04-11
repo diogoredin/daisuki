@@ -417,6 +417,10 @@ ul.restaurant_products li {
     height: 45%;
 }
 
+ul.restaurant_products li:first-child:nth-last-child(1) {
+    width: 39%;
+}
+
 ul.restaurant_products li h1 {
     font-size: 18px;
     font-family: HeeboLight,Arial;
@@ -860,6 +864,10 @@ ul.order_products li {
     margin-bottom: 3.3%;
     margin-right: 3.3%;
     width: 30%;
+}
+
+ul.order_products li:first-child:nth-last-child(1) {
+    width: 39%;
 }
 
 ul.order_products li h1 {
