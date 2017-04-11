@@ -11,7 +11,8 @@
                                 "Carbohydrates (g)" : 7.2,
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
-                            }
+                            },
+                            "info" : ""
                         },
                         {   "id"    : 1,
                             "name"  : "Asagagas", 
@@ -24,7 +25,8 @@
                                 "Carbohydrates (g)" : 7.2,
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
-                            } 
+                            },
+                            "info" : ""
                         },
                         {   "id"    : 2,
                             "name"  : "Crab Sticks", 
@@ -37,7 +39,8 @@
                                 "Carbohydrates (g)" : 7.2,
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
-                            } 
+                            },
+                            "info" : ""
                         },
                         {   "id"    : 3,
                             "name"  : "Mango Roll",
@@ -50,7 +53,8 @@
                                 "Carbohydrates (g)" : 7.2,
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
-                            } 
+                            },
+                            "info" : ""
                         },
                         {   "id"    : 4,
                             "name"  : "Tuna Roll", 
@@ -63,7 +67,8 @@
                                 "Carbohydrates (g)" : 7.2,
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
-                            } 
+                            },
+                            "info" : ""
                         },
                         {   "id"    : 5,
                             "name"  : "Salmon Roll", 
@@ -76,7 +81,8 @@
                                 "Carbohydrates (g)" : 7.2,
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
-                            } 
+                            },
+                            "info" : "" 
                         },
                         {   "id"    : 6,
                             "name"  : "Avocado Roll", 
@@ -102,7 +108,8 @@
                                 "Carbohydrates (g)" : 7.2,
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
-                            } 
+                            },
+                            "info" : "" 
                         },
                         {   "id"    : 8,
                             "name"  : "Tuna & Shrimp Roll", 
@@ -115,7 +122,8 @@
                                 "Carbohydrates (g)" : 7.2,
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
-                            } 
+                            },
+                            "info" : "" 
                         },
                         {   "id"    : 9,
                             "name"  : "Nigiri Salmon", 
@@ -128,7 +136,8 @@
                                 "Carbohydrates (g)" : 7.2,
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
-                            } 
+                            },
+                            "info" : "" 
                         },
                         {   "id"    : 10,
                             "name"  : "Nigiri King Fish", 
@@ -141,7 +150,8 @@
                                 "Carbohydrates (g)" : 7.2,
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
-                            } 
+                            },
+                            "info" : "" 
                         },
                         {   "id"    : 11,
                             "name"  : "Nigiri Tuna", 
@@ -154,7 +164,8 @@
                                 "Carbohydrates (g)" : 7.2,
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
-                            } 
+                            },
+                            "info" : "" 
                         },
                         {   "id"    : 12,
                             "name"  : "Nigiri Pineapple", 
@@ -167,7 +178,8 @@
                                 "Carbohydrates (g)" : 7.2,
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
-                            } 
+                            },
+                            "info" : "" 
                         },
                         {   "id"    : 13,
                             "name"  : "Sashimi Salmon", 
@@ -180,7 +192,8 @@
                                 "Carbohydrates (g)" : 7.2,
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
-                            } 
+                            },
+                            "info" : "" 
                         },
                         {   "id"    : 14,
                             "name"  : "Sashimi Special", 
@@ -193,7 +206,8 @@
                                 "Carbohydrates (g)" : 7.2,
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
-                            } 
+                            },
+                            "info" : "" 
                         },
                         {   "id"    : 15,
                             "name"  : "Sashimi White Fish", 
@@ -206,7 +220,8 @@
                                 "Carbohydrates (g)" : 7.2,
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
-                            } 
+                            },
+                            "info" : "" 
                         },
                         {   "id"    : 16,
                             "name"  : "Sashimi Tuna", 
@@ -219,7 +234,8 @@
                                 "Carbohydrates (g)" : 7.2,
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
-                            } 
+                            },
+                            "info" : "" 
                         },
                         {   "id"    : 17,
                             "name"  : "Sashimi Red Fish", 
@@ -232,7 +248,8 @@
                                 "Carbohydrates (g)" : 7.2,
                                 "Fiber (g)" : 23.9,
                                 "Sodium (g)" : 1.2
-                            } 
+                            },
+                            "info" : "" 
                         }
                     ]
     },
@@ -249,7 +266,8 @@
                                 "Carbohydrates (g)" : 35,
                                 "Fiber (g)" : 0,
                                 "Sodium (g)" : 0
-                            } 
+                            },
+                            "info" : "" 
                         },
                         {   "id"    : 1,
                             "name"  : "Coke", 
@@ -262,7 +280,8 @@
                                 "Carbohydrates (g)" : 35,
                                 "Fiber (g)" : 0,
                                 "Sodium (g)" : 0
-                            } 
+                            },
+                            "info" : "" 
                         },
                         {   "id"    : 2,
                             "name"  : "Coke Life", 
@@ -275,7 +294,8 @@
                                 "Carbohydrates (g)" : 35,
                                 "Fiber (g)" : 0,
                                 "Sodium (g)" : 0
-                            } 
+                            },
+                            "info" : "" 
                         }
                     ]
     },
@@ -292,7 +312,8 @@
                                 "Carbohydrates (g)" : 16,
                                 "Fiber (g)" : 0,
                                 "Sodium (g)" : 0
-                            } 
+                            },
+                            "info" : "" 
                         },
                         {   "id"    : 1,
                             "name"  : "Chocolate Mousse", 
@@ -305,7 +326,8 @@
                                 "Carbohydrates (g)" : 16,
                                 "Fiber (g)" : 0,
                                 "Sodium (g)" : 0
-                            } 
+                            },
+                            "info" : "" 
                         },
                         {   "id"    : 2,
                             "name"  : "Chocolate Mousse", 
@@ -318,7 +340,8 @@
                                 "Carbohydrates (g)" : 16,
                                 "Fiber (g)" : 0,
                                 "Sodium (g)" : 0
-                            }  
+                            },
+                            "info" : ""  
                         }
                     ]
     }

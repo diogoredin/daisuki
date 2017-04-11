@@ -48,6 +48,13 @@ function loadProduct(id, categoryName) {
 	// Display Product
 	$('#screen_product').fadeIn(300);
 
+	for (var key in object.nutricionalInfo) {
+		$('table.nutricional').append("<tr><td><strong>" + key + "</strong></td>\
+                						<td>" + object.nutricionalInfo[key] + "</td></tr>");
+	}
+	
+	$('p.desc').append(object.info);
+
 }
 
 $(document).ready(function() {

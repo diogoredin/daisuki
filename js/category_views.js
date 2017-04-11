@@ -8,7 +8,6 @@ $(document).ready(function() {
 
 	/*
 	*
-<<<<<<< HEAD
 	*	BACK BUTTON
 	*
 	*/
