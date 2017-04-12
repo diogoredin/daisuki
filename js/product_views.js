@@ -59,6 +59,9 @@ function loadProduct(id, categoryName) {
 
 $(document).ready(function() {
 
+	// Update Number of Orders
+	$('#submenu ul li.order_current').find("span").text(parseInt(sessionStorage.getItem("NoOrders")));
+
 	// Circular Menu
 	$(document).on('click', ".circle-menu ul li a", function(e) {
 		$(".circle-menu>ul>li.active").removeClass("active");
@@ -115,10 +118,9 @@ $(document).ready(function() {
 
 		// Animation and Submenu Increase
 		var menu_item = $('#submenu ul li.order_current');
-		var value = parseInt(menu_item.find("span").text()) + 1;
 
 		menu_item.effect( "highlight", {color:"rgba(0,147,238,0.40)"}, 700 );
-		menu_item.find("span").text(value);
+		menu_item.find("span").text(parseInt(NoOrders) + 1);
 
 		e.preventDefault();
 
