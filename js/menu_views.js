@@ -28,10 +28,24 @@ $(document).ready(function() {
 
 			// Load the Menu
 			$('#submenu').load('menu_' + screen + '.html', function(data){
+
+				// Clear page
 				$('#page').hide();
 				$('#page').replaceWith( "<div id='page'></div>" );
+
+				// Update sub menu display of number of orders
+				if ( screen == "order" ) {
+
+					var NoOrders = sessionStorage.getItem("NoOrders");
+					var menu_item = $('#submenu ul li.order_current');
+	
+					menu_item.find("span").text(parseInt(NoOrders));
+				}
+
+				// Show new submenu
 				$('#submenu').hide();
 				$('#submenu').fadeIn(300);
+
 			});
 
 		}

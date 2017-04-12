@@ -128,7 +128,6 @@ $(document).ready(function() {
 
 		// Animation and Submenu Increase
 		var menu_item = $('#submenu ul li.order_current');
-		menu_item.effect( "highlight", {color:"rgba(0,147,238,0.70)"}, 1000 );
 		menu_item.find("span").text(parseInt(NoOrders) + 1);
 
 		// Load Category

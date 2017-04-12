@@ -404,11 +404,13 @@ ul.restaurant_categories li:hover {
     padding-left: 4%;
     overflow-y: hidden;
     float: left;
+    width: 96%;
 }
 
 ul.restaurant_products {
     list-style: outside none none;
     padding-left: 0px;
+    width: 100%;
 }
 
 ul.restaurant_products li {
@@ -420,10 +422,6 @@ ul.restaurant_products li {
     margin-bottom: 3.3%;
     width: 30%;
     height: 45%;
-}
-
-ul.restaurant_products li:first-child:nth-last-child(1) {
-    width: 39% !important;
 }
 
 ul.restaurant_products li h1 {
@@ -883,9 +881,8 @@ input:checked + .slider:before {
 ul.order_products {
     float: left;
     list-style: outside none none;
-    overflow-y: hidden;
-    padding-left: 4%;
-    padding-top: 20%;
+    padding-left: 0px;
+    width: 100%;
 }
 
 ul.order_products li {
@@ -896,10 +893,6 @@ ul.order_products li {
     margin-bottom: 3.3%;
     margin-right: 3.3%;
     width: 30%;
-}
-
-ul.order_products li:first-child:nth-last-child(1) {
-    width: 39% !important;
 }
 
 ul.order_products li h1 {

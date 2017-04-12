@@ -15,7 +15,6 @@ function loadCurrentOrder() {
             var product;
             var categoryName, categoryTag;
 
-
             switch (categoryTag) {
                 case "maincourses":
                     product = products[0].maincourses[productId];
@@ -51,11 +50,23 @@ function loadCurrentOrder() {
 }
 
 $(document).ready(function() {
+
+    // Product removed from order
     $(document).on('click', "a.remove_request", function(e) {
+
         var requestId = $( this ).attr('class').split(' ')[1];
         var request = JSON.parse(sessionStorage.getItem(requestId));
         request[5] = -1;
         sessionStorage.setItem(requestId, JSON.stringify(request));
         e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+
+        // Update number orders (-1)
+        var NoOrders = sessionStorage.getItem("NoOrders");
+        sessionStorage.setItem("NoOrders", parseInt(NoOrders) - 1);
+
+        // Update sub menu display of number of orders
+        var menu_item = $('#submenu ul li.order_current');
+		menu_item.find("span").text(parseInt(NoOrders) - 1);
+
     });
 });
