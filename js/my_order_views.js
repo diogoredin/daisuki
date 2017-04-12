@@ -1,19 +1,30 @@
+/*
+*
+*   my_order_views.js
+*
+*/
+
+/*
+*
+*	LOAD CURRENT ORDER
+*
+*/
+
 function loadCurrentOrder() {
 
     var NoOrders = parseInt(sessionStorage.getItem("NoOrders"));
-    var i;
     var products = JSON.parse(sessionStorage.getItem('products'));
 
-    for (i = 0; i < NoOrders; i++) {
+    for (var i = 0; i < NoOrders; i++) {
 
         var properties = JSON.parse(sessionStorage.getItem(i));
         var state = parseInt(properties[5]);
 
         if (state == 0) {
+
             var categoryTag = properties[1];
             var productId = properties[0];
-            var product;
-            var categoryName, categoryTag;
+            var product, categoryName, categoryTag;
 
             switch (categoryTag) {
                 case "maincourses":
@@ -47,7 +58,20 @@ function loadCurrentOrder() {
 
     }
 
+    // No products anymore
+    if ( NoOrders == 0 ) {
+        $(".information_message").show();
+    } else {
+        $(".place_order").show();
+    }
+
 }
+
+/*
+*
+*	PAGE ANIMATIONS & DATA
+*
+*/
 
 $(document).ready(function() {
 
@@ -60,13 +84,41 @@ $(document).ready(function() {
         sessionStorage.setItem(requestId, JSON.stringify(request));
         e.target.parentNode.parentNode.removeChild(e.target.parentNode);
 
-        // Update number orders (-1)
+        // Update number products (-1)
         var NoOrders = sessionStorage.getItem("NoOrders");
         sessionStorage.setItem("NoOrders", parseInt(NoOrders) - 1);
 
-        // Update sub menu display of number of orders
+        // Update sub menu display of number of products
         var menu_item = $('#submenu ul li.order_current');
 		menu_item.find("span").text(parseInt(NoOrders) - 1);
 
+        // No products anymore
+        if ( ( NoOrders -1 ) == 0 ) {
+
+            $(".information_message").show();
+            $("button.place_order").hide();
+        }
+
+        e.preventDefault();
     });
+
+    // Place Order
+    $(document).on('click', "button.place_order", function(e) {
+
+        // Hide button and products
+        $("button.place_order").hide();
+        $("ul.order_products").hide();
+        $(".confirmation_message").fadeIn(500);
+
+        // Update number of orders
+        sessionStorage.setItem("NoOrders", 0);
+        // IMPORTANTE!!! FALTA REMOVER PRODUTOS TODOS DA LISTA!
+
+        // Update sub menu display of number of products
+        var menu_item = $('#submenu ul li.order_current');
+		menu_item.find("span").text(0);
+
+        e.preventDefault();
+    });
+
 });
