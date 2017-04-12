@@ -95,7 +95,7 @@ $(document).ready(function() {
         // No products anymore
         if ( ( NoOrders -1 ) == 0 ) {
 
-            $(".information_message").show();
+            $(".information_message").fadeIn(500);
             $("button.place_order").hide();
         }
 
