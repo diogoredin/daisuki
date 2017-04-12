@@ -107,6 +107,9 @@
 .icon-calories:before {
   content: "\73";
 }
+.icon-confirm:before {
+  content: "\65";
+}
 .icon-back:before {
-  content: "\72";
+  content: "\79";
 }

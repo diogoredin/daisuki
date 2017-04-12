@@ -4,7 +4,12 @@
 *
 */
 
-// On Page Load
+/*
+*
+*	LOAD PRODUCT
+*
+*/
+
 function loadProduct(id, categoryName) {
 
 	// Parse the list of products saved on localStorage
@@ -39,7 +44,7 @@ function loadProduct(id, categoryName) {
 	// Display the product name
 	$('.page_title').append('<h1 class="icon-' + category_tag +'">' + category_name + ' > ' + object.name + '</h1>');
 
-	//Display the confirm button
+	// Display the confirm button
 	$('.picker_configure').append('<button class="confirm ' + categoryName + '" id=\"' + object.id + '\"> Add to Order </button>')
 
 	// Update the Product Image
@@ -52,10 +57,15 @@ function loadProduct(id, categoryName) {
 		$('table.nutricional').append("<tr><td><strong>" + key + "</strong></td>\
                 						<td>" + object.nutricionalInfo[key] + "</td></tr>");
 	}
-	
-	$('p.desc').append(object.info);
 
+	$('p.desc').append(object.info);
 }
+
+/*
+*
+*	PAGE ANIMATIONS & DATA
+*
+*/
 
 $(document).ready(function() {
 
@@ -118,9 +128,17 @@ $(document).ready(function() {
 
 		// Animation and Submenu Increase
 		var menu_item = $('#submenu ul li.order_current');
-
-		menu_item.effect( "highlight", {color:"rgba(0,147,238,0.40)"}, 700 );
+		menu_item.effect( "highlight", {color:"rgba(0,147,238,0.70)"}, 1000 );
 		menu_item.find("span").text(parseInt(NoOrders) + 1);
+
+		// Load Category
+		if (category == "maincourses") {
+			categoryIndex = 0;
+		} else if (category == "drinks") {
+			categoryIndex = 1;
+		} else if (category == "deserts") {
+			categoryIndex = 2;
+		} loadCategory(categoryIndex, true, e.target.id);
 
 		e.preventDefault();
 
