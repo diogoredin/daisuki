@@ -277,8 +277,8 @@ body {
 #screen_order_categories, 
 #screen_order_status,
 #screen_order_current, 
-#screen_order_review, 
-#screen_order_category, 
+#screen_order_review,
+#screen_order_category,
 #screen_product,
 #screen_check_review,
 #screen_check_tax,
@@ -1092,6 +1092,123 @@ ul.order_products li a.remove_request:active {
  
 *******************************************************/
 
+.consumed_products {
+    padding-top: 22%;
+    width: 100%;
+}
+
+.consumed_products ul {
+    list-style: outside none none;
+    margin-top: 0;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+.consumed_products ul li {
+    background: rgba(28, 40, 59, 0.9) none repeat scroll 0 0;
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: HeeboRegular,Arial;
+    letter-spacing: 0.5px;
+    list-style: outside none none;
+    margin-bottom: 3.5%;
+    margin-left: 3%;
+    margin-right: 3%;
+    position: absolute;
+}
+
+.consumed_products ul li .product_photo {
+    float: left;
+    height: 10%;
+    margin-bottom: -1%;
+    padding-bottom: 0;
+    width: 25%;
+}
+
+.consumed_products ul li .product_photo img {
+    border-radius: 3px 0 0 3px;
+    width: 100%;
+}
+
+.consumed_products ul li .product_details {
+    float: left;
+    width: 53%;
+}
+
+.consumed_products ul li h1 {
+    color: #ffffff;
+    font-family: HeeboLight,Arial;
+    font-size: 30px;
+    letter-spacing: 0.6px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 10%;
+    text-align: left;
+    text-decoration: none;
+}
+
+.consumed_products ul li h3::before {
+    color: #cccccc;
+    font-size: 25px;
+    padding-bottom: 3px;
+    padding-right: 8.5px;
+    position: unset;
+    vertical-align: middle;
+}
+
+.consumed_products ul li h3 {
+    color: #cccccc;
+    font-family: HeeboLight,Arial;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+    margin-top: 9%;
+    padding-left: 10%;
+}
+
+.consumed_products ul li p {
+    color: #cccccc;
+    font-family: HeeboLight,Arial;
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    margin-bottom: 15px;
+    margin-top: 7px;
+    padding-left: 10%;
+    text-align: left;
+    text-decoration: none;
+}
+
+.consumed_products ul li .product_review_button {
+    float: right;
+    margin-right: 4%;
+    margin-top: 6.5%;
+    width: 17%;
+}
+
+.consumed_products ul li .product_review_button button {
+    border: medium none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 0.6px;
+    margin-top: 20px;
+    padding: 15px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.consumed_products ul li .product_review_button button {
+    background: #52ad20 none repeat scroll 0 0;
+    outline: medium none;
+}
+
+.consumed_products ul li .product_review_button button:active {
+    background: #45921a none repeat scroll 0 0;
+    outline: medium none;
+}
+
 /******************************************************
  
 5. CHECK
@@ -1265,7 +1382,7 @@ button.cancel_waiter:active {
 
 /******************************************************
  
-7.1. CALL WAITER
+7.2. HELP
  
 *******************************************************/
 
