@@ -77,10 +77,10 @@ $(document).ready(function() {
 				// Update sub menu display of number of orders
 				if ( screen == "order" ) {
 
-					var NoOrders = sessionStorage.getItem("NoOrders");
+					var NoProductsInOrder = parseInt(sessionStorage.getItem("NoProductsInOrder"));
 					var menu_item = $('#submenu ul li.order_current');
 	
-					menu_item.find("span").text(parseInt(NoOrders));
+					menu_item.find("span").text(parseInt(NoProductsInOrder));
 				}
 
 				// Show new submenu
