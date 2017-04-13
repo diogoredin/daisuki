@@ -125,10 +125,13 @@ $(document).ready(function() {
 		var orderProperties = [e.target.id, category, 0, "", "", 0, 0];
 		sessionStorage.setItem(NoOrders, JSON.stringify(orderProperties));
 		sessionStorage.setItem("NoOrders", parseInt(NoOrders) + 1);
+		// Update number products (+1)
+        var NoProductsInOrder = parseInt(sessionStorage.getItem("NoProductsInOrder")) + 1;
+        sessionStorage.setItem("NoProductsInOrder", NoProductsInOrder);
 
 		// Animation and Submenu Increase
 		var menu_item = $('#submenu ul li.order_current');
-		menu_item.find("span").text(parseInt(NoOrders) + 1);
+		menu_item.find("span").text(NoProductsInOrder);
 
 		// Load Category
 		if (category == "maincourses") {

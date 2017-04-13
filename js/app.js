@@ -18,5 +18,6 @@ $(document).ready(function() {
 	}
 
      sessionStorage.setItem("NoOrders", "0");
+     sessionStorage.setItem("NoProductsInOrder", "0");
 
 });

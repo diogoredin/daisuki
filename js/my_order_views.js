@@ -13,9 +13,11 @@
 function loadCurrentOrder() {
 
     var NoOrders = parseInt(sessionStorage.getItem("NoOrders"));
+    var NoProductsInOrder = parseInt(sessionStorage.getItem("NoProductsInOrder"));
     var products = JSON.parse(sessionStorage.getItem('products'));
+    var NoProductsShowed = 0;
 
-    for (var i = 0; i < NoOrders; i++) {
+    for (var i = 0; i < NoOrders && NoProductsInOrder > NoProductsShowed; i++) {
 
         var properties = JSON.parse(sessionStorage.getItem(i));
         var state = parseInt(properties[5]);
@@ -25,6 +27,7 @@ function loadCurrentOrder() {
             var categoryTag = properties[1];
             var productId = properties[0];
             var product, categoryName, categoryTag;
+            NoProductsShowed++;
 
             switch (categoryTag) {
                 case "maincourses":
@@ -59,7 +62,7 @@ function loadCurrentOrder() {
     }
 
     // No products anymore
-    if ( NoOrders == 0 ) {
+    if ( NoProductsInOrder == 0 ) {
         $(".information_message").show();
     } else {
         $(".place_order").show();
@@ -85,15 +88,15 @@ $(document).ready(function() {
         e.target.parentNode.parentNode.removeChild(e.target.parentNode);
 
         // Update number products (-1)
-        var NoOrders = sessionStorage.getItem("NoOrders");
-        sessionStorage.setItem("NoOrders", parseInt(NoOrders) - 1);
+        var NoProductsInOrder = parseInt(sessionStorage.getItem("NoProductsInOrder")) - 1;
+        sessionStorage.setItem("NoProductsInOrder", NoProductsInOrder);
 
         // Update sub menu display of number of products
         var menu_item = $('#submenu ul li.order_current');
-		menu_item.find("span").text(parseInt(NoOrders) - 1);
+		menu_item.find("span").text(NoProductsInOrder);
 
         // No products anymore
-        if ( ( NoOrders -1 ) == 0 ) {
+        if (NoProductsInOrder == 0) {
 
             $(".information_message").fadeIn(500);
             $("button.place_order").hide();
@@ -110,9 +113,24 @@ $(document).ready(function() {
         $("ul.order_products").hide();
         $(".confirmation_message").fadeIn(500);
 
-        // Update number of orders
-        sessionStorage.setItem("NoOrders", 0);
-        // IMPORTANTE!!! FALTA REMOVER PRODUTOS DA LISTA?
+        //Get nubmer of requests
+        NoOrders = sessionStorage.getItem("NoOrders");
+
+        // Update number of products in order
+        sessionStorage.setItem("NoProductsInOrder", 0);
+
+        for (var i = 0; i < NoOrders; i++) {
+
+            var properties = JSON.parse(sessionStorage.getItem(i));
+            var state = parseInt(properties[5]);
+
+            if (state == 0) {
+                properties[5] = 1;
+            }
+
+            sessionStorage.setItem(i, JSON.stringify(properties));
+
+        }        
 
         // Update sub menu display of number of products
         var menu_item = $('#submenu ul li.order_current');
