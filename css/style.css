@@ -1098,14 +1098,14 @@ ul.order_products li a.remove_request:active {
     background: rgba(28, 40, 59, 0.9) none repeat scroll 0 0;
     border-radius: 4px;
     color: #ffffff;
+    display: inline-block;
     font-family: HeeboRegular,Arial;
     letter-spacing: 0.5px;
     list-style: outside none none;
     margin-bottom: 3.5%;
     margin-left: 3%;
     margin-right: 3%;
-    position: absolute;
-    width: 60.3%;
+    width: 94%;
 }
 
 .order_status_timers ul li .product_photo {
@@ -1207,13 +1207,14 @@ ul.order_products li a.remove_request:active {
     background: rgba(28, 40, 59, 0.9) none repeat scroll 0 0;
     border-radius: 4px;
     color: #ffffff;
+    display: inline-block;
     font-family: HeeboRegular,Arial;
     letter-spacing: 0.5px;
     list-style: outside none none;
     margin-bottom: 3.5%;
     margin-left: 3%;
     margin-right: 3%;
-    position: absolute;
+    width: 94%;
 }
 
 .consumed_products ul li .product_photo {
