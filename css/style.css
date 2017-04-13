@@ -1801,6 +1801,86 @@ button.confirm_check:active {
  
 *******************************************************/
 
+.container {
+    background: rgba(28, 40, 59, 0.9) none repeat scroll 0 0;
+    border-radius: 4px;
+    height: 400px;
+    margin: 30px auto;
+    padding: 0;
+    text-align: center;
+    width: 320px;
+}
+.row {
+    clear: both;
+    margin: 0 auto;
+    text-align: center;
+    width: 280px;
+}
+#output {
+    color: #1976d2;
+    font-family: HeeboLight,Arial;
+    font-size: 40px;
+    height: 70px;
+    padding-top: 15px;
+}
+button.digit, button.clear {
+    background: rgba(28, 40, 59, 0.7) none repeat scroll 0 0;
+    border: 1px solid #2f4869;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    float: left;
+    font-family: HeeboRegular,Arial;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 4px;
+    padding: 8px 30px;
+}
+button.clear {
+    font-size: 18px;
+    padding-left: 34px;
+    padding-right: 35px;
+}
+button.digit:active, button.clear:active {
+    opacity: 0.6;
+}
+.botrow {
+    font-family: HeeboRegular;
+    margin-left: 5%;
+    text-align: center;
+    width: 100%;
+}
+button#confirm_pin, button#cancel_pin {
+    border: medium none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    float: left;
+    font-size: 16px;
+    letter-spacing: 0.6px;
+    margin-left: 3%;
+    margin-top: 4%;
+    padding: 15px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 40%;
+}
+button#confirm_pin {
+    background: #52ad20 none repeat scroll 0 0;
+    outline: medium none;
+}
+button#confirm_pin:active {
+    background: #45921a none repeat scroll 0 0;
+    outline: medium none;
+}
+button#cancel_pin {
+    background: #b33a3a none repeat scroll 0 0;
+}
+button#cancel_pin:active {
+    background: #a90d0d none repeat scroll 0 0;
+    outline: medium none;
+}
+
 /******************************************************
  
 7. SIDE SCREENS
