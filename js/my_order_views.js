@@ -21,6 +21,7 @@ function loadCurrentOrder() {
 
         var properties = JSON.parse(sessionStorage.getItem(i));
         var state = parseInt(properties[5]);
+        var total = 0;
 
         if (state == 0) {
 
@@ -57,6 +58,10 @@ function loadCurrentOrder() {
             			<p class="price">' + Number(product.price).toFixed(2) + '$</p>\
                         <a class="remove_request ' + i.toString() + '">Remove</a>\
         				</li>');
+            
+            // Increase total
+            total = total + product.price;
+
 		}
 
     }
@@ -64,8 +69,10 @@ function loadCurrentOrder() {
     // No products anymore
     if ( NoProductsInOrder == 0 ) {
         $(".information_message").show();
+        $(".place_order_message").hide();
     } else {
-        $(".place_order").show();
+        $(".place_order_message").show();
+        $(".place_order_message h4.icon-price").text("Total = " + total + "$");
     }
 
 }
@@ -99,7 +106,7 @@ $(document).ready(function() {
         if (NoProductsInOrder == 0) {
 
             $(".information_message").fadeIn(500);
-            $("button.place_order").hide();
+            $(".place_order_message").hide();
         }
 
         e.preventDefault();
@@ -109,7 +116,7 @@ $(document).ready(function() {
     $(document).on('click', "button.place_order", function(e) {
 
         // Hide button and products
-        $("button.place_order").hide();
+        $(".place_order_message").hide();
         $("ul.order_products").hide();
         $(".confirmation_message").fadeIn(500);
 
