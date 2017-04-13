@@ -20,7 +20,7 @@ function timer() {
         startOverAfterAdding: true,      // Start the timer over after time is added with addSeconds
         smooth: true,                    // update the ticks every 16ms when true
         onComplete  : function () { console.log('completed') }
-    }).start()
+    }).start();
 }
 
 // On Page Load
