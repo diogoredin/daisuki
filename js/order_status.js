@@ -38,7 +38,7 @@ function loadOrderStatus() {
                         <img src="./data/images/' + product.photo + '" />\
                     </div>\
                     <div class="product_timer">\
-                        <div id="countdown"></div>\
+                        <div id="countdown' + i + '"></div>\
                     </div>\
                     <div class="product_details">\
                         <h3 class="icon-status">' + properties[3] + '</h3>\
@@ -48,7 +48,7 @@ function loadOrderStatus() {
                 </li>');
 		}
 
-        $("#countdown").countdown360({
+        $("#countdown" + i).countdown360({
         radius      : 60.5,
         seconds     : 40,
         strokeWidth : 15,
