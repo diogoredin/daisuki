@@ -112,7 +112,7 @@ $(document).ready(function() {
 
         // Update number of orders
         sessionStorage.setItem("NoOrders", 0);
-        // IMPORTANTE!!! FALTA REMOVER PRODUTOS TODOS DA LISTA!
+        // IMPORTANTE!!! FALTA REMOVER PRODUTOS DA LISTA?
 
         // Update sub menu display of number of products
         var menu_item = $('#submenu ul li.order_current');

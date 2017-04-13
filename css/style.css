@@ -510,7 +510,7 @@ button.place_order {
     font-size: 16px;
     letter-spacing: 0.6px;
     margin-bottom: 5%;
-    padding: 25px 25px;
+    padding: 15px 15px;
     text-align: center;
     width: 96%;
     text-transform: uppercase;
@@ -1115,3 +1115,200 @@ ul.order_products li a.remove_request:active {
 5.3. PAY
  
 *******************************************************/
+
+/******************************************************
+ 
+7. SIDE SCREENS
+ 
+*******************************************************/
+
+/******************************************************
+ 
+7.1. CALL WAITER
+ 
+*******************************************************/
+
+#side_waiter {
+    padding-top: 0;
+}
+
+.waiter_comming {
+    display: none;
+    width: 100%;
+}
+
+.waiter_inner {
+    bottom: 0;
+    padding-bottom: 30%;
+    position: absolute;
+    width: 100%;
+}
+
+.close_side {
+    background: rgba(15, 29, 48, 0.8) none repeat scroll 0 0;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: HeeboBold,Arial;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    line-height: 16px;
+    padding: 1% 4% 1% 2%;
+    position: fixed;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 21%;
+}
+
+.close_side:active {
+    background: #0093ee none repeat scroll 0 0;
+}
+
+.close_side span::before {
+    font-size: 35px;
+    padding-right: 10px;
+    position: unset;
+    vertical-align: middle;
+}
+
+#side_waiter h1::before {
+    color: #fff;
+    font-size: 65px;
+    padding-bottom: 5px;
+    padding-right: 9px;
+    position: unset;
+    vertical-align: middle;
+}
+
+#side_waiter h1 {
+    color: #fff;
+    font-family: HeeboLight,Arial;
+    font-size: 40px;
+    letter-spacing: 0.2px;
+    margin-top: 0;
+    padding-bottom: 5%;
+    padding-top: 30%;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.6);
+}
+
+.waiter_comming h3 {
+    color: #fff;
+    font-family: HeeboRegular,Arial;
+    font-size: 21px;
+    letter-spacing: 1.5px;
+    line-height: 40px;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.6);
+    margin-top: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.confirmation_box {
+    color: #fff;
+    font-family: HeeboRegular,Arial;
+    font-size: 21px;
+    letter-spacing: 0.6px;
+    line-height: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.6);
+    text-transform: uppercase;
+}
+
+button.confirm_waiter, button.cancel_waiter {
+    border: medium none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 0.6px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding: 15px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.waiter_photo img {
+    border-radius: 80px;
+    position: relative;
+    width: 140px;
+}
+
+.waiter_photo {
+    margin: 0 auto;
+    width: 140px;
+}
+
+button.confirm_waiter {
+    background: #52ad20 none repeat scroll 0 0;
+    outline: medium none;
+}
+
+button.confirm_waiter:active {
+    background: #45921a none repeat scroll 0 0;
+    outline: medium none;
+}
+
+button.cancel_waiter {
+    background: #b33a3a none repeat scroll 0 0;
+}
+
+button.cancel_waiter:active {
+    background: #a90d0d none repeat scroll 0 0;
+    outline: medium none;
+}
+
+/******************************************************
+ 
+7.1. CALL WAITER
+ 
+*******************************************************/
+
+#side_help {
+    padding-top: 0;
+}
+
+.help_inner {
+    bottom: 0;
+    padding-bottom: 30%;
+    position: absolute;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#side_help h1::before {
+    color: #fff;
+    font-size: 65px;
+    padding-bottom: 5px;
+    padding-right: 9px;
+    position: unset;
+    vertical-align: middle;
+}
+
+#side_help h1 {
+    color: #fff;
+    font-family: HeeboLight,Arial;
+    font-size: 40px;
+    letter-spacing: 0.2px;
+    margin-top: 0;
+    padding-bottom: 5%;
+    padding-top: 30%;
+    text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.6);
+}
+
+.help_inner p {
+    color: #fff;
+    font-family: HeeboRegular,Arial;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    line-height: 25px;
+    text-align: left;
+    text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.6);
+    margin-top: 10px;
+}

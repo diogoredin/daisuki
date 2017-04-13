@@ -113,3 +113,6 @@
 .icon-back:before {
   content: "\79";
 }
+.icon-close:before {
+  content: "\41";
+}

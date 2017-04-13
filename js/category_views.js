@@ -71,7 +71,8 @@ function loadCategory(categoryIndex, ProductAdded, ProductId) {
 		if( ProductAdded ) {
 			var product = category[ProductId];
 			$(".success_message").append('\
-				<h4 class="icon-confirm">' + product.name + ' was successfully added to your order.</h4>').show().delay(2000).fadeOut(300);
+				<h4 class="icon-confirm">' + product.name + ' was successfully added to your order.\
+				</h4>').show().delay(2000).fadeOut(300);
 		}
 
 	});
