@@ -1320,6 +1320,170 @@ ul.order_products li a.remove_request:active {
  
 *******************************************************/
 
+.check_list_review {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 22%;
+    width: 94%;
+}
+
+.check_list_review h1::before {
+    color: #fff;
+    font-size: 40px;
+    padding-bottom: 3px;
+    padding-right: 8.5px;
+    position: unset;
+    vertical-align: middle;
+    text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.6);
+}
+
+.check_list_review h1 {
+    color: #fff;
+    font-family: HeeboLight,Arial;
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+    text-align: center;
+    margin-top: 0px;
+    text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.6);
+}
+
+.check_list_review ul {
+    list-style: outside none none;
+    margin-top: 0;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+.check_list_review ul li {
+    background: rgba(28, 40, 59, 0.9) none repeat scroll 0 0;
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: HeeboRegular,Arial;
+    letter-spacing: 0.5px;
+    list-style: outside none none;
+    margin-top: 2%;
+    width: 100%;
+    display: inline-block;
+}
+
+.check_list_review ul li .product_photo {
+    float: left;
+    margin-bottom: -1%;
+    padding-bottom: 0;
+    width: 25%;
+}
+
+.check_list_review ul li .product_photo img {
+    border-radius: 3px 0 0 3px;
+    width: 100%;
+}
+
+.check_list_review ul li .product_details {
+    float: left;
+    width: 53%;
+}
+
+.check_list_review ul li h1 {
+    color: #ffffff;
+    font-family: HeeboLight,Arial;
+    font-size: 30px;
+    letter-spacing: 0.6px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 10%;
+    text-align: left;
+    text-decoration: none;
+}
+
+.check_list_review ul li h3::before {
+    color: #0093E9;
+    font-size: 30px;
+    padding-bottom: 3px;
+    padding-right: 8.5px;
+    position: unset;
+    vertical-align: middle;
+}
+
+.check_list_review ul li h3 {
+    color: #0093E9;
+    font-family: HeeboLight,Arial;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    margin-top: 10%;
+    padding-left: 10%;
+}
+
+.check_list_review ul li p {
+    color: #cccccc;
+    font-family: HeeboLight,Arial;
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    padding-left: 10%;
+    text-align: left;
+    text-decoration: none;
+    margin-bottom: 0px;
+    line-height: 28px;
+}
+
+.check_list_review .product_review_given {
+    float: right;
+    margin-right: 6%;
+    width: 15%;
+    text-align: left;
+    padding-top: 5%;
+}
+
+.check_list_review .product_review_given p {
+    margin-left: 0px;
+    padding-left: 0px;
+    font-size: 18px;
+    font-size: HeeboLight,Arial;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+
+.check_list_review .product_review_given .stars i {
+    display: inline;
+    text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.4);
+}
+
+.check_list_review .product_review_given .stars i.fa-star {
+    color: #fc0;
+    font-size: 30px;
+}
+
+.check_list_review .product_review_given .stars i.fa-star {
+    color: #fc0;
+    font-size: 16px;
+}
+
+.check_list_review .product_review_given i.fa-star.inactive {
+    color: #ccc;
+}
+
+button.confirm_check {
+    background: #52ad20 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 0.6px;
+    margin-bottom: 5%;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+button.confirm_check:active {
+    background: #45921a none repeat scroll 0 0;
+    border: medium none;
+    box-shadow: none;
+}
+
 /******************************************************
  
 5.2. TAX INFORMATION

@@ -116,3 +116,6 @@
 .icon-close:before {
   content: "\41";
 }
+.icon-price:before {
+  content: "\72";
+}
