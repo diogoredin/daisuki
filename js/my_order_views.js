@@ -59,11 +59,8 @@ function loadCurrentOrder() {
         				</li>');
             
             // Increase total
-            console.log(total)
             total = total + product.price;
-
 		}
-
     }
 
     // No products anymore
@@ -75,6 +72,7 @@ function loadCurrentOrder() {
         $(".place_order_message h4.icon-price").text("Total = " + Number(total).toFixed(2) + "$");
     }
 
+    sessionStorage.setItem("Total", total);
 }
 
 /*
@@ -88,8 +86,11 @@ $(document).ready(function() {
     // Product removed from order
     $(document).on('click', "a.remove_request", function(e) {
 
+        var product;
+        var products = JSON.parse(sessionStorage.getItem('products'));
         var requestId = $( this ).attr('class').split(' ')[1];
         var request = JSON.parse(sessionStorage.getItem(requestId));
+        var total = sessionStorage.getItem("Total");
         request[5] = -1;
         sessionStorage.setItem(requestId, JSON.stringify(request));
         e.target.parentNode.parentNode.removeChild(e.target.parentNode);
@@ -108,6 +109,25 @@ $(document).ready(function() {
             $(".information_message").fadeIn(500);
             $(".place_order_message").hide();
         }
+
+        //Updating total price
+        switch (request[1]) {
+            case "maincourses":
+                product = products[0].maincourses[request[0]];
+                break;
+            case "drinks":
+                product = products[1].drinks[request[0]];
+                break;
+            case "deserts":
+                product = products[2].deserts[request[0]];
+                break;
+        }
+
+        total = Number(total) - Number(product.price);
+        $(".place_order_message h4.icon-price").text("Total = " + Number(total).toFixed(2) + "$");
+        sessionStorage.setItem("Total", total);
+        
+
 
         e.preventDefault();
     });
@@ -134,7 +154,6 @@ $(document).ready(function() {
             if (state == 0) {
                 properties[5] = 1;
                 properties[2] = new Date();
-                console.log(properties[2].getTime())
             }
 
             sessionStorage.setItem(i, JSON.stringify(properties));
@@ -144,6 +163,9 @@ $(document).ready(function() {
         // Update sub menu display of number of products
         var menu_item = $('#submenu ul li.order_current');
 		menu_item.find("span").text(0);
+
+        // Update total price of current order
+        sessionStorage.setItem("Total", 0);
 
         e.preventDefault();
     });
