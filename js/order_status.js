@@ -1,4 +1,5 @@
 function loadOrderStatus() {
+    
     var products = JSON.parse(sessionStorage.getItem('products'));
     var NoOrders = parseInt(sessionStorage.getItem("NoOrders"));
 
@@ -46,6 +47,18 @@ function loadOrderStatus() {
                     </div>\
                 </li>');
 		}
+
+        $("#countdown").countdown360({
+        radius      : 60.5,
+        seconds     : 40,
+        strokeWidth : 15,
+        fillStyle   : '#0276FD',
+        strokeStyle : '#003F87',
+        fontSize    : 50,
+        fontColor   : '#FFFFFF',
+        autostart: false,
+        onComplete  : function () { console.log('completed') }
+        }).start(properties[2]);
 
     }
 }

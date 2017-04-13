@@ -64,8 +64,8 @@
         }
     },
 
-    start: function () {
-      this.startedAt = new Date();
+    start: function (date = new Date) {
+      this.startedAt = new Date(date);
       this._drawCountdownShape(Math.PI*3.5, true);
       this._drawCountdownLabel(0);
       var timerInterval = 1000;
