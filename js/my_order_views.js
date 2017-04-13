@@ -16,12 +16,11 @@ function loadCurrentOrder() {
     var NoProductsInOrder = parseInt(sessionStorage.getItem("NoProductsInOrder"));
     var products = JSON.parse(sessionStorage.getItem('products'));
     var NoProductsShowed = 0;
-
+    var total = 0; 
     for (var i = 0; i < NoOrders && NoProductsInOrder > NoProductsShowed; i++) {
 
         var properties = JSON.parse(sessionStorage.getItem(i));
         var state = parseInt(properties[5]);
-        var total = 0;
 
         if (state == 0) {
 
@@ -60,6 +59,7 @@ function loadCurrentOrder() {
         				</li>');
             
             // Increase total
+            console.log(total)
             total = total + product.price;
 
 		}
@@ -72,7 +72,7 @@ function loadCurrentOrder() {
         $(".place_order_message").hide();
     } else {
         $(".place_order_message").show();
-        $(".place_order_message h4.icon-price").text("Total = " + total + "$");
+        $(".place_order_message h4.icon-price").text("Total = " + Number(total).toFixed(2) + "$");
     }
 
 }
