@@ -1,7 +1,17 @@
+/*
+*
+* order_status.js
+*
+*/
+
 function loadOrderStatus() {
     
     var products = JSON.parse(sessionStorage.getItem('products'));
     var NoOrders = parseInt(sessionStorage.getItem("NoOrders"));
+
+    if ( NoOrders == 0 ) {
+        $(".information_message").show();
+    }
 
     for (var i = 0; i < NoOrders; i++) {
 

@@ -485,6 +485,15 @@ ul.restaurant_products li:hover {
     border: 3px solid #335078;
 }
 
+.page_inner .information_message {
+    margin-top: 2%;
+}
+
+.consumed_products .information_message,
+.order_status_timers .information_message {
+    margin-left: 3%;
+}
+
 .success_message h4, 
 .information_message h4, 
 .confirmation_message h4 {

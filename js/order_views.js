@@ -6,20 +6,16 @@
 
 /*
 *
-*   Order Status
-*
-*/
-
-function loadOrderStatus() {
-}
-
-/*
-*
 *   Order Review General
 *
 */
 
 function loadOrderReview() {
+
+    if ( sessionStorage.getItem("NoOrders") == 0 ) {
+        $(".information_message").show();
+    }
+
 }
 
 /*
