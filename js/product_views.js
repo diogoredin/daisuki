@@ -58,6 +58,20 @@ function loadProduct(id, categoryName) {
                 						<td>" + object.nutricionalInfo[key] + "</td></tr>");
 	}
 
+	//Adding ingredients
+	var ingredients = object.ingredients;
+	var ingredientsLenght = ingredients.length;
+	for (var i = 0; i < ingredientsLenght; i++) {
+		$(".picker_configure ul").append('<li class="on_off">\
+                <label class="switch">\
+                    <input type="checkbox">\
+                    <div class="slider round"></div>\
+                </label>\
+                <p>' + ingredients[i] + '</p>\
+            </li>');
+	}
+	
+
 	$('p.desc').append(object.info);
 }
 
