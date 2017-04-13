@@ -50,7 +50,7 @@ function loadOrderStatus() {
 
         $("#countdown" + i).countdown360({
         radius      : 60.5,
-        seconds     : 40,
+        seconds     : 70,
         strokeWidth : 15,
         fillStyle   : '#0276FD',
         strokeStyle : '#003F87',

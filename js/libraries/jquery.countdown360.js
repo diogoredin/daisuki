@@ -130,9 +130,16 @@
         y = this.settings.height/2;
       }
       this.pen.fillStyle = this.settings.fillStyle;
-      this.pen.fillText(Math.ceil(((secondsLeft)/60)), x, y);
       this.pen.fillStyle  = this.settings.fontColor;
-      this.pen.fillText(Math.ceil(((secondsLeft)/60)), x, y);
+      if (secondsLeft < 60){
+        this.pen.fillText(secondsLeft, x, y);
+      }
+      else {
+        var min = Math.floor((secondsLeft/60));
+        this.pen.fillText(min, x, y);
+        label = min === 1 ? "minute" : "minutes"
+      }
+      
       if (drawLabel) {
         this.pen.font = "normal small-caps " + (this.settings.fontSize/3) + "px " + this.settings.fontFamily;
         this.pen.fillText(label, this.settings.width/2, this.settings.height/2 + (this.settings.fontSize/2.2));
