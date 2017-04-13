@@ -130,9 +130,9 @@
         y = this.settings.height/2;
       }
       this.pen.fillStyle = this.settings.fillStyle;
-      this.pen.fillText(secondsLeft + 1, x, y);
+      this.pen.fillText(Math.ceil(((secondsLeft)/60)), x, y);
       this.pen.fillStyle  = this.settings.fontColor;
-      this.pen.fillText(secondsLeft, x, y);
+      this.pen.fillText(Math.ceil(((secondsLeft)/60)), x, y);
       if (drawLabel) {
         this.pen.font = "normal small-caps " + (this.settings.fontSize/3) + "px " + this.settings.fontFamily;
         this.pen.fillText(label, this.settings.width/2, this.settings.height/2 + (this.settings.fontSize/2.2));
