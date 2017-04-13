@@ -51,14 +51,16 @@ function loadOrderStatus() {
         $("#countdown" + i).countdown360({
         radius      : 60.5,
         seconds     : 70,
-        strokeWidth : 15,
-        fillStyle   : '#0276FD',
-        strokeStyle : '#003F87',
+        strokeWidth : 10,
+        fillStyle   : 'transparent',
+        strokeStyle : '#0276FD',
         fontSize    : 50,
         fontColor   : '#FFFFFF',
+        fontFamily  : "HeeboLight",
+        fontWeight  : 700,
         autostart: false,
         onComplete  : function () { console.log('completed') }
         }).start(properties[2]);
-
+    
     }
 }
