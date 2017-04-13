@@ -409,7 +409,7 @@ ul.restaurant_categories li:hover {
 
 ul.restaurant_products {
     list-style: outside none none;
-    padding-left: 0px;
+    padding-left: 0;
     width: 100%;
 }
 
@@ -418,10 +418,10 @@ ul.restaurant_products li {
     border-radius: 4px;
     cursor: pointer;
     float: left;
+    height: 45%;
     margin-right: 3.3%;
     margin-bottom: 3.3%;
     width: 30%;
-    height: 45%;
 }
 
 ul.restaurant_products li h1 {
@@ -507,20 +507,55 @@ button.place_order {
     border-radius: 5px;
     color: #ffffff;
     cursor: pointer;
+    float: right;
     font-size: 16px;
     letter-spacing: 0.6px;
-    margin-bottom: 5%;
-    padding: 15px 15px;
+    margin: 2% 3% 2% 2%;
+    padding: 15px;
     text-align: center;
-    width: 96%;
     text-transform: uppercase;
-    display: none;
+    width: 40%;
 }
 
 button.place_order:active {
-    background: #45921A none repeat scroll 0 0;
+    background: #45921a none repeat scroll 0 0;
+    border: medium none;
     box-shadow: none;
-    border: none;
+}
+
+.place_order_message {
+    border-radius: 4px;
+    color: #ffffff;
+    display: none;
+    font-family: HeeboRegular,Arial;
+    letter-spacing: 0.5px;
+    margin-bottom: 3%;
+    margin-top: 0;
+    padding-bottom: 1%;
+    padding-left: 4%;
+    padding-top: 1%;
+    text-align: left;
+    text-transform: uppercase;
+    width: 92.5%;
+}
+
+.place_order_message {
+    background: rgba(28, 40, 59, 0.9) none repeat scroll 0 0;
+    display: inline-block;
+}
+
+.place_order_message h4 {
+    font-size: 16px;
+    line-height: 16px;
+    width: 50%;
+    float: left;
+}
+
+.place_order_message h4::before {
+    font-size: 40px;
+    padding-right: 10px;
+    position: unset;
+    vertical-align: middle;
 }
 
 /* 4.1.3. New Order > Category > Product */
@@ -919,7 +954,8 @@ input:checked + .slider:before {
 ul.order_products {
     float: left;
     list-style: outside none none;
-    padding-left: 0px;
+    margin-bottom: 0;
+    padding-left: 0;
     width: 100%;
 }
 
