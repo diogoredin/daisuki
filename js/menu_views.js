@@ -157,6 +157,8 @@ $(document).ready(function() {
 					break;
 				case "order_current":
 					loadCurrentOrder();
+				case "order_review":
+					loadOrderReview();
 			}
 
     	});
