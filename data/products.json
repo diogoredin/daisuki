@@ -1,9 +1,9 @@
 [ 
-    { "maincourses" : [ 
+    { "maincourses" : [
                         {   "id"    : 0,
-                            "name"  : "Alaska Roll", 
-                            "price" : 5.50,
-                            "photo" : "product1.jpg",
+                            "name"  : "Tuna Roll", 
+                            "price" : 4.50, 
+                            "photo" : "product5.jpg",
                             "nutricionalInfo" : {
                                 "Energetic Value (kcal)" : 192,
                                 "Proteins (g)" : 192,
@@ -13,14 +13,33 @@
                                 "Sodium (g)" : 1.2
                             },
 
-                            "cooking_time" : 30, 
-                            "ingredients" : [ "eggs","salmon","crab meat","wasabi"
+                            "cooking_time" : 22, 
+                            "ingredients" : [ "Fish Eggs","Wasabi on the Side"
                             ],
-                                                    
-                            "info" : "Small cylindrical piece, with nori on the outside. A typical hosomaki has a diameter of about two and a half centimeters. Include avocado, imitation crab meat, rice, salmon and nori, which is toasted seaweed."
+
+                            "info" : "Type of sushi that consist in combining thin slices of Tuna, wrapped in sticky white rice, then wrapped in seaweed/nori and cut into short bite-sized pieces."
                         },
                         {   "id"    : 1,
-                            "name"  : "Asagagas", 
+                            "name"  : "Salmon Roll", 
+                            "price" : 4.50, 
+                            "photo" : "product6.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            },
+
+                            "cooking_time" : 20, 
+                            "ingredients" : [ "Fish Eggs","Wasabi on the Side"
+                            ],
+
+                            "info" : "Type of sushi that consist in combining thin slices of Salmon, wrapped in sticky white rice, then wrapped in seaweed/nori and cut into short bite-sized pieces." 
+                        },
+                        {   "id"    : 2,
+                            "name"  : "Cucumber Roll", 
                             "price" : 6.50,
                             "photo" : "product2.jpg",
                             "nutricionalInfo" : {
@@ -33,29 +52,10 @@
                             },
 
                             "cooking_time" : 25, 
-                            "ingredients" : [ "eggs","wasabi"
+                            "ingredients" : [ "Fish Eggs","Wasabi on the Side"
                             ],
 
                             "info" : "Large cone-shaped piece of nori on the outside and the ingredients spilling out the wide end. A typical temaki is about ten centimeters."
-                        },
-                        {   "id"    : 2,
-                            "name"  : "Crab Sticks", 
-                            "price" : 15, 
-                            "photo" : "product3.jpg",
-                            "nutricionalInfo" : {
-                                "Energetic Value (kcal)" : 192,
-                                "Proteins (g)" : 192,
-                                "Lipids (g)" : 7.2,
-                                "Carbohydrates (g)" : 7.2,
-                                "Fiber (g)" : 23.9,
-                                "Sodium (g)" : 1.2
-                            },
-
-                            "cooking_time" : 28, 
-                            "ingredients" : [ "eggs","salt","wasabi"
-                            ],
-
-                            "info" : "Traditional form of fermented sushi. Skinned and gutted fish are stuffed with salt, placed in a wooden barrel, doused with salt again."
                         },
                         {   "id"    : 3,
                             "name"  : "Mango Roll",
@@ -71,50 +71,12 @@
                             },
 
                             "cooking_time" : 25, 
-                            "ingredients" : [ "eggs", "wasabi"
+                            "ingredients" : [ "Fish Eggs", "Wasabi on the Side"
                             ],
 
                             "info" : "variation of sushi within the United States, and comes in variations that take their names from their place of origin. Other rolls may."
                         },
                         {   "id"    : 4,
-                            "name"  : "Tuna Roll", 
-                            "price" : 4.50, 
-                            "photo" : "product5.jpg",
-                            "nutricionalInfo" : {
-                                "Energetic Value (kcal)" : 192,
-                                "Proteins (g)" : 192,
-                                "Lipids (g)" : 7.2,
-                                "Carbohydrates (g)" : 7.2,
-                                "Fiber (g)" : 23.9,
-                                "Sodium (g)" : 1.2
-                            },
-
-                            "cooking_time" : 22, 
-                            "ingredients" : [ "eggs","wasabi"
-                            ],
-
-                            "info" : "Type of sushi that consist in combining thin slices of Tuna, wrapped in sticky white rice, then wrapped in seaweed/nori and cut into short bite-sized pieces."
-                        },
-                        {   "id"    : 5,
-                            "name"  : "Salmon Roll", 
-                            "price" : 4.50, 
-                            "photo" : "product6.jpg",
-                            "nutricionalInfo" : {
-                                "Energetic Value (kcal)" : 192,
-                                "Proteins (g)" : 192,
-                                "Lipids (g)" : 7.2,
-                                "Carbohydrates (g)" : 7.2,
-                                "Fiber (g)" : 23.9,
-                                "Sodium (g)" : 1.2
-                            },
-
-                            "cooking_time" : 20, 
-                            "ingredients" : [ "eggs","wasabi"
-                            ],
-
-                            "info" : "Type of sushi that consist in combining thin slices of Salmon, wrapped in sticky white rice, then wrapped in seaweed/nori and cut into short bite-sized pieces." 
-                        },
-                        {   "id"    : 6,
                             "name"  : "Avocado Roll", 
                             "price" : 4.50,
                             "photo" : "product7.jpg",
@@ -128,10 +90,48 @@
                             },
 
                             "cooking_time" : 30, 
-                            "ingredients" : [ "eggs","wasabi"
+                            "ingredients" : [ "Fish Eggs","Wasabi on the Side"
                             ],
 
                             "info" : "Type of sushi that consist in combining thin slices of Avocado, wrapped in sticky white rice, then wrapped in seaweed/nori and cut into short bite-sized pieces."
+                        },
+                        {   "id"    : 5,
+                            "name"  : "Inside Out Roll", 
+                            "price" : 5.50,
+                            "photo" : "product1.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            },
+
+                            "cooking_time" : 30, 
+                            "ingredients" : [ "Salmon","Crab","Wasabi on the Side"
+                            ],
+
+                            "info" : "Includes avocado, crab, rice, salmon and toasted seaweed."
+                        },
+                        {   "id"    : 6,
+                            "name"  : "Special Crab Roll", 
+                            "price" : 15, 
+                            "photo" : "product3.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            },
+
+                            "cooking_time" : 28, 
+                            "ingredients" : [ "Fish Eggs","Extra Salt","Wasabi on the Side"
+                            ],
+
+                            "info" : "Traditional form of fermented sushi. Skinned and gutted fish are stuffed with salt, placed in a wooden barrel, doused with salt again."
                         },
                         {   "id"    : 7,
                             "name"  : "Flamed Salmon Roll", 
@@ -147,7 +147,7 @@
                             },
 
                             "cooking_time" : 28, 
-                            "ingredients" : [ "eggs","wasabi"
+                            "ingredients" : [ "Fish Eggs","Wasabi on the Side"
                             ],
 
                             "info" : "Variation of sushi within the United States, and comes in variations that take their names from their place of origin." 
@@ -166,7 +166,7 @@
                             },
 
                             "cooking_time" : 28, 
-                            "ingredients" : [ "eggs","wasabi"
+                            "ingredients" : [ "Fish Eggs","Wasabi on the Side"
                             ],
 
                             "info" : "Type of sushi that consist in combining thin slices of Tuna&Shrimp, wrapped in sticky white rice, then wrapped in seaweed/nori and cut into short bite-sized pieces." 
@@ -185,7 +185,7 @@
                             },
 
                             "cooking_time" : 15, 
-                            "ingredients" : [ "eggs","wasabi"
+                            "ingredients" : [ "Fish Eggs","Wasabi on the Side"
                             ],
 
                             "info" : "Consisting of a slice of Salmon over pressed vinegared rice." 
@@ -204,7 +204,7 @@
                             },
 
                             "cooking_time" : 15, 
-                            "ingredients" : [ "eggs","wasabi"
+                            "ingredients" : [ "Fish Eggs","Wasabi on the Side"
                             ],
 
                             "info" : "Consisting of a slice of King Fish over pressed vinegared rice." 
@@ -223,7 +223,7 @@
                             },
 
                             "cooking_time" : 15, 
-                            "ingredients" : [ "eggs","wasabi"
+                            "ingredients" : [ "Fish Eggs","Wasabi on the Side"
                             ],
 
                             "info" : "Consisting of a slice of Tuna over pressed vinegared rice." 
@@ -242,7 +242,7 @@
                             },
 
                             "cooking_time" : 15, 
-                            "ingredients" : [ "eggs","wasabi"
+                            "ingredients" : [ "Fish Eggs","Wasabi on the Side"
                             ],
 
                             "info" : "Consisting of a slice of Pineapple over pressed vinegared rice." 
@@ -261,7 +261,7 @@
                             },
 
                             "cooking_time" : 24, 
-                            "ingredients" : [ "eggs","wasabi"
+                            "ingredients" : [ "Fish Eggs","Wasabi on the Side"
                             ],
 
                             "info" : "Slices of very fresh Salmon served raw, over a bed of shredded daikon radish." 
@@ -280,7 +280,7 @@
                             },
 
                             "cooking_time" : 24, 
-                            "ingredients" : [ "eggs","wasabi"
+                            "ingredients" : [ "White Fish","Salmon", "Tuna"
                             ],
 
                             "info" : "Slices of very fresh Salmon, White Fish, Tuna and Red Fish served raw, over a bed of shredded daikon radish." 
@@ -299,7 +299,7 @@
                             },
 
                             "cooking_time" : 24, 
-                            "ingredients" : [ "eggs","wasabi"
+                            "ingredients" : [ "Wasabi on the Side", "Teriaky Sauce"
                             ],
 
                             "info" : "Slices of very fresh White Fish served raw, over a bed of shredded daikon radish." 
@@ -318,7 +318,7 @@
                             },
 
                             "cooking_time" : 24, 
-                            "ingredients" : [ "eggs","wasabi"
+                            "ingredients" : [ "Wasabi on the Side", "Teriaky Sauce"
                             ],
 
                             "info" : "Slices of very fresh Tuna served raw, over a bed of shredded daikon radish." 
@@ -337,7 +337,7 @@
                             },
 
                             "cooking_time" : 24, 
-                            "ingredients" : [ "eggs","wasabi"
+                            "ingredients" : [ "Wasabi on the Side", "Teriaky Sauce"
                             ],
 
                             "info" : "Slices of very fresh Red Fish served raw, over a bed of shredded daikon radish." 
@@ -356,7 +356,7 @@
                             },
 
                             "cooking_time" : 24, 
-                            "ingredients" : [ "Salmon","Tuna","White Fish","Extra Sashimi"
+                            "ingredients" : [ "Salmon","Tuna","White Fish"
                             ],
 
                             "info" : "Salmon, Prawn, Tuna, Kingfish, Tamogoyaki, Inari nigiri, California roll, Spicy tuna roll, Shrimp roll with avocado and Aburi salmon roll (56 pcs.)" 
@@ -375,7 +375,7 @@
                             },
 
                             "cooking_time" : 24, 
-                            "ingredients" : [ "eggs","wasabi"
+                            "ingredients" : [ "Wasabi on the Side", "Teriaky Sauce"
                             ],
 
                             "info" : "Avocado, Mango, Asparagus, Inari nigiri, Edamame, Seaweed gunkan, Avocado cucumber roll, Seaweed roll with avocado & Asparagus roll with mango.(56pcs.)" 
@@ -394,7 +394,7 @@
                             },
 
                             "cooking_time" : 24, 
-                            "ingredients" : [ "Fish Eggs","Wasabi"
+                            "ingredients" : [ "Shrimp", "Salmon", "Wasabi on the Side"
                             ],
 
                             "info" : "Salmon, Prawn, Kingfish nigiri and Shrimp roll with avocado (10pcs.)" 
@@ -420,7 +420,7 @@
                             "ingredients" : [
                             ],
 
-                            "info" : "Sake is the japanese wine. It's made by fermenting rice that has been polished to remove the bran." 
+                            "info" : "Sake is a kind of Japanese wine. It's made by fermenting rice that has been polished to remove the bran." 
                         },
                         {   "id"    : 1,
                             "name"  : "Absolut Vodka",
@@ -436,10 +436,10 @@
                             },
 
                             "cooking_time" : 10, 
-                            "ingredients" : [ "Ice","Lemon"
+                            "ingredients" : [ "Ice","Lemon","Add Coke"
                             ],
 
-                            "info" : "" 
+                            "info" : "Made in Sweden." 
                         },
                         {   "id"    : 2,
                             "name"  : "Aveleda White Wine", 
@@ -458,7 +458,7 @@
                             "ingredients" : [
                             ],
 
-                            "info" : "" 
+                            "info" : "Made in Portugal, goes great with a Sushi meal." 
                         },
                         {   "id"    : 3,
                             "name"  : "Japanese Beer", 
@@ -477,7 +477,7 @@
                             "ingredients" : [
                             ],
 
-                            "info" : "" 
+                            "info" : "Made in Japan." 
                         },
                         {   "id"    : 4,
                             "name"  : "Tonic Gin",
@@ -493,10 +493,10 @@
                             },
 
                             "cooking_time" : 10, 
-                            "ingredients" : [ "Ice","Lemon","Spices"
+                            "ingredients" : [ "Ice","Lemon","Special Spices"
                             ],
 
-                            "info" : "" 
+                            "info" : "Great to start off your meal." 
                         },
                         {   "id"    : 5,
                             "name"  : "Coke", 
@@ -534,7 +534,7 @@
                             "ingredients" : [ "Ice","Lemon"
                             ],
 
-                            "info" : "" 
+                            "info" : "Great soda." 
                         },
                         {   "id"    : 7,
                             "name"  : "Orange Juice",
@@ -550,7 +550,7 @@
                             },
 
                             "cooking_time" : 10, 
-                            "ingredients" : [ "ice","lemon"
+                            "ingredients" : [ "Ice"
                             ],
 
                             "info" : "Natural Juice made by squeezing oranges." 
@@ -592,15 +592,15 @@
                             },
 
                             "cooking_time" : 20, 
-                            "ingredients" : [
+                            "ingredients" : [ "Free Coffee"
                             ],
 
-                            "info" : "Sweat chocolate desert that  is fluffy. Made of dark chocokate, eggs, sugar." 
+                            "info" : "Sweat chocolate desert that is fluffy. Made of dark chocokate, eggs and sugar." 
                         },
                         {   "id"    : 1,
-                            "name"  : "CheeseCake", 
+                            "name"  : "Cheesecake", 
                             "price" : 5.00, 
-                            "photo" : "product23.jpg",
+                            "photo" : "product33.jpg",
                             "nutricionalInfo" : {
                                 "Energetic Value (kcal)" : 321,
                                 "Proteins (g)" : 6,
@@ -611,15 +611,15 @@
                             },
 
                             "cooking_time" : 20, 
-                            "ingredients" : [
+                            "ingredients" : [ "Free Coffee"
                             ],
                                                         
-                            "info" : "Sweat desert consisting of 3 layers. The main layer consists of cheese, eggs and sugar, the bottom layers consists od a crust base made of crushed cookies and the top layer of strawberries." 
+                            "info" : "Sweat dessert consisting of 3 layers. The main layer consists of cheese, eggs and sugar, the bottom layers consists od a crust base made of crushed cookies and the top layer of strawberries." 
                         },
                         {   "id"    : 2,
-                            "name"  : "Ice Cream", 
+                            "name"  : "Chocolate Muffin", 
                             "price" : 6.00, 
-                            "photo" : "product24.jpg",
+                            "photo" : "product34.jpg",
                             "nutricionalInfo" : {
                                 "Energetic Value (kcal)" : 207,
                                 "Proteins (g)" : 3.5,
@@ -630,10 +630,67 @@
                             },
 
                             "cooking_time" : 20, 
-                            "ingredients" : [ "cup"
+                            "ingredients" : [ "Heat up", "Free Coffee"
                             ],
 
-                            "info" : "Sweat frozen desert made of milk, cream, strawberries and sugar."  
+                            "info" : "Dessert made of milk, chocolate and sugar."  
+                        },
+                        {   "id"    : 3,
+                            "name"  : "Cookie Cake", 
+                            "price" : 7.00, 
+                            "photo" : "product35.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 1800,
+                                "Proteins (g)" : 3.5,
+                                "Lipids (g)" : 80,
+                                "Carbohydrates (g)" : 0,
+                                "Fiber (g)" : 0,
+                                "Sodium (g)" : 0.80
+                            },
+
+                            "cooking_time" : 20, 
+                            "ingredients" : [ "Free Coffee"
+                            ],
+
+                            "info" : "Dessert made of milk, cookies, butter and sugar."  
+                        },
+                        {   "id"    : 4,
+                            "name"  : "Chocolate Cake", 
+                            "price" : 7.00, 
+                            "photo" : "product36.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 900,
+                                "Proteins (g)" : 3.5,
+                                "Lipids (g)" : 11,
+                                "Carbohydrates (g)" : 24,
+                                "Fiber (g)" : 0,
+                                "Sodium (g)" : 0.08
+                            },
+
+                            "cooking_time" : 20, 
+                            "ingredients" : [ "Free Coffee"
+                            ],
+
+                            "info" : "Dessert made of milk, chocolate and sugar."  
+                        },
+                        {   "id"    : 5,
+                            "name"  : "Expresso Coffee", 
+                            "price" : 7.00, 
+                            "photo" : "product37.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 900,
+                                "Proteins (g)" : 0,
+                                "Lipids (g)" : 0,
+                                "Carbohydrates (g)" : 0,
+                                "Fiber (g)" : 0,
+                                "Sodium (g)" : 0
+                            },
+
+                            "cooking_time" : 20, 
+                            "ingredients" : [ "Sugar", "Add Brandy"
+                            ],
+
+                            "info" : "Delta."  
                         }
                     ]
     }
