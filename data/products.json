@@ -341,6 +341,63 @@
                             ],
 
                             "info" : "Slices of very fresh Red Fish served raw, over a bed of shredded daikon radish." 
+                        },
+                        {   "id"    : 18,
+                            "name"  : "Deluxe Sushi Set", 
+                            "price" : 84.90, 
+                            "photo" : "product30.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            },
+
+                            "cooking_time" : 24, 
+                            "ingredients" : [ "Salmon","Tuna","White Fish","Extra Sashimi"
+                            ],
+
+                            "info" : "Salmon, Prawn, Tuna, Kingfish, Tamogoyaki, Inari nigiri, California roll, Spicy tuna roll, Shrimp roll with avocado and Aburi salmon roll (56 pcs.)" 
+                        },
+                        {   "id"    : 19,
+                            "name"  : "Deluxe Vegan set", 
+                            "price" : 74.00, 
+                            "photo" : "product31.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            },
+
+                            "cooking_time" : 24, 
+                            "ingredients" : [ "eggs","wasabi"
+                            ],
+
+                            "info" : "Avocado, Mango, Asparagus, Inari nigiri, Edamame, Seaweed gunkan, Avocado cucumber roll, Seaweed roll with avocado & Asparagus roll with mango.(56pcs.)" 
+                        },
+                        {   "id"    : 20,
+                            "name"  : "Nigiri Set", 
+                            "price" : 18.00, 
+                            "photo" : "product32.jpg",
+                            "nutricionalInfo" : {
+                                "Energetic Value (kcal)" : 192,
+                                "Proteins (g)" : 192,
+                                "Lipids (g)" : 7.2,
+                                "Carbohydrates (g)" : 7.2,
+                                "Fiber (g)" : 23.9,
+                                "Sodium (g)" : 1.2
+                            },
+
+                            "cooking_time" : 24, 
+                            "ingredients" : [ "Fish Eggs","Wasabi"
+                            ],
+
+                            "info" : "Salmon, Prawn, Kingfish nigiri and Shrimp roll with avocado (10pcs.)" 
                         }
                     ]
     },
