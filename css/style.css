@@ -1953,6 +1953,7 @@ button.confirm_check:active {
 
 button.change_tax,
 button.save_tax_information,
+button.cancel_tax_information,
 button.confirm_receipt,
 button.check_back {
     border: medium none;
@@ -1967,8 +1968,13 @@ button.check_back {
 }
 
 button.change_tax,
-button.save_tax_information {
+button.save_tax_information,
+button.cancel_tax_information {
     width: 100%;
+}
+
+button.cancel_tax_information {
+    margin-top: 2%;
 }
 
 button.confirm_receipt {
@@ -1985,13 +1991,15 @@ button.check_back {
     margin-top: 2%;
 }
 
-button.check_back {
+button.check_back,
+button.cancel_tax_information {
     background: #b33a3a none repeat scroll 0 0;
     outline: medium none;
 }
 
 
-button.check_back:active {
+button.check_back:active,
+button.cancel_tax_information:active {
     background: #A90D0D none repeat scroll 0 0;
     outline: medium none;
 }
@@ -2049,6 +2057,47 @@ button.confirm_receipt:active {
     display: block;
     width: 99%;
     margin-bottom: 0.7%;
+}
+
+.back {
+    font-family: HeeboRegular,Arial;
+    padding-top: 8%;
+}
+
+.back input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border-color: rgba(244, 237, 255, 0.2);
+    border-style: none none solid;
+    border-width: 2px;
+    float: none;
+    width: 90%;
+    margin-bottom: 10%;
+    padding-top: 0%;
+    margin-left: 5%;
+    height: 45px;
+    color: #AAA;
+    font-size: 35px;
+}
+
+.back input:focus,
+.back input:active {
+    outline: none;
+}
+
+.back label {
+    float: none;
+    padding: 5%;
+    width: 100%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    letter-spacing: 0.8px;
+}
+
+.back label span {
+    color: #999;
+    font-size: 14px;
+    text-transform: none;
+    padding-left: 3px;
 }
 
 /******************************************************

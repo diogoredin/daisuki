@@ -119,6 +119,11 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $(document).on('click', "button.cancel_tax_information", function(e) {
+        $("#myCard").removeClass("flip");
+        e.preventDefault();
+    });
+
     /*
     *
     *   Keypad
