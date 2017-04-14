@@ -47,6 +47,16 @@ $(document).ready(function() {
 
 	/*
 	*
+	*	FIRST PAGE
+	*
+	*/
+
+	if ( $("#menu ul li.order").hasClass("active") ) {
+		$('#screen_order_categories' ).fadeIn(300);
+	}
+
+	/*
+	*
 	*	MAIN MENU & SIDE SCREENS
 	*
 	*/
@@ -58,36 +68,43 @@ $(document).ready(function() {
 	// Menu Click
 	$(document).on('click', "#menu ul li", function(e) {
 
-		// Disable Back
-		$(".go_back").removeClass().addClass("go_back").hide();
+		if ( !($(this).hasClass("active") ) ) {
 
-		// Main Screens
-		if ($(this).hasClass('order') || $(this).hasClass('check')) {
+			// Disable Back
+			$(".go_back").removeClass().addClass("go_back").hide();
 
-			// Get the menu to be loaded from the class
-			var screen = $( this ).attr('class').split(' ')[0];
+			// Main Screens
+			if ($(this).hasClass('order') || $(this).hasClass('check')) {
 
-			// Load the Menu
-			$('#submenu').load('menu_' + screen + '.html', function(data){
+				// Get the menu to be loaded from the class
+				var screen = $( this ).attr('class').split(' ')[0];
 
-				// Clear page
-				$('#page').hide();
-				$('#page').replaceWith( "<div id='page'></div>" );
+				// Load the Menu
+				$('#submenu').load('menu_' + screen + '.html', function(data){
 
-				// Update sub menu display of number of orders
-				if ( screen == "order" ) {
+					// Update sub menu display of number of orders
+					if ( screen == "order" ) {
 
-					var NoProductsInOrder = parseInt(sessionStorage.getItem("NoProductsInOrder"));
-					var menu_item = $('#submenu ul li.order_current');
-	
-					menu_item.find("span").text(parseInt(NoProductsInOrder));
-				}
+						var NoProductsInOrder = parseInt(sessionStorage.getItem("NoProductsInOrder"));
+						var menu_item = $('#submenu ul li.order_current');
+		
+						menu_item.find("span").text(parseInt(NoProductsInOrder));
+					}
 
-				// Show new submenu
-				$('#submenu').hide();
-				$('#submenu').fadeIn(300);
+					// Make First Screen Imeddiatly Available
+					if ( screen == "check" ) {
+						$('#page').load( 'check_review.html', function(data){
+							$('#screen_check_review' ).fadeIn(300);
+						});
+					}
 
-			});
+					// Show new submenu
+					$('#submenu').hide();
+					$('#submenu').fadeIn(300);
+
+				});
+
+			}
 
 		}
 
