@@ -1656,7 +1656,7 @@ ul.order_products li a.remove_request:active {
 
 .check_list_review ul li .product_details {
     float: left;
-    width: 53%;
+    width: 50%;
 }
 
 .check_list_review ul li h1 {
@@ -1672,8 +1672,8 @@ ul.order_products li a.remove_request:active {
 }
 
 .check_list_review ul li h3::before {
-    color: #0093e9;
-    font-size: 30px;
+    color: #cccccc;
+    font-size: 25px;
     padding-bottom: 3px;
     padding-right: 8.5px;
     position: unset;
@@ -1681,12 +1681,12 @@ ul.order_products li a.remove_request:active {
 }
 
 .check_list_review ul li h3 {
-    color: #0093e9;
+    color: #cccccc;
     font-family: HeeboLight,Arial;
-    font-size: 20px;
+    font-size: 14px;
     letter-spacing: 0.5px;
-    line-height: 20px;
-    margin-top: 10%;
+    line-height: 18px;
+    margin-top: 7%;
     padding-left: 10%;
 }
 
@@ -1695,11 +1695,13 @@ ul.order_products li a.remove_request:active {
     font-family: HeeboLight,Arial;
     font-size: 14px;
     letter-spacing: 0.6px;
-    line-height: 28px;
-    margin-bottom: 0;
     padding-left: 10%;
-    text-align: left;
     text-decoration: none;
+    letter-spacing: 0.6px;
+    line-height: 17px;
+    text-align: left;
+    margin-bottom: 5px;
+    margin-top: 6px;
 }
 
 .check_list_review .product_review_given {
