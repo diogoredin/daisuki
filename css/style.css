@@ -1708,6 +1708,7 @@ ul.order_products li a.remove_request:active {
 .check_list_review .product_review_given p {
     color: #ffffff;
     font-size: 18px;
+    font-weight: bold;
     margin-bottom: 5px;
     margin-left: 0;
     padding-left: 0;
