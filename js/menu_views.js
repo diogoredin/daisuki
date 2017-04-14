@@ -47,16 +47,6 @@ $(document).ready(function() {
 
 	/*
 	*
-	*	FIRST PAGE
-	*
-	*/
-
-	if ( $("#menu ul li.order").hasClass("active") ) {
-		$('#screen_order_categories' ).fadeIn(300);
-	}
-
-	/*
-	*
 	*	MAIN MENU & SIDE SCREENS
 	*
 	*/
@@ -67,8 +57,6 @@ $(document).ready(function() {
 
 	// Menu Click
 	$(document).on('click', "#menu ul li", function(e) {
-
-		if ( !($(this).hasClass("active") ) ) {
 
 			// Disable Back
 			$(".go_back").removeClass().addClass("go_back").hide();
@@ -84,6 +72,10 @@ $(document).ready(function() {
 
 					// Update sub menu display of number of orders
 					if ( screen == "order" ) {
+						
+						$('#page').load( 'order_categories.html', function(data){
+							$('#screen_order_categories' ).fadeIn(300);
+						});
 
 						var NoProductsInOrder = parseInt(sessionStorage.getItem("NoProductsInOrder"));
 						var menu_item = $('#submenu ul li.order_current');
@@ -103,8 +95,6 @@ $(document).ready(function() {
 					$('#submenu').fadeIn(300);
 
 				});
-
-			}
 
 		}
 
