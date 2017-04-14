@@ -22,7 +22,8 @@
       label: ["second", "seconds"],    // the label to use or false if none
       startOverAfterAdding: true,      // Start the timer over after time is added with addSeconds
       smooth: true,                   // should the timer be smooth or stepping
-      onComplete: function () {}
+      onComplete: function () {},
+      status : "ordered"
     };
 
   function Plugin(element, options) {
@@ -164,6 +165,14 @@
       if (secondsElapsed < this.settings.seconds) {
         this._drawCountdownShape(endAngle, true);
         this._drawCountdownLabel(secondsElapsed);
+        if (secondsElapsed > 0.10 * this.settings.seconds && secondsElapsed < 0.90 * this.settings.seconds && this.status != "cooking") {
+          this.status = "cooking";
+          this.settings.afterTen();
+        }
+        else if (secondsElapsed > 0.90 * this.settings.seconds && this.status != "serving") {
+          this.status = "serving";
+          this.settings.tenToComplete();          
+        }
       } else {
         this._drawCountdownLabel(this.settings.seconds);
         this.stop();

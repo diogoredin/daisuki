@@ -75,7 +75,22 @@ function loadOrderStatus() {
                     sessionStorage.setItem($(this)[0].id, JSON.stringify(properties));
                     console.log($("#countdown" + $(this)[0].id).parent().parent().find("h3.icon-status"));
                     $("#countdown" + $(this)[0].id).parent().parent().find("h3.icon-status").text("served");
+                },
+                afterTen  : function () {
+                    var properties = JSON.parse(sessionStorage.getItem($(this)[0].id));
+                    properties[3] = "cooking";
+                    sessionStorage.setItem($(this)[0].id, JSON.stringify(properties));
+                    console.log($("#countdown" + $(this)[0].id).parent().parent().find("h3.icon-status"));
+                    $("#countdown" + $(this)[0].id).parent().parent().find("h3.icon-status").text("cooking");
+                },
+                tenToComplete  : function () {
+                    var properties = JSON.parse(sessionStorage.getItem($(this)[0].id));
+                    properties[3] = "serving";
+                    sessionStorage.setItem($(this)[0].id, JSON.stringify(properties));
+                    console.log($("#countdown" + $(this)[0].id).parent().parent().find("h3.icon-status"));
+                    $("#countdown" + $(this)[0].id).parent().parent().find("h3.icon-status").text("serving");
                 }
+
             }).start(properties[2]);	
         }     
     }
