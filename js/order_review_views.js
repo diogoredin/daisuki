@@ -66,8 +66,8 @@ function loadOrderReview() {
                     <p>Price: ' + Number(product.price).toFixed(2) + '$</p>\
                     <p>Purchased in ' + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + '</p>\
                 </div>\
-                <div class="product_review_button ' + i + '">\
-                    <button>Add Review</button>\
+                <div class="product_review_button">\
+                    <button class="' + i + '">Add Review</button>\
                 </div>\
             </li>');
         }     
@@ -81,7 +81,32 @@ function loadOrderReview() {
 *
 */
 
-function loadOrderReviewInner() {
+function loadOrderReviewInner(orderId) {
+    var products = JSON.parse(sessionStorage.getItem('products'));
+    var properties = JSON.parse(sessionStorage.getItem(orderId));
+    var categoryTag = properties[1];
+    var productId = properties[0];
+    var product, categoryName, categoryTag;
+
+    switch (categoryTag) {
+        case "maincourses":
+            product = products[0].maincourses[productId];
+            categoryName = "Main Courses";
+            categoryTag = "maincourses";
+            break;
+        case "drinks":
+            product = products[1].drinks[productId];
+            categoryName = "Drinks";
+            categoryTag = "drinks";
+            break;
+        case "deserts":
+            product = products[2].deserts[productId];
+            categoryName = "Deserts";
+            categoryTag = "deserts";
+            break;
+    }
+
+	$('.page_title').append('<h1 class="icon-add-review>Review Order > ' + product.name + '</h1>');
 }
 
 /*
@@ -94,15 +119,13 @@ $(document).ready(function() {
 
     $(document).on('click', ".product_review_button button", function(e) {
 
-        console.log( $(this).attr('class').split(' ')[2]);
+        var orderId = $(this).attr('class')
+
 		// Load the Page
-		$('#page').load('order_review_inner.html', function(data){
+		$('#page').load('order_review_inner.html', function(){
 			$('#screen_order_review_inner').fadeIn(300);
-
-            console.log( $(this).attr('class').split(' ')[2]);
 			// Specific Functions to Execute
-			loadOrderReviewInner();
-
+			loadOrderReviewInner(orderId);
     	});
 
 		e.preventDefault();
