@@ -154,6 +154,7 @@ $(document).ready(function() {
             if (state == 0) {
                 properties[5] = 1;
                 properties[2] = new Date();
+                properties[3] = "Ordered";
             }
 
             sessionStorage.setItem(i, JSON.stringify(properties));

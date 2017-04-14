@@ -56,21 +56,27 @@ function loadOrderStatus() {
                         <p class="icon-' + categoryTag +'">' + categoryName + '</p>\
                     </div>\
                 </li>');
-		}
 
-        $("#countdown" + i).countdown360({
-        radius      : 60.5,
-        seconds     : 70,
-        strokeWidth : 10,
-        fillStyle   : 'transparent',
-        strokeStyle : '#0276FD',
-        fontSize    : 50,
-        fontColor   : '#FFFFFF',
-        fontFamily  : "HeeboLight",
-        fontWeight  : 700,
-        autostart: false,
-        onComplete  : function () { console.log('completed') }
-        }).start(properties[2]);
-    
+	        $("#countdown" + i).countdown360({
+                id          : i,
+                radius      : 60.5,
+                seconds     : product.cookingTime,
+                strokeWidth : 10,
+                fillStyle   : 'transparent',
+                strokeStyle : '#0276FD',
+                fontSize    : 50,
+                fontColor   : '#FFFFFF',
+                fontFamily  : "HeeboLight",
+                fontWeight  : 700,
+                autostart: false,
+                onComplete  : function () {
+                    var properties = JSON.parse(sessionStorage.getItem($(this)[0].id));
+                    properties[3] = "served";
+                    sessionStorage.setItem($(this)[0].id, JSON.stringify(properties));
+                    console.log($("#countdown" + $(this)[0].id).parent().parent().find("h3.icon-status"));
+                    $("#countdown" + $(this)[0].id).parent().parent().find("h3.icon-status").text("served");
+                }
+            }).start(properties[2]);	
+        }     
     }
 }
