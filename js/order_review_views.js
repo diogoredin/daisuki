@@ -11,7 +11,7 @@
 */
 
 function loadOrderReview() {
-
+    
     $(".information_message_review").hide();
     if ( sessionStorage.getItem("Ordered") == "False" ) {
         $(".information_message_review").show();
@@ -82,6 +82,7 @@ function loadOrderReview() {
 */
 
 function loadOrderReviewInner() {
+    $(".go_back").show();
 }
 
 /*
@@ -103,6 +104,24 @@ $(document).ready(function() {
 			// Specific Functions to Execute
 			loadOrderReviewInner();
 
+    	});
+
+		e.preventDefault();
+	});
+
+    /*
+	*
+	*	BACK BUTTON
+	*
+	*/
+
+	// Single Category
+	$(document).on('click', ".go_back", function(e) {
+
+		// Load the Page
+		$('#page').load( screen + '.html', function(data){
+			$('#screen_order_review').fadeIn(300);
+			loadOrderReview();
     	});
 
 		e.preventDefault();
