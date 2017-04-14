@@ -1802,56 +1802,78 @@ button.confirm_check:active {
 *******************************************************/
 
 .check_tax_inner {
-    padding-top: 20%;
     padding-left: 3.3%;
     padding-right: 3.3%;
+    padding-top: 20%;
 }
 
 .left_receipt {
+    background: rgba(0, 0, 0, 0) url("../graphics/receipt.svg") no-repeat local center top / 100% auto;
     float: left;
-    width: 40%;
-    background: url("../graphics/receipt.svg") no-repeat;
-    background-position: left;
     margin-left: 5%;
     margin-right: 5%;
-    background-size: 100%;
-    background-position: top;
-    padding-bottom: 22%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 40%;
 }
-
+.left_receipt img {
+    margin: 0 17% 0 13%;
+    width: 70%;
+}
+.left_receipt h1 {
+    color: #444;
+    font-family: BitterRegular;
+    font-size: 16px;
+    letter-spacing: 2.4px;
+    padding-top: 0.5%;
+    text-align: center;
+    text-transform: uppercase;
+}
 .left_receipt ul {
     color: #444;
     font-family: BitterRegular;
     font-size: 14px;
-    list-style: outside none none;
-    padding-left: 0px;
-    margin: 13% 17% 0% 13%;
-    line-height: 17px;
     letter-spacing: 0.6px;
+    line-height: 14px;
+    list-style: outside none none;
+    margin: 3% 17% 0 13%;
+    padding-left: 0;
 }
-
 .left_receipt ul li {
     height: 55px;
 }
-
 .left_receipt ul li p.product_name {
-    text-align: left;
     float: left;
+    text-align: left;
 }
-
 .left_receipt ul li p.product_price {
-    text-align: right;
     float: right;
+    text-align: right;
 }
-
+.left_receipt ul.final {
+    color: #444;
+    font-family: BitterRegular;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    list-style: outside none none;
+    margin-bottom: 0;
+    margin-top: 2%;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+.left_receipt ul.final li {
+    height: 45px;
+    line-height: 14px;
+    margin-top: 0;
+}
 .right_tax {
     background: rgba(28, 40, 59, 0.9) none repeat scroll 0 0;
-    float: right;
-    width: 46%;
     border-radius: 4px;
+    float: right;
     padding: 2%;
+    width: 46%;
 }
-
 .right_tax h1 {
     color: #ffffff;
     font-family: HeeboRegular,Arial;
@@ -1862,7 +1884,6 @@ button.confirm_check:active {
     text-align: center;
     text-decoration: none;
 }
-
 button.change_tax, button.confirm_receipt {
     border: medium none;
     border-radius: 5px;
@@ -1874,56 +1895,48 @@ button.change_tax, button.confirm_receipt {
     text-align: center;
     text-transform: uppercase;
 }
-
 button.change_tax {
     width: 100%;
 }
-
 button.confirm_receipt {
-    margin-top: 2%;
+    float: right;
     margin-bottom: 2%;
     margin-right: 2%;
-    float: right;
+    margin-top: 2%;
 }
-
 button.change_tax, button.confirm_receipt {
     background: #52ad20 none repeat scroll 0 0;
     outline: medium none;
 }
-
 button.change_tax:active, button.confirm_receipt:active {
     background: #45921a none repeat scroll 0 0;
     outline: medium none;
 }
-
 .total_check {
     border-radius: 4px;
     color: #ffffff;
     font-family: HeeboRegular,Arial;
-    text-shadow: none;
     letter-spacing: 0.5px;
     margin-bottom: 3%;
-    margin-top: 0;
+    margin-top: 3%;
     padding-bottom: 1%;
     padding-left: 4%;
     padding-top: 1%;
     text-align: left;
+    text-shadow: none;
     text-transform: uppercase;
     width: 96%;
 }
-
 .total_check {
     background: rgba(28, 40, 59, 0.9) none repeat scroll 0 0;
     display: inline-block;
 }
-
 .total_check h4 {
+    float: left;
     font-size: 16px;
     line-height: 16px;
     width: 50%;
-    float: left;
 }
-
 .total_check h4::before {
     font-size: 40px;
     padding-right: 10px;
