@@ -75,6 +75,11 @@ TABLE OF CONTENTS
     src: url(fonts/Heebo-Thin.ttf);
 }
 
+@font-face {
+    font-family: BitterRegular;
+    src: url(fonts/Bitter-Regular.ttf);
+}
+
 /* 1.2. General */
 
 a, button, *:active {
@@ -1796,6 +1801,69 @@ button.confirm_check:active {
  
 *******************************************************/
 
+.check_tax_inner {
+    padding-top: 20%;
+    padding-left: 3.3%;
+    padding-right: 3.3%;
+}
+
+.left_receipt {
+    float: left;
+    width: 50%;
+}
+
+.left_receipt ul {
+    list-style: none;
+    padding-left: 10px;
+    font-family: BitterRegular;
+    font-size: 12px;
+    color: #000;
+}
+
+.right_receipt {
+    float: right;
+    width: 50%;
+    background: rgba(28, 40, 59, 0.9) none repeat scroll 0 0;
+}
+
+.right_receipt h1 {
+    color: #ffffff;
+    font-family: HeeboLight,Arial;
+    font-size: 30px;
+    letter-spacing: 0.6px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 10%;
+    text-align: left;
+    text-decoration: none;
+}
+
+button.change_tax, button.confirm_receipt {
+    border: medium none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    float: left;
+    font-size: 16px;
+    letter-spacing: 0.6px;
+    margin-left: 3%;
+    margin-top: 4%;
+    padding: 15px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 40%;
+}
+
+button.change_tax, button.confirm_receipt {
+    background: #52ad20 none repeat scroll 0 0;
+    outline: medium none;
+}
+
+button.change_tax:active, button.confirm_receipt:active {
+    background: #45921a none repeat scroll 0 0;
+    outline: medium none;
+}
+
 /******************************************************
  
 5.3. PAY
@@ -1811,12 +1879,14 @@ button.confirm_check:active {
     text-align: center;
     width: 320px;
 }
+
 .row {
     clear: both;
     margin: 0 auto;
     text-align: center;
     width: 280px;
 }
+
 #output {
     color: #1976d2;
     font-family: HeeboLight,Arial;
@@ -1824,6 +1894,7 @@ button.confirm_check:active {
     height: 70px;
     padding-top: 15px;
 }
+
 button.digit, button.clear {
     background: rgba(28, 40, 59, 0.7) none repeat scroll 0 0;
     border: 1px solid #2f4869;
@@ -1837,20 +1908,24 @@ button.digit, button.clear {
     margin: 4px;
     padding: 8px 30px;
 }
+
 button.clear {
     font-size: 18px;
     padding-left: 34px;
     padding-right: 35px;
 }
+
 button.digit:active, button.clear:active {
     opacity: 0.6;
 }
+
 .botrow {
     font-family: HeeboRegular;
     margin-left: 5%;
     text-align: center;
     width: 100%;
 }
+
 button#confirm_pin, button#cancel_pin {
     border: medium none;
     border-radius: 5px;
@@ -1866,17 +1941,21 @@ button#confirm_pin, button#cancel_pin {
     text-transform: uppercase;
     width: 40%;
 }
+
 button#confirm_pin {
     background: #52ad20 none repeat scroll 0 0;
     outline: medium none;
 }
+
 button#confirm_pin:active {
     background: #45921a none repeat scroll 0 0;
     outline: medium none;
 }
+
 button#cancel_pin {
     background: #b33a3a none repeat scroll 0 0;
 }
+
 button#cancel_pin:active {
     background: #a90d0d none repeat scroll 0 0;
     outline: medium none;
