@@ -42,7 +42,8 @@ function loadProduct(id, categoryName) {
 	var object = category[id];
 
 	// Display the product name
-	$('.page_title').append('<h1 class="icon-' + category_tag +'">' + category_name + ' > ' + object.name + '</h1>');
+	$('.page_title').append('<h1 class="icon-' + category_tag +'">' + category_name + ' > ' + object.name + '\
+	\ - <span class="' + Number(object.price).toFixed(2) + '">' + Number(object.price).toFixed(2) + '$</span></h1>');
 
 	// Display the confirm button
 	$('.picker_configure').append('<button class="confirm ' + categoryName + '" id=\"' + object.id + '\"> Add to Order </button>')
