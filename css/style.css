@@ -1951,7 +1951,8 @@ button.confirm_check:active {
     text-decoration: none;
 }
 
-button.change_tax, 
+button.change_tax,
+button.save_tax_information,
 button.confirm_receipt,
 button.check_back {
     border: medium none;
@@ -1965,7 +1966,8 @@ button.check_back {
     text-transform: uppercase;
 }
 
-button.change_tax {
+button.change_tax,
+button.save_tax_information {
     width: 100%;
 }
 
@@ -1994,12 +1996,16 @@ button.check_back:active {
     outline: medium none;
 }
 
-button.change_tax, button.confirm_receipt {
+button.change_tax,
+button.save_tax_information,
+button.confirm_receipt {
     background: #52ad20 none repeat scroll 0 0;
     outline: medium none;
 }
 
-button.change_tax:active, button.confirm_receipt:active {
+button.change_tax:active,
+button.save_tax_information:active,
+button.confirm_receipt:active {
     background: #45921a none repeat scroll 0 0;
     outline: medium none;
 }

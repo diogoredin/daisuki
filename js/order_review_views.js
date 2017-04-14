@@ -11,7 +11,7 @@
 */
 
 function loadOrderReview() {
-
+    
     $(".information_message_review").hide();
     if ( sessionStorage.getItem("Ordered") == "False" ) {
         $(".information_message_review").show();
@@ -109,6 +109,10 @@ function loadOrderReviewInner(orderId) {
 	$('.page_title').append('<h1 class="icon-add-review>Review Order > ' + product.name + '</h1>');
 }
 
+function loadOrderReviewInner() {
+    $(".go_back").show();
+}
+
 /*
 *
 *	PAGE ANIMATIONS & DATA
@@ -126,6 +130,24 @@ $(document).ready(function() {
 			$('#screen_order_review_inner').fadeIn(300);
 			// Specific Functions to Execute
 			loadOrderReviewInner(orderId);
+    	});
+
+		e.preventDefault();
+	});
+
+    /*
+	*
+	*	BACK BUTTON
+	*
+	*/
+
+	// Single Category
+	$(document).on('click', ".go_back", function(e) {
+
+		// Load the Page
+		$('#page').load( screen + '.html', function(data){
+			$('#screen_order_review').fadeIn(300);
+			loadOrderReview();
     	});
 
 		e.preventDefault();
