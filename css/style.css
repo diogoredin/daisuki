@@ -479,7 +479,8 @@ ul.restaurant_products li:hover {
 }
 
 .success_message, 
-.information_message, 
+.information_message,
+.information_message_review,
 .confirmation_message {
     border-radius: 4px;
     color: #ffffff;
@@ -499,7 +500,8 @@ ul.restaurant_products li:hover {
     border: 1px solid #6cac4a;
 }
 
-.information_message {
+.information_message,
+.information_message_review {
     background: rgba(28,40,59,0.9);
     border: 3px solid #335078;
 }
@@ -509,19 +511,22 @@ ul.restaurant_products li:hover {
 }
 
 .consumed_products .information_message,
-.order_status_timers .information_message {
+.order_status_timers .information_message,
+.information_message_review {
     margin-left: 3%;
 }
 
 .success_message h4, 
-.information_message h4, 
+.information_message h4,
+.information_message_review h4,
 .confirmation_message h4 {
     font-size: 16px;
     line-height: 16px;
 }
 
 .success_message h4::before, 
-.information_message h4::before, 
+.information_message h4::before,
+.information_message_review h4::before,
 .confirmation_message h4::before {
     position: unset;
     vertical-align: middle;
