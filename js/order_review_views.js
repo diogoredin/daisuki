@@ -12,9 +12,11 @@
 
 function loadOrderReview() {
 
+    $(".information_message_review").hide();
     if ( sessionStorage.getItem("Ordered") == "False" ) {
-        $(".information_message").show();
+        $(".information_message_review").show();
     }
+    
 
     var products = JSON.parse(sessionStorage.getItem('products'));
     var NoOrders = parseInt(sessionStorage.getItem("NoOrders"));
@@ -92,10 +94,12 @@ $(document).ready(function() {
 
     $(document).on('click', ".product_review_button button", function(e) {
 
+        console.log( $(this).attr('class').split(' ')[2]);
 		// Load the Page
 		$('#page').load('order_review_inner.html', function(data){
 			$('#screen_order_review_inner').fadeIn(300);
 
+            console.log( $(this).attr('class').split(' ')[2]);
 			// Specific Functions to Execute
 			loadOrderReviewInner();
 
