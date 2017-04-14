@@ -273,6 +273,16 @@ body {
     color: #0093EE;
 }
 
+#submenu ul li.active {
+    color: #0093ee;
+}
+
+#submenu ul li.inactive,
+#submenu ul li.hover {
+    color: #56606C;
+    cursor: default;
+}
+
 /******************************************************
  
 3. MAIN PAGE

@@ -136,7 +136,9 @@ $(document).ready(function() {
 	*/
 
 	$(document).on('click', "#submenu ul li", function(e) {
-		
+
+		if ( !($(this).hasClass("inactive") ) ) {
+
 		$(this).parent().children("li.active").toggleClass("active");
 		$(this).toggleClass("active");
 
@@ -161,7 +163,9 @@ $(document).ready(function() {
 					loadOrderReview();
 			}
 
-    	});
+    		});
+			
+		}
 
 		e.preventDefault();
 	});
