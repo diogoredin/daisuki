@@ -280,7 +280,7 @@ body {
 
 #submenu ul li.inactive,
 #submenu ul li.hover {
-    color: #56606C;
+    color: rgba(244, 237, 255, 0.15);
     cursor: default;
 }
 

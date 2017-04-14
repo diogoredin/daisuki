@@ -16,16 +16,12 @@ function closeSubmenu(originalMenu, originalSubmenu) {
 	$("#menu").replaceWith(originalMenu);
 
 	// Load the Submenu
-	$('#submenu').hide();
 	$("#submenu").replaceWith(originalSubmenu);
 
 	// Update sub menu display of number of orders
 	var NoOrders = sessionStorage.getItem("NoOrders");
 	var menu_item = $('#submenu ul li.order_current');
 	menu_item.find("span").text(parseInt(NoOrders));
-
-	// Show new submenu
-	$('#submenu').fadeIn(300);
 
 }
 
