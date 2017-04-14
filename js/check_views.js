@@ -4,46 +4,110 @@
 *
 */
 
+/*
+*
+*   Update Check Menus
+*
+*/
+
+function updateCheckMenus( screen ) {
+
+    $("#submenu ul").children().removeClass("active");
+    $("#submenu ul li." + screen ).addClass("active");
+
+    $("#submenu ul").children().addClass("inactive");
+    $("#submenu ul li." + screen ).removeClass("inactive");
+
+}
+
+/*
+*
+*   Load Check Confirmation Screen
+*
+*/
+
+function loadCheckReviewScreen() {
+
+	// Load the Page
+	$('#page').load( 'check_review.html', function(data){
+		$('#screen_check_review' ).fadeIn(300);
+    });
+
+}
+
+/*
+*
+*   Load Tax Confirmation Screen
+*
+*/
+
+function loadTaxInformationScreen() {
+
+	// Load the Page
+	$('#page').load( 'check_tax.html', function(data){
+		$('#screen_check_tax' ).fadeIn(300);
+    });
+
+}
+
+/*
+*
+*   Load Pay Screen
+*
+*/
+
+function loadPayScreen() {
+
+	// Load the Page
+	$('#page').load( 'check_pay.html', function(data){
+	    $('#screen_check_pay' ).fadeIn(300);
+    });
+
+}
+
+/*
+*
+*   Page Data and Animations
+*
+*/
+
 $(document).ready(function() {
 
+    /*
+    *
+    *   Navigation
+    *
+    */
+
     $(document).on('click', ".confirm_check", function(e) {
-
-    	$("#submenu ul").children("li.active").toggleClass("active");
-        $("#submenu ul li.check_review").addClass("inactive");
-        $("#submenu ul li.check_tax").removeClass("inactive");
-		$("#submenu ul li.check_tax").toggleClass("active");
-
-		// Disable back
-		$(".go_back").removeClass().addClass("go_back").hide();
-
-		// Load the Page
-		$('#page').load( 'check_tax.html', function(data){
-			$('#screen_check_tax' ).fadeIn(300);
-
-    		});
-    
+        loadTaxInformationScreen();
+        updateCheckMenus("check_tax");
         e.preventDefault();
     });
 
     $(document).on('click', ".confirm_receipt", function(e) {
-
-    	$("#submenu ul").children("li.active").toggleClass("active");
-        $("#submenu ul li.check_review").addClass("inactive");
-        $("#submenu ul li.check_tax").addClass("inactive");
-        $("#submenu ul li.check_pay").removeClass("inactive");
-		$("#submenu ul li.check_pay").toggleClass("active");
-
-		// Disable back
-		$(".go_back").removeClass().addClass("go_back").hide();
-
-		// Load the Page
-		$('#page').load( 'check_pay.html', function(data){
-			$('#screen_check_pay' ).fadeIn(300);
-
-    		});
-    
+        loadPayScreen();
+        updateCheckMenus("check_pay");
         e.preventDefault();
     });
+
+    $(document).on('click', ".back_pay", function(e) {
+        loadTaxInformationScreen();
+        updateCheckMenus("check_tax");
+        e.preventDefault();
+    });
+    
+    $(document).on('click', ".back_tax", function(e) {
+        loadCheckReviewScreen();
+        updateCheckMenus("check_review");
+        e.preventDefault();
+    });
+
+    /*
+    *
+    *   Keypad
+    *
+    */
     
     var count = 0;
     $(document).on('click', ".digit", function(e) {

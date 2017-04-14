@@ -195,6 +195,7 @@ body {
     letter-spacing: 0.4px;
     text-align: center;
     padding-top: 5px;
+    text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.4);
 }
 
 #menu ul li.icon-order::before,
@@ -250,6 +251,7 @@ body {
     padding-top: 6%;
     float: none;
     letter-spacing: 0.4px;
+    text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.4);
 }
 
 #submenu ul li.icon-menu::before, 
@@ -282,6 +284,7 @@ body {
 #submenu ul li.hover {
     color: rgba(244, 237, 255, 0.15);
     cursor: default;
+    text-shadow: none;
 }
 
 /******************************************************
@@ -1675,8 +1678,8 @@ ul.order_products li a.remove_request:active {
     font-family: HeeboLight,Arial;
     font-size: 30px;
     letter-spacing: 0.6px;
-    margin-bottom: 0;
-    margin-top: 0;
+    margin-bottom: 5%;
+    margin-top: 5%;
     padding-left: 10%;
     text-align: left;
     text-decoration: none;
@@ -1697,8 +1700,9 @@ ul.order_products li a.remove_request:active {
     font-size: 14px;
     letter-spacing: 0.5px;
     line-height: 18px;
-    margin-top: 7%;
+    margin-top: 8%;
     padding-left: 10%;
+    margin-bottom: 4%;
 }
 
 .check_list_review ul li p {
@@ -1706,30 +1710,34 @@ ul.order_products li a.remove_request:active {
     font-family: HeeboLight,Arial;
     font-size: 14px;
     letter-spacing: 0.6px;
-    padding-left: 10%;
-    text-decoration: none;
-    letter-spacing: 0.6px;
     line-height: 17px;
-    text-align: left;
     margin-bottom: 5px;
     margin-top: 6px;
+    padding-left: 10%;
+    text-align: left;
+    text-decoration: none;
 }
 
 .check_list_review .product_review_given {
     float: right;
     margin-right: 3%;
-    padding-top: 6%;
-    text-align: left;
-    width: 15%;
+    padding-top: 9%;
+    text-align: center;
+    width: 18%;
 }
 
 .check_list_review .product_review_given p {
     color: #ffffff;
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     margin-left: 0;
     padding-left: 0;
+    text-transform: uppercase;
+}
+
+.check_list_review .product_review_given .stars {
+    padding-right: 8%;
 }
 
 .check_list_review .product_review_given .stars i {
@@ -1821,18 +1829,21 @@ button.confirm_check:active {
 }
 
 .left_receipt {
-    background: rgba(0, 0, 0, 0) url("../graphics/receipt.svg") no-repeat local center top / 100% auto;
+    background: rgba(0, 0, 0, 0) url("../graphics/receipt.svg") repeat-y local center top;
     float: left;
+    background-size: 100% 100%;
     margin-left: 5%;
     margin-right: 5%;
     padding-top: 5%;
     padding-bottom: 5%;
     width: 40%;
 }
+
 .left_receipt img {
     margin: 0 17% 0 13%;
     width: 70%;
 }
+
 .left_receipt h1 {
     color: #444;
     font-family: BitterRegular;
@@ -1842,6 +1853,7 @@ button.confirm_check:active {
     text-align: center;
     text-transform: uppercase;
 }
+
 .left_receipt ul {
     color: #444;
     font-family: BitterRegular;
@@ -1852,17 +1864,21 @@ button.confirm_check:active {
     margin: 3% 17% 0 13%;
     padding-left: 0;
 }
+
 .left_receipt ul li {
     height: 55px;
 }
+
 .left_receipt ul li p.product_name {
     float: left;
     text-align: left;
 }
+
 .left_receipt ul li p.product_price {
     float: right;
     text-align: right;
 }
+
 .left_receipt ul.final {
     color: #444;
     font-family: BitterRegular;
@@ -1875,11 +1891,13 @@ button.confirm_check:active {
     padding-bottom: 0;
     padding-left: 0;
 }
+
 .left_receipt ul.final li {
     height: 45px;
     line-height: 14px;
     margin-top: 0;
 }
+
 .right_tax {
     background: rgba(28, 40, 59, 0.9) none repeat scroll 0 0;
     border-radius: 4px;
@@ -1887,6 +1905,7 @@ button.confirm_check:active {
     padding: 2%;
     width: 46%;
 }
+
 .right_tax h1 {
     color: #ffffff;
     font-family: HeeboRegular,Arial;
@@ -1897,7 +1916,10 @@ button.confirm_check:active {
     text-align: center;
     text-decoration: none;
 }
-button.change_tax, button.confirm_receipt {
+
+button.change_tax, 
+button.confirm_receipt,
+button.check_back {
     border: medium none;
     border-radius: 5px;
     color: #ffffff;
@@ -1908,23 +1930,46 @@ button.change_tax, button.confirm_receipt {
     text-align: center;
     text-transform: uppercase;
 }
+
 button.change_tax {
     width: 100%;
 }
+
 button.confirm_receipt {
     float: right;
     margin-bottom: 2%;
     margin-right: 2%;
     margin-top: 2%;
 }
+
+button.check_back {
+    float: right;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+}
+
+button.check_back {
+    background: #b33a3a none repeat scroll 0 0;
+    outline: medium none;
+}
+
+
+button.check_back:active {
+    background: #A90D0D none repeat scroll 0 0;
+    outline: medium none;
+}
+
 button.change_tax, button.confirm_receipt {
     background: #52ad20 none repeat scroll 0 0;
     outline: medium none;
 }
+
 button.change_tax:active, button.confirm_receipt:active {
     background: #45921a none repeat scroll 0 0;
     outline: medium none;
 }
+
 .total_check {
     border-radius: 4px;
     color: #ffffff;
@@ -1940,21 +1985,30 @@ button.change_tax:active, button.confirm_receipt:active {
     text-transform: uppercase;
     width: 96%;
 }
+
 .total_check {
     background: rgba(28, 40, 59, 0.9) none repeat scroll 0 0;
     display: inline-block;
 }
+
 .total_check h4 {
     float: left;
     font-size: 16px;
     line-height: 16px;
     width: 50%;
 }
+
 .total_check h4::before {
     font-size: 40px;
     padding-right: 10px;
     position: unset;
     vertical-align: middle;
+}
+
+.check_list_review .information_message {
+    display: block;
+    width: 99%;
+    margin-bottom: 0.7%;
 }
 
 /******************************************************
