@@ -1898,15 +1898,44 @@ button.confirm_check:active {
     margin-top: 0;
 }
 
-.right_tax {
-    background: rgba(28, 40, 59, 0.9) none repeat scroll 0 0;
-    border-radius: 4px;
+.flip-container {
     float: right;
-    padding: 2%;
-    width: 46%;
+    perspective: 1000px;
+    width: 50%;
 }
 
-.right_tax h1 {
+.flip-container.flip .flipper {
+    transform: rotateY(180deg);
+}
+
+.flipper {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease 0s;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.front {
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    background: rgba(28, 40, 59, 0.9) none repeat scroll 0 0;
+    border-radius: 4px;
+    padding: 4%;
+    width: 92%;
+}
+
+.flipper h1 {
     color: #ffffff;
     font-family: HeeboRegular,Arial;
     font-size: 18px;

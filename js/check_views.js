@@ -105,6 +105,22 @@ $(document).ready(function() {
 
     /*
     *
+    *   Tax Information
+    *
+    */
+
+    $(document).on('click', "button.change_tax", function(e) {
+        $("#myCard").addClass("flip");
+        e.preventDefault();
+    });
+
+    $(document).on('click', "button.save_tax_information", function(e) {
+        $("#myCard").removeClass("flip");
+        e.preventDefault();
+    });
+
+    /*
+    *
     *   Keypad
     *
     */

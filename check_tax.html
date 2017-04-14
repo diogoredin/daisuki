@@ -51,9 +51,25 @@
 
         </div>
 
-        <div class="right_tax">
-            <h1>No Tax Information Given</h1>
-            <button class="change_tax">Change Tax Information</button>
+        <div id="myCard" class="flip-container">
+            <div class="flipper">
+
+                <div class="front">
+                    <h1>No Tax Information Given</h1>
+                    <button class="change_tax">Change Tax Information</button>
+                </div>
+
+                <div class="back">
+                    <label for="name">Name</label>
+                        <input type="text" name="name">
+                    <label for="tin">TIN</label>
+                        <input type="text" name="tin">
+                    <label for="enterprise">Enterprise (optional)</label>
+                        <input type="text" name="enterprise">
+                    <button class="save_tax_information">Save</button>
+                </div>
+            
+            </div>
         </div>
 
         <div class="total_check">
