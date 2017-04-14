@@ -168,6 +168,9 @@ $(document).ready(function() {
         // Update total price of current order
         sessionStorage.setItem("Total", 0);
 
+        //Sets that the user already ordered
+        sessionStorage.setItem("Ordered", "True");
+
         e.preventDefault();
     });
 

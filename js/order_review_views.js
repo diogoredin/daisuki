@@ -12,11 +12,11 @@
 
 function loadOrderReview() {
 
-    if ( sessionStorage.getItem("NoOrders") == 0 ) {
+    if ( sessionStorage.getItem("Ordered") == "False" ) {
         $(".information_message").show();
     }
 
-var products = JSON.parse(sessionStorage.getItem('products'));
+    var products = JSON.parse(sessionStorage.getItem('products'));
     var NoOrders = parseInt(sessionStorage.getItem("NoOrders"));
 
     if ( NoOrders == 0 ) {
