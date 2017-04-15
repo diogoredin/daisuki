@@ -65,8 +65,8 @@ function loadOrderReview() {
                         <div class="product_details">\
                             <h3 class="icon-' + categoryTag + '">' + categoryName + '</h3>\
                             <h1>' + product.name + ' ' + properties[7] + 'X</h1>\
-                            <p>Price: ' + Number(product.price * properties[7]).toFixed(2) + '$</p>\
                             <p>Purchased in ' + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + '</p>\
+                            <p>' + Number(product.price * properties[7]).toFixed(2) + '$</p>\
                         </div>\
                         <div class="product_review_list_right">\
                             <div class="product_review_button alone">\
@@ -84,8 +84,8 @@ function loadOrderReview() {
                         <div class="product_details">\
                             <h3 class="icon-' + categoryTag + '">' + categoryName + '</h3>\
                             <h1>' + product.name + ' ' + properties[7] + 'X</h1>\
-                            <p>Price: ' + Number(product.price * properties[7]).toFixed(2) + '$</p>\
                             <p>Purchased in ' + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + '</p>\
+                            <p>' + Number(product.price * properties[7]).toFixed(2) + '$</p>\
                         </div>\
                         <div class="product_review_list_right">\
                             <div class="product_review_given">\
