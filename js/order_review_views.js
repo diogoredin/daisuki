@@ -106,7 +106,14 @@ function loadOrderReviewInner(orderId) {
             break;
     }
 
+    var date = new Date(properties[2]);
+
 	$('.page_title').append('<h1 class="icon-add-review">Review Order > ' + product.name + '</h1>');
+    $('div.product_photo').append('<img src="data/images/' + product.photo +'"/>');
+    $('div.product_details').append('<h3 class="icon-' + categoryTag + '">' + categoryName + '</h3>\
+            <h1>' + product.name + '</h1>\
+            <p><strong> Price: </strong> ' + Number(product.price).toFixed(2) + '$</p>\
+            <p><strong> Purchased in </strong> ' + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + '</p>');
     $(".go_back_orders").show();
 }
 
