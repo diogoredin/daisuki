@@ -53,7 +53,7 @@ function loadOrderStatus() {
                     </div>\
                     <div class="product_details">\
                         <h3 class="icon-status">' + properties[3] + '</h3>\
-                        <h1>' + product.name + '</h1>\
+                        <h1>' + product.name + ' ' + properties[7] +'X</h1>\
                         <p class="icon-' + categoryTag +'">' + categoryName + '</p>\
                     </div>\
                 </li>');

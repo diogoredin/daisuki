@@ -64,8 +64,8 @@ function loadOrderReview() {
                         </div>\
                         <div class="product_details">\
                             <h3 class="icon-' + categoryTag + '">' + categoryName + '</h3>\
-                            <h1>' + product.name +'</h1>\
-                            <p>Price: ' + Number(product.price).toFixed(2) + '$</p>\
+                            <h1>' + product.name + ' ' + properties[7] + 'X</h1>\
+                            <p>Price: ' + Number(product.price * properties[7]).toFixed(2) + '$</p>\
                             <p>Purchased in ' + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + '</p>\
                         </div>\
                             <div class="product_review_button">\
@@ -81,8 +81,8 @@ function loadOrderReview() {
                         </div>\
                         <div class="product_details">\
                             <h3 class="icon-' + categoryTag + '">' + categoryName + '</h3>\
-                            <h1>' + product.name +'</h1>\
-                            <p>Price: ' + Number(product.price).toFixed(2) + '$</p>\
+                            <h1>' + product.name + ' ' + properties[7] + 'X</h1>\
+                            <p>Price: ' + Number(product.price * properties[7]).toFixed(2) + '$</p>\
                             <p>Purchased in ' + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + '</p>\
                         </div>\
                         <div class="stars">\
@@ -142,8 +142,8 @@ function loadOrderReviewInner(orderId) {
 	$('.page_title').append('<h1 class="icon-add-review">Review Order > ' + product.name + '</h1>');
     $('div.product_photo').append('<img src="data/images/' + product.photo +'"/>');
     $('div.product_details').append('<h3 class="icon-' + categoryTag + '">' + categoryName + '</h3>\
-            <h1>' + product.name + '</h1>\
-            <p><strong> Price: </strong> ' + Number(product.price).toFixed(2) + '$</p>\
+            <h1>' + product.name + ' ' + properties[7] + 'X</h1>\
+            <p><strong> Price: </strong> ' + Number(product.price * properties[7]).toFixed(2) + '$</p>\
             <p><strong> Purchased in </strong> ' + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + '</p>');
     $(".go_back_orders").show();
     $('div.my_stars').rateYo({

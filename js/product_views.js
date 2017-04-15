@@ -136,8 +136,8 @@ $(document).ready(function() {
 		var NoOrders = sessionStorage.getItem("NoOrders");
 		var category = $( this ).attr('class').split(' ')[1]
 		// [Product ID, {0: MainCourses, 1: Drinks, 2: Deserts}, Time of Creation (to be changed later), 
-		//	Status, Review, Classification, {-1: Removed, 0: Added not confirmed, 1:Ordered}]
-		var orderProperties = [e.target.id, category, 0, "", "", 0, 0];
+		//	Status, Review, Classification, {-1: Removed, 0: Added not confirmed, 1:Ordered}, Quantity]
+		var orderProperties = [e.target.id, category, 0, "", "", 0, 0, parseInt($(this).parent().find("p span").text())];
 		sessionStorage.setItem(NoOrders, JSON.stringify(orderProperties));
 		sessionStorage.setItem("NoOrders", parseInt(NoOrders) + 1);
 		// Update number products (+1)

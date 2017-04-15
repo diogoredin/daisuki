@@ -53,13 +53,13 @@ function loadCurrentOrder() {
                 			<img src="./data/images/' + product.photo + '" />\
            				</div>\
                         <h3 class="icon-' + categoryTag + '">' + categoryName + '</h3>\
-                        <h1>' + product.name + '</h1>\
-            			<p class="price">' + Number(product.price).toFixed(2) + '$</p>\
+                        <h1>' + product.name + ' ' + properties[7] +'X</h1>\
+            			<p class="price">' + Number(product.price * properties[7]).toFixed(2) + '$</p>\
                         <a class="remove_request ' + i.toString() + '">Remove</a>\
         				</li>');
             
             // Increase total
-            total = total + product.price;
+            total = total + product.price * properties[7];
 		}
     }
 
