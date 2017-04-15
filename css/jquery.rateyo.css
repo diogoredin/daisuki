@@ -1,37 +1,105 @@
+/******************************************************
+ 
+0. ORIGINAL STYLES
+
+*******************************************************/
+
 .jq-ry-container {
-  position: relative;
-  padding: 0 5px;
-  line-height: 0;
-  display: block;
-  cursor: pointer;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+    box-sizing: content-box;
+    cursor: pointer;
+    display: block;
+    line-height: 0;
+    margin-top: 4px;
+    padding: 0 5px;
+    position: relative;
 }
+
 .jq-ry-container[readonly="readonly"] {
-  cursor: default;
+    cursor: default;
 }
+
 .jq-ry-container > .jq-ry-group-wrapper {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
+
 .jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group {
-  position: relative;
-  line-height: 0;
-  z-index: 10;
-  white-space: nowrap;
+    line-height: 0;
+    position: relative;
+    white-space: nowrap;
+    z-index: 10;
 }
+
 .jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group > svg {
-  display: inline-block;
+    display: inline-block;
 }
+
 .jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group.jq-ry-normal-group {
-  width: 100%;
+    width: 100%;
 }
+
 .jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group.jq-ry-rated-group {
-  width: 0;
-  z-index: 11;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
+    height: 30px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 0;
+    z-index: 11;
+}
+
+/******************************************************
+ 
+1. OUR STARS
+
+*******************************************************/
+
+/* Product Detail */
+.overall_rating .stars {
+    padding-bottom: 34px;
+}
+.picker_review .overall_rating .stars i {
+    display: inline;
+    text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.4);
+}
+.picker_review .overall_rating .stars i.fa-star {
+    color: #fc0;
+    font-size: 30px;
+}
+.picker_review ul li .stars i.fa-star {
+    color: #fc0;
+    font-size: 16px;
+}
+.picker_review .stars i.fa-star.inactive {
+    color: #ccc;
+}
+
+/* Review Page */
+
+/* Inner Review Page */
+.product_review_right .stars i.inactive {
+    display: inline;
+    text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.4);
+}
+.product_review_right .stars i.fa-star {
+    color: #fc0;
+    font-size: 30px;
+}
+.product_review_right ul li .stars i.fa-star, 
+.product_review_right ul li .stars label i.fa-star {
+    color: #fc0;
+    font-size: 16px;
+}
+.product_review_right .stars i.fa-star.inactive, 
+.product_review_right .stars label i.fa-star.inactive {
+    color: #ccc;
+}
+.my_review_box .stars {
+    float: right;
+}
+.my_review_box .stars i {
+    margin-right: 5px;
+}
+.my_review_box .stars {
+    font-size: 14px;
 }

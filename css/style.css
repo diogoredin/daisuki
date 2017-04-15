@@ -1475,54 +1475,9 @@ ul.order_products li a.remove_request:active {
     margin-bottom: 15px;
 }
 
-.product_review_right .stars i,
-.product_review_right .stars label i {
-    display: inline;
-    text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.4);
-}
-
-.product_review_right .stars i.fa-star,
-.product_review_right .stars label i.fa-star {
-    color: #fc0;
-    font-size: 30px;
-}
-
-.product_review_right ul li .stars i.fa-star,
-.product_review_right ul li .stars label i.fa-star {
-    color: #fc0;
-    font-size: 16px;
-}
-
-.product_review_right .stars i.fa-star.inactive,
-.product_review_right .stars label i.fa-star.inactive {
-    color: #ccc;
-}
-
-.product_review_right .stars input[type="radio"] {
-    display: none;
-}
-
-.product_review_right .stars input[type=radio]:checked ~ label i.fa:before {
-  color: #CCC;
-}
-
 .my_review_box h3 {
     width: 50%;
     float: left;
-}
-
-.my_review_box .stars {
-    width: 50%;
-    float: right;
-}
-
-.my_review_box .stars i {
-    float: right;
-    margin-left: 3px;
-}
-
-.my_review_box .stars {
-    font-size: 14px;
 }
 
 .my_review_box textarea {
@@ -1742,29 +1697,6 @@ ul.order_products li a.remove_request:active {
     margin-left: 0;
     padding-left: 0;
     text-transform: uppercase;
-}
-
-.check_list_review .product_review_given .stars {
-    padding-right: 8%;
-}
-
-.check_list_review .product_review_given .stars i {
-    display: inline;
-    text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.4);
-}
-
-.check_list_review .product_review_given .stars i.fa-star {
-    color: #fc0;
-    font-size: 30px;
-}
-
-.check_list_review .product_review_given .stars i.fa-star {
-    color: #fc0;
-    font-size: 16px;
-}
-
-.check_list_review .product_review_given i.fa-star.inactive {
-    color: #ccc;
 }
 
 button.confirm_check {
