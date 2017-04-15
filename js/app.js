@@ -22,5 +22,4 @@ $(document).ready(function() {
         sessionStorage.setItem("Total", "0");
         sessionStorage.setItem("Ordered", "False");
 
-
 });
