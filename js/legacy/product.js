@@ -39,7 +39,7 @@ var orders = [];
 				properties[2],
 				properties[3],
 				properties[4],
-				properties[5]
+				properties[6]
 			);
 
 			array.push(product);

@@ -9,14 +9,15 @@ function loadOrderStatus() {
     var products = JSON.parse(sessionStorage.getItem('products'));
     var NoOrders = parseInt(sessionStorage.getItem("NoOrders"));
 
-    if ( NoOrders == 0 ) {
+    $(".information_message").hide();
+    if ( sessionStorage.getItem("Ordered") == "False" ) {
         $(".information_message").show();
     }
 
     for (var i = 0; i < NoOrders; i++) {
 
         var properties = JSON.parse(sessionStorage.getItem(i));
-        var state = parseInt(properties[5]);
+        var state = parseInt(properties[6]);
 
         if (state == 1) {
 

@@ -20,7 +20,7 @@ function loadCurrentOrder() {
     for (var i = 0; i < NoOrders && NoProductsInOrder > NoProductsShowed; i++) {
 
         var properties = JSON.parse(sessionStorage.getItem(i));
-        var state = parseInt(properties[5]);
+        var state = parseInt(properties[6]);
 
         if (state == 0) {
 
@@ -149,10 +149,10 @@ $(document).ready(function() {
         for (var i = 0; i < NoOrders; i++) {
 
             var properties = JSON.parse(sessionStorage.getItem(i));
-            var state = parseInt(properties[5]);
+            var state = parseInt(properties[6]);
 
             if (state == 0) {
-                properties[5] = 1;
+                properties[6] = 1;
                 properties[2] = new Date();
                 properties[3] = "Ordered";
             }

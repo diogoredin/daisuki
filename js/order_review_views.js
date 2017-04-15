@@ -28,7 +28,7 @@ function loadOrderReview() {
     for (var i = 0; i < NoOrders; i++) {
 
         var properties = JSON.parse(sessionStorage.getItem(i));
-        var state = parseInt(properties[5]);
+        var state = parseInt(properties[6]);
 
         if (state == 1) {
 
@@ -115,6 +115,18 @@ function loadOrderReviewInner(orderId) {
             <p><strong> Price: </strong> ' + Number(product.price).toFixed(2) + '$</p>\
             <p><strong> Purchased in </strong> ' + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + '</p>');
     $(".go_back_orders").show();
+    $('div.my_stars').rateYo({
+        rating      : properties[5],
+        fullStar    : true,
+        ratedFill   : '#fc0'
+    });
+    
+    $('div.my_stars').rateYo().on("rateyo.change", function (e, data) {
+        var rating = data.rating;
+        properties[5] = rating;
+        sessionStorage.setItem(orderId, JSON.stringify(properties)); 
+    });
+    
 }
 
 /*
