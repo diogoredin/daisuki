@@ -113,7 +113,7 @@ $(document).ready(function() {
 		price = parseFloat($('.priceTitle').attr("class").split(' ')[1]);
 		$('.priceTitle').text(Number(price * value).toFixed(2) + '$');
 
-		if ( value >= 0 ) {
+		if ( value > 1 ) {
 			$(this).parent().find("button.minus").removeClass("disable");
 		}
 
@@ -125,10 +125,10 @@ $(document).ready(function() {
 		var value = parseInt($(this).parent().find("p span").text()) - 1;
 		price = parseFloat($('.priceTitle').attr("class").split(' ')[1]);
 		$('.priceTitle').text(Number(price * value).toFixed(2) + '$');
-		if ( value == 0 ) {
+		if ( value == 1 ) {
 			$(this).addClass("disable");
-			$(this).parent().find("p span").text("0");
-		} else if ( value > 0 ) {
+			$(this).parent().find("p span").text("1");
+		} else if ( value > 1 ) {
 			$(this).removeClass("disable");
 			$(this).parent().find("p span").text(value);
 		}
