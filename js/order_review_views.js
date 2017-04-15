@@ -106,11 +106,8 @@ function loadOrderReviewInner(orderId) {
             break;
     }
 
-	$('.page_title').append('<h1 class="icon-add-review>Review Order > ' + product.name + '</h1>');
-}
-
-function loadOrderReviewInner() {
-    $(".go_back").show();
+	$('.page_title').append('<h1 class="icon-add-review">Review Order > ' + product.name + '</h1>');
+    $(".go_back_orders").show();
 }
 
 /*
@@ -142,13 +139,15 @@ $(document).ready(function() {
 	*/
 
 	// Single Category
-	$(document).on('click', ".go_back", function(e) {
+	$(document).on('click', ".go_back_orders", function(e) {
 
 		// Load the Page
-		$('#page').load( screen + '.html', function(data){
+		$('#page').load( 'order_review.html', function(data){
 			$('#screen_order_review').fadeIn(300);
 			loadOrderReview();
     	});
+
+        $(this).hide();
 
 		e.preventDefault();
 	});

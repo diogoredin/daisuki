@@ -347,7 +347,8 @@ body {
  
 *******************************************************/
 
-.go_back {
+.go_back,
+.go_back_orders {
     background: rgba(15, 29, 48, 0.8);
     color: #ffffff;
     display: none;
@@ -367,11 +368,13 @@ body {
     text-align: center;
 }
 
-.go_back:active {
+.go_back:active,
+.go_back_orders:active {
     background: #0093EE;
 }
 
-.go_back span::before {
+.go_back span::before,
+.go_back_orders span::before {
     position: unset;
     font-size: 35px;
     vertical-align: middle;
