@@ -43,7 +43,7 @@ function loadProduct(id, categoryName) {
 
 	// Display the product name
 	$('.page_title').append('<h1 class="icon-' + category_tag +'">' + category_name + ' > ' + object.name + '\
-	\ - <span class="' + Number(object.price).toFixed(2) + '">' + Number(object.price).toFixed(2) + '$</span></h1>');
+	\ - <span class="priceTitle ' + Number(object.price).toFixed(2) + '">' + Number(object.price).toFixed(2) + '$</span></h1>');
 
 	// Display the confirm button
 	$('.picker_configure').append('<button class="confirm ' + categoryName + '" id=\"' + object.id + '\"> Add to Order </button>')
@@ -110,6 +110,8 @@ $(document).ready(function() {
 	$(document).on('click', ".picker_configure ul li button.plus", function(e) {
 		var value = parseInt($(this).parent().find("p span").text()) + 1;
 		$(this).parent().find("p span").text(value);
+		price = parseFloat($('.priceTitle').attr("class").split(' ')[1]);
+		$('.priceTitle').text(Number(price * value).toFixed(2) + '$');
 
 		if ( value >= 0 ) {
 			$(this).parent().find("button.minus").removeClass("disable");
@@ -121,7 +123,8 @@ $(document).ready(function() {
 	$(document).on('click', ".picker_configure ul li button.minus", function(e) {
 
 		var value = parseInt($(this).parent().find("p span").text()) - 1;
-
+		price = parseFloat($('.priceTitle').attr("class").split(' ')[1]);
+		$('.priceTitle').text(Number(price * value).toFixed(2) + '$');
 		if ( value == 0 ) {
 			$(this).addClass("disable");
 			$(this).parent().find("p span").text("0");
