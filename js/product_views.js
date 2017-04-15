@@ -123,15 +123,15 @@ $(document).ready(function() {
 	$(document).on('click', ".picker_configure ul li button.minus", function(e) {
 
 		var value = parseInt($(this).parent().find("p span").text()) - 1;
-		price = parseFloat($('.priceTitle').attr("class").split(' ')[1]);
-		$('.priceTitle').text(Number(price * value).toFixed(2) + '$');
-		if ( value == 1 ) {
+
+		if ( value  <= 1 ) {
 			$(this).addClass("disable");
-			$(this).parent().find("p span").text("1");
-		} else if ( value > 1 ) {
-			$(this).removeClass("disable");
-			$(this).parent().find("p span").text(value);
+			value = 1
 		}
+
+		$(this).parent().find("p span").text(value);
+		price = parseFloat($('.priceTitle').attr("class").split(' ')[1]);
+		$('.priceTitle').text(Number(price * (value)).toFixed(2) + '$');
 	
 	});
 
