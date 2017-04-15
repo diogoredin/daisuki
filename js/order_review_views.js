@@ -56,20 +56,51 @@ function loadOrderReview() {
 
             var date = new Date(properties[2]);
 
-            $(".consumed_products ul").append('\<li>\
-                <div class="product_photo">\
-                    <img src="data/images/' + product.photo + '" />\
-                </div>\
-                <div class="product_details">\
-                    <h3 class="icon-' + categoryTag + '">' + categoryName + '</h3>\
-                    <h1>' + product.name +'</h1>\
-                    <p>Price: ' + Number(product.price).toFixed(2) + '$</p>\
-                    <p>Purchased in ' + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + '</p>\
-                </div>\
-                <div class="product_review_button">\
-                    <button class="' + i + '">Add Review</button>\
-                </div>\
-            </li>');
+            if (properties[5] == 0){
+                $(".consumed_products ul").append('\
+                    <li>\
+                        <div class="product_photo">\
+                            <img src="data/images/' + product.photo + '" />\
+                        </div>\
+                        <div class="product_details">\
+                            <h3 class="icon-' + categoryTag + '">' + categoryName + '</h3>\
+                            <h1>' + product.name +'</h1>\
+                            <p>Price: ' + Number(product.price).toFixed(2) + '$</p>\
+                            <p>Purchased in ' + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + '</p>\
+                        </div>\
+                            <div class="product_review_button">\
+                                <button class="' + i + '">Add Review</button>\
+                            </div>\
+                    </li>');
+            }
+            else {
+                $(".consumed_products ul").append('\
+                    <li>\
+                        <div class="product_photo">\
+                            <img src="data/images/' + product.photo + '" />\
+                        </div>\
+                        <div class="product_details">\
+                            <h3 class="icon-' + categoryTag + '">' + categoryName + '</h3>\
+                            <h1>' + product.name +'</h1>\
+                            <p>Price: ' + Number(product.price).toFixed(2) + '$</p>\
+                            <p>Purchased in ' + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + '</p>\
+                        </div>\
+                        <div class="stars">\
+                            <div class="my_stars' + i + '">\
+                            </div>\
+                        </div>\
+                        <div class="product_review_button">\
+                            <button class="' + i + '">Change Review</button>\
+                        </div>\
+                    </li>');
+
+                $('div.my_stars' + i).rateYo({
+                    rating      : properties[5],
+                    fullStar    : true,
+                    ratedFill   : '#fc0',
+                    readonly    : true,
+                });                
+            }
         }     
     }
 
