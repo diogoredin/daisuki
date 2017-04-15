@@ -119,3 +119,15 @@
 .icon-price:before {
   content: "\72";
 }
+.icon-sensors:before {
+  content: "\42";
+}
+.icon-insert-plate:before {
+  content: "\43";
+}
+.icon-nfc:before {
+  content: "\44";
+}
+.icon-finish-plate:before {
+  content: "\45";
+}

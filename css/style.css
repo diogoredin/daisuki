@@ -2396,3 +2396,113 @@ button.cancel_waiter:active {
     text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.6);
     margin-top: 10px;
 }
+
+/******************************************************
+
+8. SIMULATION CONTROLS
+
+*******************************************************/
+
+#simulation_controls {
+    background-color: #ffffff;
+    border-bottom: 50px solid #eeeeee;
+    bottom: 0;
+    color: #000000;
+    display: none;
+    height: 210px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+.simulation_controls_inner {
+    height: 210px;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 96%;
+}
+.simulation_controls_inner span.simulation_control {
+    cursor: pointer;
+    float: left;
+    height: 99%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-top: 1%;
+    width: 15%;
+}
+.simulation_controls_inner span.simulation_control h3::before {
+    color: #000000;
+    display: inline-block;
+    font-size: 70px;
+    padding-bottom: 15px;
+    position: unset;
+    width: 100%;
+}
+.simulation_controls_inner span.simulation_control h3 {
+    float: none;
+    text-align: center;
+    width: 100%;
+}
+.simulation_controls_inner span.simulation_control:hover {
+    background: #eeeeee none repeat scroll 0 0;
+}
+.simulation_controls_inner span.simulation_control h3 {
+    font-family: HeeboMedium,Arial;
+    text-align: center;
+}
+#toggle_simulation_controls_wrapper {
+    bottom: 0;
+    display: block;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    z-index: 1200;
+    width: 15%;
+}
+.toggle_simulation_controls {
+    background: #999 none repeat scroll 0 0;
+    cursor: pointer;
+    height: 50px;
+}
+.toggle_simulation_controls.open {
+    background: #0093EE;
+}
+.toggle_simulation_controls p:before {
+    font-size: 38px;
+    position: unset;
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+.toggle_simulation_controls p {
+    color: #fff;
+    font-family: HeeboMedium,Arial;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 0;
+    text-align: center;
+}
+.info {
+    float: right;
+    font-family: HeeboRegular;
+    height: 70%;
+    line-height: 25px;
+    padding-top: 1%;
+    text-align: justify;
+    width: 40%;
+}
+.info h3.icon-info {
+    font-family: HeeboRegular,Arial;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.info h3.icon-info::before {
+    color: #000000;
+    font-size: 35px;
+    padding-right: 9px;
+    position: unset;
+    vertical-align: middle;
+}
+.info p {
+    font-size: 14px;
+    margin-top: 0;
+}
