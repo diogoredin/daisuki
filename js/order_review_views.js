@@ -68,9 +68,11 @@ function loadOrderReview() {
                             <p>Price: ' + Number(product.price * properties[7]).toFixed(2) + '$</p>\
                             <p>Purchased in ' + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + '</p>\
                         </div>\
-                            <div class="product_review_button">\
+                        <div class="product_review_list_right">\
+                            <div class="product_review_button alone">\
                                 <button class="' + i + '">Add Review</button>\
                             </div>\
+                        </div>\
                     </li>');
             }
             else {
@@ -85,12 +87,16 @@ function loadOrderReview() {
                             <p>Price: ' + Number(product.price * properties[7]).toFixed(2) + '$</p>\
                             <p>Purchased in ' + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + '</p>\
                         </div>\
-                        <div class="stars">\
-                            <div class="my_stars' + i + '">\
+                        <div class="product_review_list_right">\
+                            <div class="product_review_given">\
+                                <p>Review Given</p>\
+                                <div class="stars">\
+                                    <div class="my_stars' + i + '"></div>\
+                                </div>\
                             </div>\
-                        </div>\
-                        <div class="product_review_button">\
-                            <button class="' + i + '">Change Review</button>\
+                            <div class="product_review_button">\
+                                <button class="' + i + '">Change Review</button>\
+                            </div>\
                         </div>\
                     </li>');
 
@@ -98,7 +104,7 @@ function loadOrderReview() {
                     rating      : properties[5],
                     fullStar    : true,
                     ratedFill   : '#fc0',
-                    readonly    : true,
+                    readOnly    : true
                 });                
             }
         }     

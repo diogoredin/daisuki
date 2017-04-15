@@ -1300,7 +1300,13 @@ ul.order_products li a.remove_request:active {
 
 .consumed_products ul li .product_details {
     float: left;
-    width: 50%;
+    width: 45%;
+}
+
+.consumed_products .product_review_list_right {
+    float: left;
+    padding-top: 3%;
+    width: 25%;
 }
 
 .consumed_products ul li h1 {
@@ -1339,20 +1345,24 @@ ul.order_products li a.remove_request:active {
     font-family: HeeboLight,Arial;
     font-size: 14px;
     letter-spacing: 0.6px;
-    padding-left: 10%;
-    text-decoration: none;
-    letter-spacing: 0.6px;
     line-height: 17px;
-    text-align: left;
     margin-bottom: 5px;
     margin-top: 6px;
+    padding-left: 10%;
+    text-align: left;
+    text-decoration: none;
 }
 
 .consumed_products ul li .product_review_button {
-    float: right;
-    margin-right: 4%;
-    margin-top: 6.5%;
-    width: 20%;
+    float: left;
+    margin-top: 2.6%;
+    width: 100%;
+}
+
+.consumed_products ul li .product_review_button.alone {
+    float: left;
+    margin-top: 14.5%;
+    width: 100%;
 }
 
 .consumed_products ul li .product_review_button button {
