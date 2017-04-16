@@ -2370,14 +2370,19 @@ button.cancel_waiter:active {
     margin-right: 2%;
     padding-top: 1%;
     width: 15%;
+    color: #000000;
 }
 .simulation_controls_inner span.simulation_control h3::before {
-    color: #000000;
     display: inline-block;
+    color: #000000;
     font-size: 70px;
     padding-bottom: 15px;
     position: unset;
     width: 100%;
+}
+.simulation_controls_inner span.simulation_control:active,
+.simulation_controls_inner span.simulation_control:active h3::before {
+    color: #0093EE;
 }
 .simulation_controls_inner span.simulation_control h3 {
     float: none;

@@ -3,3 +3,10 @@
 0. PLATE STYLES
 
 *******************************************************/
+
+#plate {
+    margin: 0 auto;
+    padding-left: 10%;
+    padding-top: 2%;
+    width: 40%;
+}

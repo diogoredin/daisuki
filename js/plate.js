@@ -12,11 +12,18 @@
 
 function insertPlate() {
 
-        // Include Stylesheet
-        $('head').append('<link href="css/plate.css" rel="stylesheet" />');
+        if ( sessionStorage.getItem("Plate") == "off" ) {
 
-        // Set global State to On
-        sessionStorage.setItem("Plate", "on");
+                // Include Stylesheet
+                $('head').append('<link href="css/plate.css" rel="stylesheet" />');
+
+                // Set global State to On
+                sessionStorage.setItem("Plate", "on");
+
+                // Include Plate
+                $('#page').append('<div id="plate"><img src="graphics/plate.svg" /></div>').hide().fadeIn(1000);
+
+        }
 
 }
 
@@ -28,11 +35,23 @@ function insertPlate() {
 
 function removePlate() {
 
-        // Include Stylesheet
-        $('link[rel=stylesheet][href~="css/plate.css"]').remove();
+        if ( sessionStorage.getItem("Plate") == "on" ) {
 
-        // Set global State
-        sessionStorage.setItem("Plate", "off");
+                // Remove Plate
+                $('#plate').fadeOut(1000,function(){ 
+
+                        // Include Stylesheet
+                        $('link[rel=stylesheet][href~="css/plate.css"]').remove();
+
+                        // Set global State
+                        sessionStorage.setItem("Plate", "off");
+
+                        // Remove Plate
+                        $('#plate').replaceWith();
+
+                });
+
+        }
 
 }
 
