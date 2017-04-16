@@ -40,8 +40,10 @@
 }
 
 .inner_page_title {
-    padding: 0%;
-    position: absolute;
+    clear: both;
+    display: block;
+    margin-top: 0;
+    position: relative;
     width: 100%;
     z-index: 100;
 }
@@ -56,7 +58,7 @@
     display: inline-block;
     overflow: scroll;
     padding-left: 10%;
-    padding-top: 33%;
+    padding-top: 7%;
     position: relative;
     width: 90%;
     bottom: 0;
@@ -114,6 +116,52 @@
     height: 10px;
 }
 
+/* My Order Products */
+
+#submenu ul.order_products {
+    display: inline-block;
+    overflow: scroll;
+    padding-left: 8%;
+    padding-top: 7%;
+    position: relative;
+    width: 90%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#submenu ul.order_products li {
+    padding-top: 0px;
+    border: none;
+    margin-bottom: 9%;
+    width: 88%;
+    float: none;
+    border: medium none;
+}
+
+.place_order_message {
+    margin-bottom: 3%;
+    margin-left: 7%;
+    margin-top: 0;
+    padding-bottom: 3%;
+    padding-top: 1%;
+    width: 76%;
+}
+
+.place_order_message h4 {
+    float: none;
+    margin: 0;
+    padding: 4%;
+    width: 88%;
+}
+
+.place_order_message button {
+    float: none;
+    margin: 4px 0 0;
+    padding: 4%;
+    width: 96%;
+}
+
 /******************************************************
  
 1. PRODUCT STYLES
@@ -126,6 +174,14 @@
     padding-bottom: 10%;
     width: 80%;
 }
+
+#tabs:active,
+#tabs:focus,
+#tabs ul li:active,
+#tabs ul li:focus {
+    outline: none !important;
+}
+
 
 #tabs ul.ui-tabs-nav {
     color: #ffffff;
@@ -184,7 +240,7 @@
 #tabs h1.option_name {
     color: #FFFFFF;
     font-family: HeeboRegular,Arial;
-    font-size: 26px;
+    font-size: 21px;
     letter-spacing: 0.6px;
     margin-bottom: 25px;
     margin-top: 0;
@@ -198,7 +254,7 @@
     border-radius: 4px;
     float: left;
     margin-left: 10%;
-    margin-top: 37%;
+    margin-top: 7%;
     width: 80%;
 }
 
@@ -213,7 +269,7 @@
     width: 100%;
 }
 
-.product_small_view  .product_details {
+.product_small_view .product_details {
     float: left;
     width: 60%;
 }
@@ -252,4 +308,26 @@
     padding-left: 0;
     padding-right: 0;
     width: 100%;
+}
+
+/******************************************************
+ 
+1. ALERT STYLES
+
+*******************************************************/
+
+.success_message, 
+.information_message, 
+.information_message_review, 
+.confirmation_message {
+    margin: 0% 11.5% 0% 8%;
+    padding: 0 3%;
+}
+
+.success_message h4, 
+.information_message h4, 
+.information_message_review h4, 
+.confirmation_message h4 {
+    font-size: 16px;
+    line-height: 35px;
 }
