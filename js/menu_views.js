@@ -165,33 +165,61 @@ $(document).ready(function() {
 			location = "#submenu";
 		}
 
-		if ( !($(this).hasClass("inactive") ) ) {
+		if ( !($(this).hasClass("inactive") ) && 
+			  ( sessionStorage.getItem("Plate") == "off" ) ) {
 
-		$(this).parent().children("li.active").toggleClass("active");
-		$(this).toggleClass("active");
+			$(this).parent().children("li.active").toggleClass("active");
+			$(this).toggleClass("active");
 
-		// Disable back
-		$(".go_back").removeClass().addClass("go_back").hide();
+			// Disable back
+			$(".go_back").removeClass().addClass("go_back").hide();
 
-		// Get the page to be loaded from the class
-		var screen = $( this ).attr('class').split(' ')[0];
+			// Get the page to be loaded from the class
+			var screen = $( this ).attr('class').split(' ')[0];
 
-		// Load the Page
-		$(location).load( screen + '.html', function(data){
-			$('#screen_' + screen ).fadeIn(300);
+			// Load the Page
+			$(location).load( screen + '.html', function(data){
+				$('#screen_' + screen ).fadeIn(300);
 
-			// Specific Functions to Execute
-			switch (screen) {
-				case "order_status":
-					loadOrderStatus();
-					break;
-				case "order_current":
-					loadCurrentOrder();
-				case "order_review":
-					loadOrderReview();
-			}
+				// Specific Functions to Execute
+				switch (screen) {
+					case "order_status":
+						loadOrderStatus();
+						break;
+					case "order_current":
+						loadCurrentOrder();
+					case "order_review":
+						loadOrderReview();
+				}
 
-    		});
+				});
+			
+		}
+
+		if ( !($(this).hasClass("inactive") ) && !($(this).hasClass("check_review") )
+			  ( sessionStorage.getItem("Plate") == "on" ) ) {
+	
+			$(this).parent().children("li.active").toggleClass("active");
+
+			// Get the page to be loaded from the class
+			var screen = $( this ).attr('class').split(' ')[0];
+
+			// Load the Page
+			$(location).load( screen + '.html', function(data){
+				$('#screen_' + screen ).fadeIn(300);
+
+				// Specific Functions to Execute
+				switch (screen) {
+					case "order_status":
+						loadOrderStatus();
+						break;
+					case "order_current":
+						loadCurrentOrder();
+					case "order_review":
+						loadOrderReview();
+				}
+
+				});
 			
 		}
 

@@ -14,6 +14,17 @@ function loadOrderStatus() {
         $(".information_message").show();
     }
 
+    // Get Plate Status
+	if ( sessionStorage.getItem("Plate") == "off" ) {
+		var t_fontsize = 50;
+        var t_radius = 60.5;
+        var t_strokewidth = 10;
+	} else {
+		var t_fontsize = 40;
+        var t_radius = 40.5;
+        var t_strokewidth = 5;
+	}
+
     for (var i = 0; i < NoOrders; i++) {
 
         var properties = JSON.parse(sessionStorage.getItem(i));
@@ -60,12 +71,12 @@ function loadOrderStatus() {
 
 	        $("#countdown" + i).countdown360({
                 id          : i,
-                radius      : 60.5,
+                radius      : t_radius,
                 seconds     : product.cookingTime,
-                strokeWidth : 10,
+                strokeWidth : t_strokewidth,
                 fillStyle   : 'transparent',
                 strokeStyle : '#0276FD',
-                fontSize    : 50,
+                fontSize    : t_fontsize,
                 fontColor   : '#FFFFFF',
                 fontFamily  : "HeeboLight",
                 fontWeight  : 700,

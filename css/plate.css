@@ -379,12 +379,12 @@
 .order_status_timers ul li .product_timer {
     float: left;
     height: 20%;
-    padding: 2% 2% 2% 2.5%;
+    padding: 8% 10% 10%;
 }
 
 .order_status_timers ul li .product_details {
     float: left;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
     padding-left: 10%;
     padding-top: 0;
     width: 80%;
@@ -392,4 +392,8 @@
 
 .order_status_timers ul li h1 {
     line-height: 40px;
+}
+
+.screen_order_review .consumed_products {
+    display: none;
 }
