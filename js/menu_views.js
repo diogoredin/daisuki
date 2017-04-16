@@ -78,15 +78,9 @@ $(document).ready(function() {
 
 					// Update sub menu display of number of orders
 					if ( screen == "order" && sessionStorage.getItem("Plate") == "off" ) {
-						
 						$(location).load( 'order_categories.html', function(data){
 							$('#screen_order_categories' ).fadeIn(300);
 						});
-
-						var NoProductsInOrder = parseInt(sessionStorage.getItem("NoProductsInOrder"));
-						var menu_item = $('#submenu ul li.order_current');
-		
-						menu_item.find("span").text(parseInt(NoProductsInOrder));
 					}
 
 					// Make First Screen Imeddiatly Available
@@ -100,6 +94,12 @@ $(document).ready(function() {
 					if ( sessionStorage.getItem("Plate") == "on" ) {
 						$('#submenu ul').children("li.active").removeClass("active");
 					}
+
+					// Update Number of Orders
+					var NoProductsInOrder = parseInt(sessionStorage.getItem("NoProductsInOrder"));
+					var menu_item = $('#submenu ul li.order_current');
+		
+					menu_item.find("span").text(parseInt(NoProductsInOrder));
 
 					// Show new submenu
 					$('#submenu').hide();
@@ -196,7 +196,7 @@ $(document).ready(function() {
 			
 		}
 
-		if ( !($(this).hasClass("inactive") ) && !($(this).hasClass("check_review") )
+		if ( !($(this).hasClass("inactive") ) && !($(this).hasClass("check_review") ) &&
 			  ( sessionStorage.getItem("Plate") == "on" ) ) {
 	
 			$(this).parent().children("li.active").toggleClass("active");
