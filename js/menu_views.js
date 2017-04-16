@@ -167,6 +167,9 @@ $(document).ready(function() {
 
 		if ( !($(this).hasClass("inactive") ) && 
 			  ( sessionStorage.getItem("Plate") == "off" ) ) {
+			
+			// Disable back
+			$(".go_back").removeClass().addClass("go_back").hide();
 
 			$(this).parent().children("li.active").toggleClass("active");
 			$(this).toggleClass("active");
@@ -218,7 +221,7 @@ $(document).ready(function() {
 			});
 
 			// Enable back
-			$(this).prepend('<div class="go_back_plate"><span class="icon-back">Go Back</span></div>');
+			//$(this).prepend('<div class="go_back_plate"><span class="icon-back">Go Back</span></div>');
 			
 		}
 
