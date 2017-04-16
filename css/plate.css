@@ -5,8 +5,170 @@
 *******************************************************/
 
 #plate {
-    margin: 0 auto;
-    padding-left: 10%;
     padding-top: 2%;
+    position: fixed;
+    right: 17%;
     width: 40%;
+}
+
+/******************************************************
+ 
+1. SUBMENU STYLES
+
+*******************************************************/
+
+#submenu {
+    height: 100%;
+    position: absolute;
+    overflow: auto;
+}
+
+#screen_order_categories, 
+#screen_order_status, 
+#screen_order_current, 
+#screen_order_review, 
+#screen_order_category, 
+#screen_product, 
+#screen_check_review, 
+#screen_check_tax, 
+#screen_check_pay {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    float: left;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.inner_page_title {
+    padding: 0%;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+.inner_page_title h1 {
+    padding: 3%;
+}
+
+/* Restaurant Categories */
+
+#submenu ul.restaurant_categories {
+    display: inline-block;
+    overflow: scroll;
+    padding-left: 10%;
+    padding-top: 33%;
+    position: relative;
+    width: 90%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#submenu ul.restaurant_categories li {
+    width: 88%;
+    height: 8%;
+    line-height: 8%;
+    padding-bottom: 6%;
+    float: none;
+    border: medium none;
+    margin-bottom: 9%;
+    padding-top: 0;
+}
+
+#submenu ul.restaurant_categories li h1 {
+    padding-top: 7%;
+}
+
+/* Restaurant Products */
+
+#submenu ul.restaurant_products {
+    display: inline-block;
+    overflow: scroll;
+    padding-left: 8%;
+    padding-top: 15%;
+    position: relative;
+    width: 90%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#submenu ul.restaurant_products li {
+    padding-top: 0px;
+    border: none;
+    margin-bottom: 9%;
+    padding-bottom: 3%;
+    width: 88%;
+    height: 8%;
+    line-height: 8%;
+    float: none;
+    border: medium none;
+}
+
+#submenu ul.restaurant_products li h1 {
+    padding-top: 10%;
+    height: 25px;
+}
+
+#submenu ul.restaurant_products li p {
+    height: 10px;
+}
+
+/******************************************************
+ 
+1. PRODUCT STYLES
+
+*******************************************************/
+
+#picker {
+    width: 85%;
+    padding-left: 8.5%;
+    float: left;
+    height: 55vh;
+    margin-top: 10vh;
+    overflow: hidden;
+}
+
+.picker_details {
+    background-image: none;
+    display: inline-block;
+    margin-top: 0;
+    padding-left: 10%;
+    padding-right: 0;
+    padding-top: 0;
+    width: 80%;
+}
+
+.picker_review, .picker_share, .picker_information {
+    display: none;
+}
+
+.circle-menu {
+    position: relative;
+    transform: rotate(-90deg);
+    height: 514px;
+    margin: 0 auto;
+    position: relative;
+    width: 400px;
+}
+
+.circle-menu ul {
+    border-radius: 50%;
+    height: 300px;
+    list-style: outside none none;
+    margin: 50px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    transform: rotate(30deg);
+    width: 300px;
+}
+
+
+.circle-menu ul li.inactive {
+    display: none;
+}
+
+.circle-menu .center {
+    transform: rotate(90deg);
 }

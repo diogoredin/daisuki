@@ -21,7 +21,10 @@ function insertPlate() {
                 sessionStorage.setItem("Plate", "on");
 
                 // Include Plate
+                $('#page').replaceWith('<div id="page"></div>');
                 $('#page').append('<div id="plate"><img src="graphics/plate.svg" /></div>').hide().fadeIn(1000);
+                $('#submenu').replaceWith('<div id="submenu"></div>');
+                $('#menu ul').children("li.active").toggleClass("active");
 
         }
 
@@ -47,7 +50,9 @@ function removePlate() {
                         sessionStorage.setItem("Plate", "off");
 
                         // Remove Plate
-                        $('#plate').replaceWith();
+                        $('#page').replaceWith('<div id="page"></div>');
+                        $('#submenu').replaceWith('<div id="submenu"></div>');
+                        $('#menu ul').children("li.active").toggleClass("active");
 
                 });
 
@@ -74,7 +79,6 @@ $(document).ready(function() {
 
         $(document).on('click', ".toggle_simulation_controls", function(e) {
 		$("#simulation_controls").slideToggle('fast', function() {
-		        $("img.toggle_simulation_icon").toggleClass('open', $(this).is(':visible'));
                         $(".toggle_simulation_controls").toggleClass('open', $(this).is(':visible'));
 		});
 
@@ -83,6 +87,8 @@ $(document).ready(function() {
 
         // Insert Plate
         $(document).on('click', ".insert_plate", function(e) {
+                $(this).addClass('open');
+                $(".remove_plate").removeClass('open');
                 insertPlate();
 
                 e.preventDefault();
@@ -90,6 +96,8 @@ $(document).ready(function() {
 
         // Remove Plate
         $(document).on('click', ".remove_plate", function(e) {
+                $(this).addClass('open');
+                $(".insert_plate").removeClass('open');
                 removePlate();
 
                 e.preventDefault();

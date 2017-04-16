@@ -47,12 +47,22 @@ $(document).ready(function() {
 	*
 	*/
 
+	// Store Screen
+	var location;
+
 	// Stores orgin when opening help or waiter
 	var originalSubmenu;
 	var originalMenu;
 
 	// Menu Click
 	$(document).on('click', "#menu ul li", function(e) {
+
+			// Get Plate Status
+			if ( sessionStorage.getItem("Plate") == "off" ) {
+				location = "#page";
+			} else {
+				location = "#submenu";
+			}
 
 			// Disable Back
 			$(".go_back").removeClass().addClass("go_back").hide();
@@ -67,9 +77,9 @@ $(document).ready(function() {
 				$('#submenu').load('menu_' + screen + '.html', function(data){
 
 					// Update sub menu display of number of orders
-					if ( screen == "order" ) {
+					if ( screen == "order" && sessionStorage.getItem("Plate") == "off" ) {
 						
-						$('#page').load( 'order_categories.html', function(data){
+						$(location).load( 'order_categories.html', function(data){
 							$('#screen_order_categories' ).fadeIn(300);
 						});
 
@@ -80,10 +90,15 @@ $(document).ready(function() {
 					}
 
 					// Make First Screen Imeddiatly Available
-					if ( screen == "check" ) {
-						$('#page').load( 'check_review.html', function(data){
+					if ( screen == "check" && sessionStorage.getItem("Plate") == "off" ) {
+						$(location).load( 'check_review.html', function(data){
 							$('#screen_check_review' ).fadeIn(300);
 						});
+					}
+
+					// Removes Default Active
+					if ( sessionStorage.getItem("Plate") == "on" ) {
+						$('#submenu ul').children("li.active").removeClass("active");
 					}
 
 					// Show new submenu
@@ -114,8 +129,11 @@ $(document).ready(function() {
 
 			// Load the Menu
 			$('#submenu').load('side_' + screen + '.html', function(data){
+
+				// Shows Submenu
 				$('#submenu').hide();
 				$('#submenu').fadeIn(300);
+
 			});
 			
 			// If we just called the waiter
@@ -140,6 +158,13 @@ $(document).ready(function() {
 
 	$(document).on('click', "#submenu ul li", function(e) {
 
+		// Get Plate Status
+		if ( sessionStorage.getItem("Plate") == "off" ) {
+			location = "#page";
+		} else {
+			location = "#submenu";
+		}
+
 		if ( !($(this).hasClass("inactive") ) ) {
 
 		$(this).parent().children("li.active").toggleClass("active");
@@ -152,7 +177,7 @@ $(document).ready(function() {
 		var screen = $( this ).attr('class').split(' ')[0];
 
 		// Load the Page
-		$('#page').load( screen + '.html', function(data){
+		$(location).load( screen + '.html', function(data){
 			$('#screen_' + screen ).fadeIn(300);
 
 			// Specific Functions to Execute

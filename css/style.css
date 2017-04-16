@@ -227,7 +227,7 @@ body {
     display: none;
 }
 
-#submenu ul {
+#submenu ul.real_menu {
     list-style: none;
     position: absolute;
     padding-left: 10%;
@@ -237,7 +237,7 @@ body {
     right: 0;
 }
 
-#submenu ul li {
+#submenu ul.real_menu li {
     font-family: HeeboBold, Arial;
     text-transform: uppercase;
     font-size: 16px;
@@ -254,34 +254,34 @@ body {
     text-shadow: 1px 1px 1px rgba(15, 29, 48, 0.4);
 }
 
-#submenu ul li.icon-menu::before, 
-#submenu ul li.icon-my-order::before, 
-#submenu ul li.icon-status::before, 
-#submenu ul li.icon-add-review::before,
-#submenu ul li.icon-receipt::before,
-#submenu ul li.icon-tax-info::before,
-#submenu ul li.icon-pay::before {
+#submenu ul.real_menu li.icon-menu::before, 
+#submenu ul.real_menu li.icon-my-order::before, 
+#submenu ul.real_menu li.icon-status::before, 
+#submenu ul.real_menu li.icon-add-review::before,
+#submenu ul.real_menu li.icon-receipt::before,
+#submenu ul.real_menu li.icon-tax-info::before,
+#submenu ul.real_menu li.icon-pay::before {
     font-size: 33px !important;
     vertical-align: middle;
     padding-right: 5px;
 }
 
-#submenu ul li:last-child {
+#submenu ul.real_menu li:last-child {
     margin-bottom: 10%;
     padding-bottom: 6%;
     border-bottom: 1px solid rgba(244, 237, 255, 0.10);
 }
 
-#submenu ul li.active {
+#submenu ul.real_menu li.active {
     color: #0093EE;
 }
 
-#submenu ul li.active {
+#submenu ul.real_menu li.active {
     color: #0093ee;
 }
 
-#submenu ul li.inactive,
-#submenu ul li.hover {
+#submenu ul.real_menu li.inactive,
+#submenu ul.real_menu li.hover {
     color: rgba(244, 237, 255, 0.15);
     cursor: default;
     text-shadow: none;
@@ -2356,22 +2356,25 @@ button.cancel_waiter:active {
     width: 100%;
     z-index: 1000;
 }
+
 .simulation_controls_inner {
     height: 210px;
     padding-left: 2%;
     padding-right: 2%;
     width: 96%;
 }
+
 .simulation_controls_inner span.simulation_control {
     cursor: pointer;
     float: left;
     height: 99%;
-    margin-left: 2%;
-    margin-right: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
     padding-top: 1%;
     width: 15%;
     color: #000000;
 }
+
 .simulation_controls_inner span.simulation_control h3::before {
     display: inline-block;
     color: #000000;
@@ -2380,22 +2383,30 @@ button.cancel_waiter:active {
     position: unset;
     width: 100%;
 }
+
 .simulation_controls_inner span.simulation_control:active,
-.simulation_controls_inner span.simulation_control:active h3::before {
+.simulation_controls_inner span.simulation_control:active h3::before,
+.simulation_controls_inner span.simulation_control.open,
+.simulation_controls_inner span.simulation_control.open h3::before {
     color: #0093EE;
+    background: #eeeeee none repeat scroll 0 0;
 }
+
 .simulation_controls_inner span.simulation_control h3 {
     float: none;
     text-align: center;
     width: 100%;
 }
+
 .simulation_controls_inner span.simulation_control:hover {
     background: #eeeeee none repeat scroll 0 0;
 }
+
 .simulation_controls_inner span.simulation_control h3 {
     font-family: HeeboMedium,Arial;
     text-align: center;
 }
+
 #toggle_simulation_controls_wrapper {
     bottom: 0;
     display: block;
@@ -2405,14 +2416,17 @@ button.cancel_waiter:active {
     z-index: 1200;
     width: 15%;
 }
+
 .toggle_simulation_controls {
     background: #999 none repeat scroll 0 0;
     cursor: pointer;
     height: 50px;
 }
+
 .toggle_simulation_controls.open {
     background: #0093EE;
 }
+
 .toggle_simulation_controls p:before {
     font-size: 38px;
     position: unset;
@@ -2420,6 +2434,7 @@ button.cancel_waiter:active {
     vertical-align: middle;
     padding-right: 10px;
 }
+
 .toggle_simulation_controls p {
     color: #fff;
     font-family: HeeboMedium,Arial;
@@ -2428,6 +2443,7 @@ button.cancel_waiter:active {
     margin-top: 0;
     text-align: center;
 }
+
 .info {
     float: right;
     font-family: HeeboRegular;
@@ -2437,11 +2453,13 @@ button.cancel_waiter:active {
     text-align: justify;
     width: 40%;
 }
+
 .info h3.icon-info {
     font-family: HeeboRegular,Arial;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
+
 .info h3.icon-info::before {
     color: #000000;
     font-size: 35px;
@@ -2449,6 +2467,7 @@ button.cancel_waiter:active {
     position: unset;
     vertical-align: middle;
 }
+
 .info p {
     font-size: 14px;
     margin-top: 0;

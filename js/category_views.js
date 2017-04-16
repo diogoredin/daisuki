@@ -11,12 +11,23 @@
 */
 
 function loadCategory(categoryIndex, ProductAdded, ProductId) {
+
+	// Store Screen
+	var location;
+
+	// Get Plate Status
+	if ( sessionStorage.getItem("Plate") == "off" ) {
+		location = "#page";
+	} else {
+		location = "#submenu";
+	}
+
 	$(".go_back").show();
 
 	// Load the Category page view
 	var link = "./order_category.html";
 
-	$('#page').load(link, function() {
+	$(location).load(link, function() {
 
 		$(".go_back").removeClass().addClass("go_back go_back_categories");
 		$("div.go_back span").text("Go Back to Menu");
@@ -116,7 +127,17 @@ $(document).ready(function() {
 		$(this).removeClass().addClass("go_back");
 		var link = "./order_categories.html";
 
-		$('#page').load(link, function() {
+		// Store Screen
+		var location;
+
+		// Get Plate Status
+		if ( sessionStorage.getItem("Plate") == "off" ) {
+			location = "#page";
+		} else {
+			location = "#submenu";
+		}
+
+		$(location).load(link, function() {
 			$('#screen_order_categories').fadeIn(300);
 		});
 
@@ -197,8 +218,18 @@ $(document).ready(function() {
 		// Load the Product page view
 		var link = "./order_product.html";
 
+		// Store Screen
+		var location;
+
+		// Get Plate Status
+		if ( sessionStorage.getItem("Plate") == "off" ) {
+			location = "#page";
+		} else {
+			location = "#submenu";
+		}
+
 		// Load Product Page
-		$('#page').load(link, function() {
+		$(location).load(link, function() {
 			loadProduct(id, categoryTag);
 		});
 
