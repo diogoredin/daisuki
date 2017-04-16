@@ -171,9 +171,6 @@ $(document).ready(function() {
 			$(this).parent().children("li.active").toggleClass("active");
 			$(this).toggleClass("active");
 
-			// Disable back
-			$(".go_back").removeClass().addClass("go_back").hide();
-
 			// Get the page to be loaded from the class
 			var screen = $( this ).attr('class').split(' ')[0];
 
@@ -198,7 +195,6 @@ $(document).ready(function() {
 
 		if ( !($(this).hasClass("inactive") ) && !($(this).hasClass("check_review") ) &&
 			  ( sessionStorage.getItem("Plate") == "on" ) ) {
-	
 			$(this).parent().children("li.active").toggleClass("active");
 
 			// Get the page to be loaded from the class
@@ -219,7 +215,10 @@ $(document).ready(function() {
 						loadOrderReview();
 				}
 
-				});
+			});
+
+			// Enable back
+			$(this).prepend('<div class="go_back_plate"><span class="icon-back">Go Back</span></div>');
 			
 		}
 

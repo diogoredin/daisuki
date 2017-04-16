@@ -397,3 +397,33 @@
 .screen_order_review .consumed_products {
     display: none;
 }
+
+.go_back_plate {
+    background: rgba(15, 29, 48, 0.8);
+    color: #ffffff;
+    font-family: HeeboBold,Arial;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    position: fixed;
+    text-transform: uppercase;
+    width: 21%;
+    padding-left: 2%;
+    padding-right: 4%;
+    line-height: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+    text-align: center;
+}
+
+.go_back_plate:active {
+    background: #0093EE;
+}
+
+.go_back_plate span::before {
+    position: unset;
+    font-size: 35px;
+    vertical-align: middle;
+    padding-right: 10px;
+}

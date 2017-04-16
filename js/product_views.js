@@ -34,7 +34,7 @@ function loadProduct(id, categoryName) {
 		case "deserts":
 			categories = products[2];
 			category = categories.deserts;
-			category_name = "Deserts";
+			category_name = "Desserts";
 			category_tag = "deserts";
 			break;
 	}

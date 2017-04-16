@@ -53,7 +53,7 @@ function loadCategory(categoryIndex, ProductAdded, ProductId) {
 				break;
 			case 2:
 				categories = products[2];
-				category_name = "Deserts";
+				category_name = "Desserts";
 				category_tag = "deserts";
 				category = categories.deserts;
 				break;
@@ -208,7 +208,7 @@ $(document).ready(function() {
 		} else if (categoryTag == "drinks") {
 			categoryName = "Drinks";
 		} else if (categoryTag == "deserts") {
-			categoryName = "Deserts";
+			categoryName = "Desserts";
 		}
 
 		// Update back button

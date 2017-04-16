@@ -595,7 +595,7 @@
                             "ingredients" : [ "Free Coffee"
                             ],
 
-                            "info" : "Sweat chocolate desert that is fluffy. Made of dark chocokate, eggs and sugar." 
+                            "info" : "Sweet chocolate desert that is fluffy. Made of dark chocokate, eggs and sugar." 
                         },
                         {   "id"    : 1,
                             "name"  : "Cheesecake", 
@@ -614,7 +614,7 @@
                             "ingredients" : [ "Free Coffee"
                             ],
                                                         
-                            "info" : "Sweat dessert consisting of 3 layers. The main layer consists of cheese, eggs and sugar, the bottom layers consists od a crust base made of crushed cookies and the top layer of strawberries." 
+                            "info" : "Sweet dessert consisting of 3 layers. The main layer consists of cheese, eggs and sugar, the bottom layers consists od a crust base made of crushed cookies and the top layer of strawberries." 
                         },
                         {   "id"    : 2,
                             "name"  : "Chocolate Muffin", 
