@@ -216,7 +216,7 @@ $(document).ready(function() {
 		$("div.go_back span").text("Go Back to " + categoryName );
 
 		// Load the Product page view
-		var link = "./order_product.html";
+		var link;
 
 		// Store Screen
 		var location;
@@ -224,13 +224,21 @@ $(document).ready(function() {
 		// Get Plate Status
 		if ( sessionStorage.getItem("Plate") == "off" ) {
 			location = "#page";
+			link = "./order_product.html";
 		} else {
 			location = "#submenu";
+			link = "./order_product_small.html";
 		}
 
 		// Load Product Page
 		$(location).load(link, function() {
 			loadProduct(id, categoryTag);
+
+			if ( sessionStorage.getItem("Plate") == "on" ) {
+				$( function() {
+    				$( "#tabs" ).tabs();
+  				} );
+			}
 		});
 
 		e.preventDefault();

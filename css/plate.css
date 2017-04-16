@@ -164,11 +164,6 @@
     width: 300px;
 }
 
-
-.circle-menu ul li.inactive {
-    display: none;
-}
-
 .circle-menu .center {
     transform: rotate(90deg);
 }

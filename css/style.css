@@ -606,7 +606,7 @@ button.place_order:active {
 
 #picker {
     width: 50%;
-    float: left;
+    float: right;
     margin-top: 15vh;
     height: 75vh;
 }
@@ -615,7 +615,7 @@ button.place_order:active {
     width: 40%;
     padding-left: 5%;
     padding-right: 5%;
-    float: left;
+    float: right;
     background-image: -webkit-linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
     background-image: -moz-linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
     background-image: -o-linear-gradient(rgba(34,50,71,0.00) 0%, #223247 100%);
