@@ -46,7 +46,9 @@ function loadProduct(id, categoryName) {
 		$('.page_title').append('<h1 class="icon-' + category_tag +'">' + category_name + ' > ' + object.name + '\
 		\ - <span class="priceTitle ' + Number(object.price).toFixed(2) + '">' + Number(object.price).toFixed(2) + '$</span></h1>');
 	} else {
-		$('.page_title').append('<h1 class="icon-' + category_tag +'">' + object.name + '</h1>');
+		$('.page_title').append('<h1 class="icon-' + category_tag +'">' + category_name + '</h1>');
+		$('.product_small_name').append( object.name );
+		$('.product_small_price').append("<strong> Price: </strong> " + Number(object.price).toFixed(2) + "$");
 	}
 
 	// Display the confirm button
