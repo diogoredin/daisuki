@@ -39,13 +39,18 @@
     width: 100%;
 }
 
+.page_inner {
+    padding-top: 0%;
+}
+
 .inner_page_title {
     clear: both;
     display: block;
     margin-top: 0;
     position: relative;
-    width: 100%;
+    width: 93%;
     z-index: 100;
+    padding-right: 4.5%;
 }
 
 .inner_page_title h1 {
@@ -58,7 +63,7 @@
     display: inline-block;
     overflow: scroll;
     padding-left: 10%;
-    padding-top: 7%;
+    padding-top: 6%;
     position: relative;
     width: 90%;
     bottom: 0;
@@ -87,7 +92,7 @@
     display: inline-block;
     overflow: scroll;
     padding-left: 8%;
-    padding-top: 15%;
+    padding-top: 7%;
     position: relative;
     width: 90%;
     bottom: 0;
@@ -254,7 +259,7 @@
     border-radius: 4px;
     float: left;
     margin-left: 10%;
-    margin-top: 7%;
+    margin-top: 10.5%;
     width: 80%;
 }
 
@@ -280,7 +285,7 @@
     font-size: 21px;
     letter-spacing: 0.6px;
     margin-bottom: 0;
-    margin-top: 18px;
+    margin-top: 15px;
     padding-left: 20px;
     padding-right: 5%;
     text-align: left;
@@ -320,7 +325,7 @@
 .information_message, 
 .information_message_review, 
 .confirmation_message {
-    margin: 0% 11.5% 0% 8%;
+    margin: 11% 11.5% 0 8%;
     padding: 0 3%;
 }
 
@@ -330,4 +335,61 @@
 .confirmation_message h4 {
     font-size: 16px;
     line-height: 35px;
+}
+
+/******************************************************
+ 
+2. ORDER TIMERS
+
+*******************************************************/
+
+.order_status_timers {
+    padding-top: 0;
+    width: 100%;
+}
+
+.order_status_timers ul {
+    margin-top: 0;
+    padding-left: 5%;
+    padding-top: 7%;
+    width: 90%;
+}
+
+.order_status_timers ul li {
+    margin-bottom: 3.5%;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 94%;
+}
+
+.order_status_timers ul li .product_photo {
+    float: left;
+    height: 10%;
+    margin-bottom: 0%;
+    padding-bottom: 0;
+    padding-right: 2%;
+    width: 45%;
+}
+
+.order_status_timers ul li .product_photo img {
+    border-radius: 3px 0;
+    width: 100%;
+}
+
+.order_status_timers ul li .product_timer {
+    float: left;
+    height: 20%;
+    padding: 2% 2% 2% 2.5%;
+}
+
+.order_status_timers ul li .product_details {
+    float: left;
+    padding-bottom: 10%;
+    padding-left: 10%;
+    padding-top: 0;
+    width: 80%;
+}
+
+.order_status_timers ul li h1 {
+    line-height: 40px;
 }

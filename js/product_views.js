@@ -48,7 +48,8 @@ function loadProduct(id, categoryName) {
 	} else {
 		$('.page_title').append('<h1 class="icon-' + category_tag +'">' + category_name + '</h1>');
 		$('.product_small_name').append( object.name );
-		$('.product_small_price').append("<strong> Price: </strong> " + Number(object.price).toFixed(2) + "$");
+		$('.product_small_price').append( Number(object.price).toFixed(2) + "$");
+		$('.product_small_view .product_photo').append( '<img src="data/images/' + object.photo + '" />' );
 	}
 
 	// Display the confirm button
