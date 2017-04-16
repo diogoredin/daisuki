@@ -120,50 +120,9 @@
 
 *******************************************************/
 
-#picker {
-    width: 85%;
-    padding-left: 8.5%;
-    float: left;
-    height: 55vh;
-    margin-top: 10vh;
-    overflow: hidden;
-}
-
-.picker_details {
-    background-image: none;
-    display: inline-block;
-    margin-top: 0;
-    padding-left: 10%;
-    padding-right: 0;
-    padding-top: 0;
+#tabs {
+    padding-top: 40%;
     width: 80%;
-}
-
-.picker_review, .picker_share, .picker_information {
-    display: none;
-}
-
-.circle-menu {
-    position: relative;
-    transform: rotate(-90deg);
-    height: 514px;
-    margin: 0 auto;
-    position: relative;
-    width: 400px;
-}
-
-.circle-menu ul {
-    border-radius: 50%;
-    height: 300px;
-    list-style: outside none none;
-    margin: 50px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    transform: rotate(30deg);
-    width: 300px;
-}
-
-.circle-menu .center {
-    transform: rotate(90deg);
+    padding-left: 10%;
+    float: left;
 }
