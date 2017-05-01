@@ -1938,14 +1938,14 @@ button.check_back {
 
 button.check_back,
 button.cancel_tax_information {
-    background: #b33a3a none repeat scroll 0 0;
+    background: rgba(28, 40, 59, 1)  none repeat scroll 0 0;
     outline: medium none;
 }
 
 
 button.check_back:active,
 button.cancel_tax_information:active {
-    background: #A90D0D none repeat scroll 0 0;
+    background: rgba(28, 40, 59, 0.8)  none repeat scroll 0 0;
     outline: medium none;
 }
 
