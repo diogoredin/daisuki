@@ -16,7 +16,6 @@ function loadOrderReview() {
     if ( sessionStorage.getItem("Ordered") == "False" ) {
         $(".information_message_review").show();
     }
-    
 
     var products = JSON.parse(sessionStorage.getItem('products'));
     var NoOrders = parseInt(sessionStorage.getItem("NoOrders"));
@@ -176,10 +175,20 @@ $(document).ready(function() {
 
     $(document).on('click', ".product_review_button button", function(e) {
 
+        // Store Screen
+        var location;
+
+        // Get Plate Status
+        if ( sessionStorage.getItem("Plate") == "off" ) {
+            location = "#page";
+        } else {
+            location = "#submenu";
+        }
+
         var orderId = $(this).attr('class')
 
 		// Load the Page
-		$('#page').load('order_review_inner.html', function(){
+		$(location).load('order_review_inner.html', function(){
 			$('#screen_order_review_inner').fadeIn(300);
 			// Specific Functions to Execute
 			loadOrderReviewInner(orderId);

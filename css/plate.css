@@ -484,8 +484,72 @@
     padding-top: 0;
     width: 86%;
 }
+
 .consumed_products ul li .product_review_button.alone {
     float: left;
     margin-top: -1.5%;
     width: 100%;
+}
+
+/******************************************************
+ 
+2. ORDER REVIEW INNER
+
+*******************************************************/
+
+#screen_order_review_inner {
+    width: 100%;
+}
+
+.product_review_left {
+    float: left;
+    height: 60%;
+    width: 86%;
+    margin-top: 7%;
+    margin-left: 7%;
+}
+
+.product_review_left .product_photo {
+    width: 25%;
+    float: right;
+}
+
+.product_review_left .product_photo img {
+    border-radius: 0 3px;
+}
+
+.product_review_left .product_details {
+    float: right;
+    width: 73%;
+    padding: 4% 1% 1% 1%;
+}
+
+.product_review_right {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    margin-left: 2%;
+    margin-top: 3%;
+    min-height: 75vh;
+    padding-left: none;
+    padding-right: none;
+    right: 0;
+    width: 86%;
+}
+
+.my_review_box textarea {
+    width: 90%;
+}
+
+.my_review_box h3 {
+    float: left;
+    padding-left: 2%;
+    width: 50%;
+}
+
+.my_review_box .stars {
+    float: left;
+    margin-bottom: 10%;
+}
+
+.my_review_box, .customer_ratings {
+    padding-bottom: 9%;
 }
