@@ -427,3 +427,65 @@
     vertical-align: middle;
     padding-right: 10px;
 }
+
+/******************************************************
+ 
+2. ORDER REVIEW
+
+*******************************************************/
+
+.consumed_products {
+    padding-top: 7%;
+    width: 100%;
+}
+
+.consumed_products ul {
+    list-style: outside none none;
+    margin-top: 0;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+.consumed_products ul li {
+    background: rgba(28, 40, 59, 0.9) none repeat scroll 0 0;
+    border-radius: 4px;
+    color: #ffffff;
+    display: inline-block;
+    font-family: HeeboRegular,Arial;
+    letter-spacing: 0.5px;
+    list-style: outside none none;
+    margin-bottom: 3.5%;
+    margin-left: 7%;
+    margin-right: 5%;
+    padding-bottom: 5%;
+    width: 86%;
+}
+
+.consumed_products ul li .product_photo {
+    float: right;
+    height: 10%;
+    margin-bottom: -1%;
+    padding-bottom: 0;
+    width: 25%;
+}
+
+.consumed_products ul li .product_photo img {
+    border-radius: 0 3px;
+    width: 100%;
+}
+
+.consumed_products ul li .product_details {
+    float: right;
+    width: 75%;
+}
+
+.consumed_products .product_review_list_right {
+    margin-left: 7%;
+    padding-top: 0;
+    width: 86%;
+}
+.consumed_products ul li .product_review_button.alone {
+    float: left;
+    margin-top: -1.5%;
+    width: 100%;
+}
