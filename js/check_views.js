@@ -133,9 +133,8 @@ $(document).ready(function() {
     var count = 0;
     $(document).on('click', ".digit", function(e) {
 
-        var num = ($(this).clone().children().remove().end().text());
         if (count < 11) {
-            $("#output").append('<span>' + num.trim() + '</span>');
+            $("#output").append('<span>*</span>');
             count++;
         }
 

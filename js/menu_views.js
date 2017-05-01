@@ -90,6 +90,13 @@ $(document).ready(function() {
 						});
 					}
 
+					// Make First Screen Imeddiatly Available
+					if ( screen == "check" && sessionStorage.getItem("Plate") == "on" ) {
+						$(location).load( 'side_remove.html', function(data){
+							$('#remove_plate' ).fadeIn(300);
+						});
+					}
+
 					// Removes Default Active
 					if ( sessionStorage.getItem("Plate") == "on" ) {
 						$('#submenu ul').children("li.active").removeClass("active");

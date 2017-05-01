@@ -415,6 +415,7 @@
     vertical-align: middle;
     cursor: pointer;
     text-align: center;
+    visibility: visible;
 }
 
 .go_back_plate:active {

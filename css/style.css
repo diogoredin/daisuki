@@ -2472,3 +2472,7 @@ button.cancel_waiter:active {
     font-size: 14px;
     margin-top: 0;
 }
+
+.go_back_plate {
+    visibility: hidden;
+}
