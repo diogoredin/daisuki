@@ -1956,23 +1956,28 @@ button.confirm_receipt {
 }
 
 button.check_back {
-    float: right;
+    float: left;
     margin-bottom: 2%;
     margin-right: 2%;
     margin-top: 2%;
 }
 
-button.check_back,
-button.cancel_tax_information {
+button.check_back {
+    background: rgba(28, 40, 59, 0.9)  none repeat scroll 0 0;
+    outline: medium none;
+}
+
+button.check_back:active {
     background: rgba(28, 40, 59, 1)  none repeat scroll 0 0;
     outline: medium none;
 }
 
+button.cancel_tax_information {
+    background: #b33a3a none repeat scroll 0 0;
+}
 
-button.check_back:active,
 button.cancel_tax_information:active {
-    background: rgba(28, 40, 59, 0.8)  none repeat scroll 0 0;
-    outline: medium none;
+    background: #a90d0d none repeat scroll 0 0;
 }
 
 button.change_tax,
@@ -2086,7 +2091,7 @@ button.confirm_receipt:active {
     font-size: 45px;
     padding: 10% 5%;
     text-align: center;
-    width: 43%;
+    width: 44.3%;
 }
 
 .container {
@@ -2094,10 +2099,9 @@ button.confirm_receipt:active {
     border-radius: 4px;
     float: right;
     height: 400px;
-    padding: 0;
+    padding: 0 0 0 0.2%;
     text-align: center;
-    width: 320px;
-    margin-left: 6%;
+    width: 41%;
 }
 
 .row {
@@ -2154,6 +2158,11 @@ button.digit:active, button.clear:active {
     opacity: 0.6;
 }
 
+.inactive button.digit:active, 
+.inactive button.clear:active {
+    opacity: 1 !important;
+}
+
 .botrow {
     font-family: HeeboRegular;
     margin-left: 5%;
@@ -2178,12 +2187,17 @@ button#confirm_pin, button#cancel_pin {
 }
 
 button#confirm_pin {
-    background: #52ad20 none repeat scroll 0 0;
+    background: #52ad20 none repeat scroll 0 0 ;
     outline: medium none;
 }
 
 button#confirm_pin:active {
     background: #45921a none repeat scroll 0 0;
+    outline: medium none;
+}
+
+.inactive button#confirm_pin:active {
+    background: #52ad20 none repeat scroll 0 0 ;
     outline: medium none;
 }
 
@@ -2196,8 +2210,12 @@ button#cancel_pin:active {
     outline: medium none;
 }
 
-.container.inactive button, .container.inactive .digit {
-    cursor: normal !important;
+.inactive button#cancel_pin:active {
+    background: #b33a3a none repeat scroll 0 0;
+}
+
+.inactive button, .inactive .digit {
+    cursor: default !important;
 }
 
 /******************************************************

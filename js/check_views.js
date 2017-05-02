@@ -63,6 +63,8 @@ function loadPayScreen() {
 	// Load the Page
 	$('#page').load( 'check_pay.html', function(data){
 	    $('#screen_check_pay' ).fadeIn(300);
+            $(".authorize_payment").replaceWith('<div class="authorize_payment"><h4 class="icon-info"></h4>Authorize payment of '
+            + Number(sessionStorage.getItem("Total")).toFixed(2) + '$</div>');
     });
 
 }
@@ -185,6 +187,9 @@ function loadCheckList() {
 
     }
 
+    // Set global State to On
+    sessionStorage.setItem("Total", total);
+
     $('p.product_price_vat').replaceWith('<p class="product_price product_price_vat">' + Number(0.23*total).toFixed(2) + '$</p>');
     $('p.product_price_no_vat').replaceWith('<p class="product_price product_price_no_vat">' + Number(total).toFixed(2) + '$</p>');
 
@@ -277,23 +282,30 @@ $(document).ready(function() {
     });
 
     $(document).on('click', "#cancel_pin", function(e) {
-        $("#output").replaceWith('<div id="output"></div>');
+        if ( !$("#atm").hasClass("inactive") ) {
+            $(".authorize_payment").replaceWith('<div class="authorize_payment"><h4 class="icon-price"></h4>Authorize payment of ' + Number(sessionStorage.getItem("Total")).toFixed(2) + '$</div>');
+            $("#output").replaceWith('<div id="output">Introduce PIN</div>');
+            count = 0;
+        }
         e.preventDefault();
     });
 
     $(document).on('click', "#confirm_pin", function(e) {
-        if ( count == 4 ) {
-            $(".authorize_payment").replaceWith('<div class="authorize_payment"> <h4 class="icon-confirm"></h4>Payment Accepted</div>');
-            $("#output").replaceWith('<div id="output"></div>');
-            $(".container").fadeTo( "slow", 0.33 );
-            $(".container").addClass('inactive')
-        }
+        if ( !$("#atm").hasClass("inactive") ) {
+            if ( count == 4 ) {
+                $(".authorize_payment").replaceWith('<div class="authorize_payment"><h4 class="icon-confirm"></h4>Payment Accepted.</br> Thank you!</div>');
+                $("#output").replaceWith('<div id="output"></div>');
+                $(".container").fadeTo( "slow", 0.33 );
+                $(".total_check").hide();
+                $(".container").addClass("inactive");
+            }
 
-        else {
-            $(".container").effect( "shake" );
-            $(".authorize_payment").replaceWith('<div class="authorize_payment">Payment Denied, please try again.</div>');
-            $("#output").replaceWith('<div id="output">Introduce PIN</div>');
-            count = 0;
+            else {
+                $(".container").effect( "shake" );
+                $(".authorize_payment").replaceWith('<div class="authorize_payment"><h4 class="icon-close"></h4>Payment Denied. Please try again.</div>');
+                $("#output").replaceWith('<div id="output">Introduce PIN</div>');
+                count = 0;
+            }
         }
 
         e.preventDefault();

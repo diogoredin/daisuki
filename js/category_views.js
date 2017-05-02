@@ -66,7 +66,6 @@ function loadCategory(categoryIndex, ProductAdded, ProductId) {
 
 		// Display the category name
 		$('.page_title').append('<h1 class="icon-' + category_tag +'">' + category_name + '</h1>');
-		mixitup('.restaurant_products');
 
 		// Display all the products from the category
 		for (var i = 0; i < category.length; i++) {
