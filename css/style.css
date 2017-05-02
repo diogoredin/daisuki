@@ -1813,6 +1813,7 @@ button.confirm_check:active {
     padding-top: 5%;
     padding-bottom: 5%;
     width: 40%;
+    padding-bottom: 20%;
 }
 
 .left_receipt img {
@@ -1920,6 +1921,20 @@ button.confirm_check:active {
     margin-top: 8%;
     text-align: center;
     text-decoration: none;
+}
+
+.flipper p {
+    color: #ffffff;
+    font-family: HeeboRegular,Arial;
+    font-size: 16px;
+    letter-spacing: 0.6px;
+    text-align: left;
+    margin-left: 6%;
+    text-decoration: none;
+}
+
+.flipper p.tax_enterprise {
+    margin-bottom: 10%;
 }
 
 button.change_tax,

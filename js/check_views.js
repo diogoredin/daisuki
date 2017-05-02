@@ -245,7 +245,39 @@ $(document).ready(function() {
     });
 
     $(document).on('click', "button.save_tax_information", function(e) {
-        $("#myCard").removeClass("flip");
+
+        if ( $('input[name=name]:text').val().length == 0 ) {
+            $('input[name=name]').effect( "highlight", {color: 'rgba(255, 0, 0, 0.3)'}, 1000 );
+        }
+
+         if ( $('input[name=tin]:text').val().length == 0 ) {
+            $('input[name=tin]').effect( "highlight", {color: 'rgba(255, 0, 0, 0.3)'}, 1000 );
+        }
+
+        if ( $('input[name=name]:text').val().length == 0 || $('input[name=tin]:text').val().length == 0 ) {
+            $("#myCard").effect( "shake" );
+
+        } else {
+
+            // Update Name
+            var tax_name = $('input[name=name]').val();
+            $("p.tax_name").replaceWith('<p class="tax_name"> <u>Name</u> ' + tax_name + '</p>');
+
+            // Update Tin
+            var tin = $('input[name=tin]').val();
+            $("p.tax_tin").replaceWith('<p class="tax_tin"> <u>TIN</u> ' + tin + '</p>');
+
+            // Update Enterprise
+            var enterprise = $('input[name=enterprise]').val();
+            $("p.tax_enterprise").replaceWith('<p class="tax_enterprise"> <u>Enterprise</u> - ' + enterprise + '</p>');
+
+            // Reset
+            $('.front h1').replaceWith("<h1>Tax Information</h1>");
+
+            $("#myCard").removeClass("flip");
+
+        }
+
         e.preventDefault();
     });
 
