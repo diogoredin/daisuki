@@ -381,6 +381,31 @@ body {
     padding-right: 10px;
 }
 
+button.sort {
+    background: #192739 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: HeeboLight;
+    font-size: 16px;
+    margin-bottom: 1.5%;
+    padding: 17px 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+button.sort::before {
+    font-size: 30px;
+    padding-right: 10px;
+    position: unset;
+    vertical-align: middle;
+}
+
+button.sort.open {
+    background: #0093EE;
+}
+
 ul.restaurant_categories {
     float: left;
     list-style: outside none none;
@@ -2053,15 +2078,15 @@ button.confirm_receipt:active {
 *******************************************************/
 
 .authorize_payment {
-    width: 43%;
-    float: left;
     background: rgba(28, 40, 59, 0.9) none repeat scroll 0 0;
     border-radius: 4px;
-    color: #FFFFFF;
-    font-family: HeeboThin, Arial;
+    color: #ffffff;
+    float: left;
+    font-family: HeeboThin,Arial;
     font-size: 45px;
-    padding: 12% 5% 12% 5%;
+    padding: 10% 5%;
     text-align: center;
+    width: 43%;
 }
 
 .container {
@@ -2092,14 +2117,16 @@ button.confirm_receipt:active {
 }
 
 .authorize_payment h4 {
-    font-size: 45px;
-    color: #FFFFFF;
+    color: #ffffff;
+    font-size: 25px;
+    margin: 0 auto;
+    width: 100%;
 }
 
-
-.authorize_payment h4:before {
-    font-size: 35px;
-    color: #FFFFFF;
+.authorize_payment h4::before {
+    color: #ffffff;
+    font-size: 95px;
+    position: unset;
 }
 
 button.digit, button.clear {
@@ -2167,6 +2194,10 @@ button#cancel_pin {
 button#cancel_pin:active {
     background: #a90d0d none repeat scroll 0 0;
     outline: medium none;
+}
+
+.container.inactive button, .container.inactive .digit {
+    cursor: normal !important;
 }
 
 /******************************************************

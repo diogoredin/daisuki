@@ -59,6 +59,13 @@
 
 /* Restaurant Categories */
 
+button.sort {
+    margin-bottom: 1.5%;
+    margin-left: 8%;
+    margin-top: 10%;
+    padding: 17px 25px;
+}
+
 #submenu ul.restaurant_categories {
     display: inline-block;
     overflow: scroll;

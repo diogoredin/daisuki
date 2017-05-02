@@ -277,7 +277,7 @@ $(document).ready(function() {
     });
 
     $(document).on('click', "#cancel_pin", function(e) {
-         $("#output").replaceWith('<div id="output"></div>');
+        $("#output").replaceWith('<div id="output"></div>');
         e.preventDefault();
     });
 
@@ -285,12 +285,15 @@ $(document).ready(function() {
         if ( count == 4 ) {
             $(".authorize_payment").replaceWith('<div class="authorize_payment"> <h4 class="icon-confirm"></h4>Payment Accepted</div>');
             $("#output").replaceWith('<div id="output"></div>');
+            $(".container").fadeTo( "slow", 0.33 );
+            $(".container").addClass('inactive')
         }
 
         else {
             $(".container").effect( "shake" );
             $(".authorize_payment").replaceWith('<div class="authorize_payment">Payment Denied, please try again.</div>');
             $("#output").replaceWith('<div id="output">Introduce PIN</div>');
+            count = 0;
         }
 
         e.preventDefault();
