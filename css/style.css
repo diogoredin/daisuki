@@ -1723,6 +1723,7 @@ button.confirm_check {
     text-align: center;
     text-transform: uppercase;
     width: 40%;
+    display: none;
 }
 
 button.confirm_check:active {

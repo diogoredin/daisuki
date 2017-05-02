@@ -87,6 +87,7 @@ $(document).ready(function() {
 					if ( screen == "check" && sessionStorage.getItem("Plate") == "off" ) {
 						$(location).load( 'check_review.html', function(data){
 							$('#screen_check_review' ).fadeIn(300);
+							loadCheckProducts();
 						});
 					}
 
