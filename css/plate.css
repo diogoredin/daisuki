@@ -321,17 +321,14 @@
 
 *******************************************************/
 
-.success_message, 
-.information_message, 
-.information_message_review, 
+.success_message,
 .confirmation_message {
     margin: 11% 11.5% 0 8%;
     padding: 0 3%;
 }
 
 .success_message h4, 
-.information_message h4, 
-.information_message_review h4, 
+.information_message h4,
 .confirmation_message h4 {
     font-size: 16px;
     line-height: 35px;
@@ -399,23 +396,20 @@
 }
 
 .go_back_plate {
-    background: rgba(15, 29, 48, 0.8);
+    background: rgba(15, 29, 48, 0.8) none repeat scroll 0 0;
     color: #ffffff;
+    cursor: pointer;
     font-family: HeeboBold,Arial;
     font-size: 16px;
     letter-spacing: 0.4px;
-    padding-bottom: 1%;
-    padding-top: 1%;
-    position: fixed;
-    text-transform: uppercase;
-    width: 21%;
-    padding-left: 2%;
-    padding-right: 4%;
     line-height: 16px;
-    vertical-align: middle;
-    cursor: pointer;
+    padding: 4% 4% 4% 2%;
+    position: relative;
     text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
     visibility: visible;
+    width: 94%;
 }
 
 .go_back_plate:active {

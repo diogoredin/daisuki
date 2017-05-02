@@ -227,9 +227,6 @@ $(document).ready(function() {
 
 			});
 
-			// Enable back
-			//$(this).prepend('<div class="go_back_plate"><span class="icon-back">Go Back</span></div>');
-			
 		}
 
 		e.preventDefault();

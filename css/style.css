@@ -2474,5 +2474,6 @@ button.cancel_waiter:active {
 }
 
 .go_back_plate {
+    position: fixed;
     visibility: hidden;
 }
