@@ -48,7 +48,7 @@ function loadProduct(id, categoryName) {
 	} else {
 		$('.page_title').append('<h1 class="icon-' + category_tag +'">' + category_name + '</h1>');
 		$('.product_small_name').append( object.name );
-		$('.product_small_price').append( Number(object.price).toFixed(2) + "$");
+		$('.product_small_price').replaceWith('<p class="product_small_price ' + Number(object.price).toFixed(2) + '">' + Number(object.price).toFixed(2) + '$</p>');
 		$('.product_small_view .product_photo').append( '<img src="data/images/' + object.photo + '" />' );
 	}
 
@@ -67,16 +67,30 @@ function loadProduct(id, categoryName) {
 	}
 
 	//Adding ingredients
-	var ingredients = object.ingredients;
-	var ingredientsLenght = ingredients.length;
-	for (var i = 0; i < ingredientsLenght; i++) {
-		$(".picker_configure ul").append('<li class="on_off">\
-                <label class="switch">\
-                    <input type="checkbox">\
-                    <div class="slider round"></div>\
-                </label>\
-                <p>' + ingredients[i] + '</p>\
-            </li>');
+	if ( sessionStorage.getItem("Plate") == "off" ) {
+		var ingredients = object.ingredients;
+		var ingredientsLenght = ingredients.length;
+		for (var i = 0; i < ingredientsLenght; i++) {
+			$(".picker_configure ul").append('<li class="on_off">\
+					<label class="switch">\
+						<input type="checkbox">\
+						<div class="slider round"></div>\
+					</label>\
+					<p>' + ingredients[i] + '</p>\
+				</li>');
+		}
+	} else {
+		var ingredients = object.ingredients;
+		var ingredientsLenght = ingredients.length;
+		for (var i = 0; i < ingredientsLenght; i++) {
+			$("#tabs-1 ul").append('<li class="on_off">\
+					<label class="switch">\
+						<input type="checkbox">\
+						<div class="slider round"></div>\
+					</label>\
+					<p>' + ingredients[i] + '</p>\
+				</li>');
+		}
 	}
 	
 
@@ -115,11 +129,17 @@ $(document).ready(function() {
 	});
 
 	// Plus Button
-	$(document).on('click', ".picker_configure ul li button.plus", function(e) {
+	$(document).on('click', "button.plus", function(e) {
 		var value = parseInt($(this).parent().find("p span").text()) + 1;
 		$(this).parent().find("p span").text(value);
-		price = parseFloat($('.priceTitle').attr("class").split(' ')[1]);
-		$('.priceTitle').text(Number(price * value).toFixed(2) + '$');
+
+		if ( sessionStorage.getItem("Plate") == "off" ) {
+			price = parseFloat($('.priceTitle').attr("class").split(' ')[1]);
+			$('.priceTitle').text(Number(price * value).toFixed(2) + '$');
+		} else {
+			price = parseFloat($('.product_small_price').attr("class").split(' ')[1]);
+			$('.product_small_price').text(Number(price * value).toFixed(2) + '$');
+		}
 
 		if ( value > 1 ) {
 			$(this).parent().find("button.minus").removeClass("disable");
@@ -128,7 +148,7 @@ $(document).ready(function() {
 	});
 
 	// Minus Button
-	$(document).on('click', ".picker_configure ul li button.minus", function(e) {
+	$(document).on('click', "button.minus", function(e) {
 
 		var value = parseInt($(this).parent().find("p span").text()) - 1;
 
@@ -138,8 +158,14 @@ $(document).ready(function() {
 		}
 
 		$(this).parent().find("p span").text(value);
-		price = parseFloat($('.priceTitle').attr("class").split(' ')[1]);
-		$('.priceTitle').text(Number(price * (value)).toFixed(2) + '$');
+
+		if ( sessionStorage.getItem("Plate") == "off" ) {
+			price = parseFloat($('.priceTitle').attr("class").split(' ')[1]);
+			$('.priceTitle').text(Number(price * (value)).toFixed(2) + '$');
+		} else {
+			price = parseFloat($('.product_small_price').attr("class").split(' ')[1]);
+			$('.product_small_price').text(Number(price * (value)).toFixed(2) + '$');
+		}
 	
 	});
 
