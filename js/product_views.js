@@ -96,20 +96,21 @@ $(document).ready(function() {
 
 	// Circular Menu
 	$(document).on('click', ".circle-menu ul li a", function(e) {
-		$(".circle-menu>ul>li.active").removeClass("active");
-		$(this).parent().addClass('active');
+		if (!$(this).parent().hasClass('inactive')) {
+			$(".circle-menu>ul>li.active").removeClass("active");
+			$(this).parent().addClass('active');
 
-		var option = $(this).attr('href');
-		$('.picker_details').each(function() {
-			
-			if (!$(this).hasClass('picker_' + option)) {
-				$(this).hide();
-			} else {
-				$(this).show();
-			}
+			var option = $(this).attr('href');
+			$('.picker_details').each(function() {
+				
+				if (!$(this).hasClass('picker_' + option)) {
+					$(this).hide();
+				} else {
+					$(this).show();
+				}
 
-		});
-
+			});
+		}
 		e.preventDefault();
 	});
 
