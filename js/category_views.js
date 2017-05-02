@@ -29,8 +29,13 @@ function loadCategory(categoryIndex, ProductAdded, ProductId) {
 
 	$(location).load(link, function() {
 
-		$(".go_back").removeClass().addClass("go_back go_back_categories");
-		$("div.go_back span").text("Go Back to Menu");
+		// Update back button
+		if ( sessionStorage.getItem("Plate") == "off" ) {
+			$(".go_back").removeClass().addClass("go_back go_back_categories");
+			$("div.go_back span").text("Go Back to Menu");
+		} else {
+			$("div.go_back_plate span").text("Go Back to Menu" );
+		}
 
 		// Parse the list of products saved on localStorage
 		var products = JSON.parse( sessionStorage.getItem('products') );
@@ -212,8 +217,10 @@ $(document).ready(function() {
 		}
 
 		// Update back button
-		$(".go_back").removeClass("go_back_categories").addClass("go_back_product " + categoryTag );
-		$("div.go_back span").text("Go Back to " + categoryName );
+		if ( sessionStorage.getItem("Plate") == "off" ) {
+			$(".go_back").removeClass("go_back_categories").addClass("go_back_product " + categoryTag );
+			$("div.go_back span").text("Go Back to " + categoryName );
+		}
 
 		// Load the Product page view
 		var link;
@@ -239,6 +246,9 @@ $(document).ready(function() {
     				$( "#tabs" ).tabs();
   				} );
 			}
+
+			$(".go_back_plate").addClass(categoryTag);
+			$("div.go_back_plate span").text("Go Back to " + categoryName );
 		});
 
 		e.preventDefault();

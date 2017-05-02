@@ -47,6 +47,7 @@ function loadTaxInformationScreen() {
 	// Load the Page
 	$('#page').load( 'check_tax.html', function(data){
 		$('#screen_check_tax' ).fadeIn(300);
+        loadCheckList();
     });
 
 }
@@ -129,6 +130,63 @@ function loadCheckProducts() {
     }
 
     $('.total_message h4').replaceWith('<h4 class="icon-price">Total = ' + Number(total).toFixed(2) + '$</h4>');
+
+}
+
+/*
+*
+*   Load Correct Products
+*
+*/
+
+function loadCheckList() {
+
+    var products = JSON.parse(sessionStorage.getItem('products'));
+    var NoOrders = parseInt(sessionStorage.getItem("NoOrders"));
+    var total = 0;
+
+    for (var i = 0; i < NoOrders; i++) {
+
+        var properties = JSON.parse(sessionStorage.getItem(i));
+        var state = parseInt(properties[6]);
+
+        var categoryTag = properties[1];
+        var productId = properties[0];
+        var product, categoryName, categoryTag;
+
+        switch (categoryTag) {
+            case "maincourses":
+                product = products[0].maincourses[productId];
+                categoryName = "Main Courses";
+                categoryTag = "maincourses";
+                break;
+            case "drinks":
+                product = products[1].drinks[productId];
+                categoryName = "Drinks";
+                categoryTag = "drinks";
+                break;
+            case "deserts":
+                product = products[2].deserts[productId];
+                categoryName = "Deserts";
+                categoryTag = "deserts";
+                break;
+            }
+
+        var date = new Date(properties[2]);
+
+        $('.check_tax_inner ul.products').append('<li>\
+                    <p class="product_name">' + product.name + ' ' + properties[7] + 'x</p>\
+                    <p class="product_price">' + Number(product.price * properties[7]).toFixed(2) + '$</p>\
+                </li>\
+        </li>');
+
+        // Update Total
+        total = total + product.price * properties[7];
+
+    }
+
+    $('p.product_price_vat').replaceWith('<p class="product_price product_price_vat">' + Number(0.23*total).toFixed(2) + '$</p>');
+    $('p.product_price_no_vat').replaceWith('<p class="product_price product_price_no_vat">' + Number(total).toFixed(2) + '$</p>');
 
 }
 

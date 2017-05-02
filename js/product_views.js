@@ -66,7 +66,7 @@ function loadProduct(id, categoryName) {
                 						<td>" + object.nutricionalInfo[key] + "</td></tr>");
 	}
 
-	//Adding ingredients
+	// Adding ingredients
 	if ( sessionStorage.getItem("Plate") == "off" ) {
 		var ingredients = object.ingredients;
 		var ingredientsLenght = ingredients.length;
@@ -74,7 +74,7 @@ function loadProduct(id, categoryName) {
 			$(".picker_configure ul").append('<li class="on_off">\
 					<label class="switch">\
 						<input type="checkbox">\
-						<div class="slider round"></div>\
+						<div class="slider_ingri round"></div>\
 					</label>\
 					<p>' + ingredients[i] + '</p>\
 				</li>');
@@ -86,7 +86,7 @@ function loadProduct(id, categoryName) {
 			$("#tabs-1 ul").append('<li class="on_off">\
 					<label class="switch">\
 						<input type="checkbox">\
-						<div class="slider round"></div>\
+						<div class="slider_ingri round"></div>\
 					</label>\
 					<p>' + ingredients[i] + '</p>\
 				</li>');
