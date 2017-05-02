@@ -110,56 +110,6 @@ $(document).ready(function() {
 	*/
 
 	// Single Category
-	var sort = true;
-	var first = true;
-	var sorted;
-	var original;
-	$(document).on('click', "button.sort", function(e) {
-		$(this).toggleClass("open");
-		if ( sort ) {
-
-			original = $('ul.restaurant_products').clone();
-			if ( first ) {
-				$('ul.restaurant_products').each(function(){
-					// get current ul
-					var $ul = $(this);
-					// get array of list items in current ul
-					var $liArr = $ul.children('li');
-					// sort array of list items in current ul randomly
-					$liArr.sort(function(a,b){
-						// Get a random number between 0 and 10
-						var temp = parseInt( Math.random()*10 );
-						// Get 1 or 0, whether temp is odd or even
-						var isOddOrEven = temp%2;
-						// Get +1 or -1, whether temp greater or smaller than 5
-						var isPosOrNeg = temp>5 ? 1 : -1;
-						// Return -1, 0, or +1
-						return( isOddOrEven*isPosOrNeg );
-					})
-					// append list items to ul
-					.appendTo($ul);            
-				});
-				sorted = $('ul.restaurant_products').clone();
-				first = false;
-			} else {
-				$('ul.restaurant_products').replaceWith(sorted);
-			}
-			sort = false;
-
-		} else {
-			$('ul.restaurant_products').replaceWith(original);
-			sort = true;
-		}
-
-	});
-
-	/*
-	*
-	*	BACK BUTTON
-	*
-	*/
-
-	// Single Category
 	$(document).on('click', ".go_back_product", function(e) {
 
 		// Get the category to return to
@@ -223,20 +173,64 @@ $(document).ready(function() {
 	*
 	*/
 
+	var sorted;
+	var original;
+
 	// Load the respective category when clicked
 	$(document).on('click', ".restaurant_category", function(e) {
 
 		if ($( this ).hasClass('maincourses')) {
+			first = true;
 			loadCategory(0);
 
 		} else if ($( this ).hasClass('drinks')) {
+			first = true;
 			loadCategory(1);
 
 		} else if ($( this ).hasClass('deserts')) {
+			first = true;
 			loadCategory(2);
 		}
 
 		e.preventDefault();
+	});
+
+	/*
+	*
+	*	SORT
+	*
+	*/
+
+	$(document).on('click', "button.sort", function(e) {
+
+		$(this).toggleClass("open");
+
+		if ( $(this).hasClass("open") ) {
+			if ( first ) {
+
+				original = $('ul.restaurant_products').clone();
+				$('ul.restaurant_products').each(function(){
+					var $ul = $(this);
+					var $liArr = $ul.children('li');
+					$liArr.sort(function(a,b){
+						var temp = parseInt( Math.random()*10 );
+						var isOddOrEven = temp%2;
+						var isPosOrNeg = temp>5 ? 1 : -1;
+						return( isOddOrEven*isPosOrNeg );
+					}).appendTo($ul);            
+				});
+
+				sorted = $('ul.restaurant_products').clone();
+				first = false;
+
+			} else {
+				$('ul.restaurant_products').replaceWith(sorted);
+			}
+
+		} else {
+			$('ul.restaurant_products').replaceWith(original);
+		}
+
 	});
 
 	/*
