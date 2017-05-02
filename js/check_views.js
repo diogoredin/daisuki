@@ -258,7 +258,10 @@ $(document).ready(function() {
     var count = 0;
     $(document).on('click', ".digit", function(e) {
 
-        if (count < 11) {
+        if(count == 0) {
+            $("#output").replaceWith('<div id="output"></div>');
+        }
+        if (count < 4) {
             $("#output").append('<span>*</span>');
             count++;
         }
@@ -269,6 +272,26 @@ $(document).ready(function() {
     $(document).on('click', ".clear", function(e) {
         $('#output span:last-child').remove();
         count--;
+
+        e.preventDefault();
+    });
+
+    $(document).on('click', "#cancel_pin", function(e) {
+         $("#output").replaceWith('<div id="output"></div>');
+        e.preventDefault();
+    });
+
+    $(document).on('click', "#confirm_pin", function(e) {
+        if ( count == 4 ) {
+            $(".authorize_payment").replaceWith('<div class="authorize_payment"> <h4 class="icon-confirm"></h4>Payment Accepted</div>');
+            $("#output").replaceWith('<div id="output"></div>');
+        }
+
+        else {
+            $(".container").effect( "shake" );
+            $(".authorize_payment").replaceWith('<div class="authorize_payment">Payment Denied, please try again.</div>');
+            $("#output").replaceWith('<div id="output">Introduce PIN</div>');
+        }
 
         e.preventDefault();
     });

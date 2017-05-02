@@ -327,11 +327,27 @@
     padding: 0 3%;
 }
 
+.information_message {
+    padding: 0 3%;
+}
+
+#screen_order_status .information_message,
+.information_message_review {
+    margin-left: 9% !important;
+    margin-right: 9% !important;
+    margin-top: 9%;
+}
+
 .success_message h4, 
 .information_message h4,
-.confirmation_message h4 {
+.confirmation_message h4,
+.information_message_review h4 {
     font-size: 16px;
     line-height: 35px;
+}
+
+.page_inner .information_message {
+    margin-top: 10%;
 }
 
 /******************************************************

@@ -2052,14 +2052,27 @@ button.confirm_receipt:active {
  
 *******************************************************/
 
+.authorize_payment {
+    width: 43%;
+    float: left;
+    background: rgba(28, 40, 59, 0.9) none repeat scroll 0 0;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-family: HeeboThin, Arial;
+    font-size: 45px;
+    padding: 12% 5% 12% 5%;
+    text-align: center;
+}
+
 .container {
     background: rgba(28, 40, 59, 0.9) none repeat scroll 0 0;
     border-radius: 4px;
+    float: right;
     height: 400px;
-    margin: 30px auto;
     padding: 0;
     text-align: center;
     width: 320px;
+    margin-left: 6%;
 }
 
 .row {
@@ -2072,9 +2085,21 @@ button.confirm_receipt:active {
 #output {
     color: #1976d2;
     font-family: HeeboLight,Arial;
-    font-size: 40px;
+    font-size: 27px;
     height: 70px;
+    line-height: 65px;
     padding-top: 15px;
+}
+
+.authorize_payment h4 {
+    font-size: 45px;
+    color: #FFFFFF;
+}
+
+
+.authorize_payment h4:before {
+    font-size: 35px;
+    color: #FFFFFF;
 }
 
 button.digit, button.clear {
@@ -2088,6 +2113,7 @@ button.digit, button.clear {
     font-size: 30px;
     line-height: 30px;
     margin: 4px;
+    min-width: 30%;
     padding: 8px 30px;
 }
 
