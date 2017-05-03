@@ -117,7 +117,7 @@ function loadOrderReview() {
 *
 */
 
-function loadOrderReviewInner(orderId) {
+function loadOrderReviewInner(orderId, change) {
     var products = JSON.parse(sessionStorage.getItem('products'));
     var properties = JSON.parse(sessionStorage.getItem(orderId));
     var categoryTag = properties[1];
@@ -157,6 +157,17 @@ function loadOrderReviewInner(orderId) {
         ratedFill   : '#fc0'
     });
     
+    if (change) {
+        $(".add_review").addClass("change");
+        $(".add_review").text("Change Review");
+        $(".my_review_box h3").text("Change Review");
+    } else {
+        $(".add_review").addClass("add");
+        $(".add_review").text("Add Review");
+        $(".my_review_box h3").text("Add Review");
+
+    }
+
     $('div.my_stars').rateYo().on("rateyo.change", function (e, data) {
         var rating = data.rating;
         properties[5] = rating;
@@ -215,11 +226,19 @@ $(document).ready(function() {
 
         var orderId = $(this).attr('class')
 
+        if ($(this).text() == "Add Review") {
+            var change = false;
+        }
+        
+        else {
+            var change = true;
+        }
+
 		// Load the Page
 		$(location).load('order_review_inner.html', function(){
 			$('#screen_order_review_inner').fadeIn(300);
 			// Specific Functions to Execute
-			loadOrderReviewInner(orderId);
+			loadOrderReviewInner(orderId, change);
     	});
 
 		e.preventDefault();
@@ -253,7 +272,7 @@ $(document).ready(function() {
 
     $(document).on('click', "button.add_review", function(e) {
 
-        var orderId = $(this).attr('class').split(' ')[1];
+        var orderId = $(this).attr('class').split(' ')[2];
         var products = JSON.parse(sessionStorage.getItem('products'));
         var properties = JSON.parse(sessionStorage.getItem(orderId));
         var categoryTag = properties[1];
@@ -282,27 +301,53 @@ $(document).ready(function() {
         var review = $('textarea#review_box').val();
 
         if ( review != '' && stars > 0 ) {
-            $(".customer_comments ul").prepend('<li class="new">\
-                    <p>' + review + '</p>\
-                    <div class="stars"></div>\
-                </li>');
+            if ($(this).hasClass("add")) {
+                $(".customer_comments ul").prepend('<li class="new">\
+                        <p>' + review + '</p>\
+                        <div class="stars"></div>\
+                    </li>');
 
-            for (var star = 0; star < stars; star++) {
-                $(".customer_comments ul").children(".new").children("div.stars").append('<i class="fa fa-star"></i>');
-            }
-            for (var star = 0; star < 5 - stars; star++) {
-                $(".customer_comments ul").children(".new").children("div.stars").append('<i class="fa fa-star inactive"></i>');
+                for (var star = 0; star < stars; star++) {
+                    $(".customer_comments ul").children(".new").children("div.stars").append('<i class="fa fa-star"></i>');
+                }
+                for (var star = 0; star < 5 - stars; star++) {
+                    $(".customer_comments ul").children(".new").children("div.stars").append('<i class="fa fa-star inactive"></i>');
+                }
+
+                sessionStorage.setItem("newRating", 0);
+                $(".customer_comments ul").children(".new").removeClass("new");
+                $('.my_review_box').fadeOut(1000);
+                
+                var reviewOBJ = {"classification" : stars,
+                                "review" : review};
+                product.reviews.unshift(reviewOBJ);
+                console.log(product.reviews);
+                sessionStorage.setItem('products', JSON.stringify(products));
             }
 
-            sessionStorage.setItem("newRating", 0);
-            $(".customer_comments ul").children(".new").removeClass("new");
-            $('.my_review_box').fadeOut(1000);
-            
-            var reviewOBJ = {"classification" : stars,
-                            "review" : review};
-            product.reviews.unshift(reviewOBJ);
-            console.log(product.reviews);
-            sessionStorage.setItem('products', JSON.stringify(products));
+            else if ($(this).hasClass("change")) {
+                $(".customer_comments ul li:first").replaceWith('<li class="new">\
+                        <p>' + review + '</p>\
+                        <div class="stars"></div>\
+                    </li>');
+
+                for (var star = 0; star < stars; star++) {
+                    $(".customer_comments ul").children(".new").children("div.stars").append('<i class="fa fa-star"></i>');
+                }
+                for (var star = 0; star < 5 - stars; star++) {
+                    $(".customer_comments ul").children(".new").children("div.stars").append('<i class="fa fa-star inactive"></i>');
+                }
+
+                sessionStorage.setItem("newRating", 0);
+                $(".customer_comments ul").children(".new").removeClass("new");
+                $('.my_review_box').fadeOut(1000);
+                
+                var reviewOBJ = {"classification" : stars,
+                                "review" : review};
+                product.reviews[0] = reviewOBJ;
+                console.log(product.reviews);
+                sessionStorage.setItem('products', JSON.stringify(products));                
+            }
 
         } else {
             $('.my_review_box').effect( "shake" );
