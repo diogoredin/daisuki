@@ -103,6 +103,17 @@ $(document).ready(function() {
                 e.preventDefault();
         });
 
+        // Remove Plate
+        $(document).on('click', ".enable_nfc", function(e) {
+                $(".authorize_payment").replaceWith('<div class="authorize_payment"><h4 class="icon-confirm"></h4>Payment Accepted.</br> Thank you!</div>');
+                $("#output").replaceWith('<div id="output"></div>');
+                $(".container").fadeTo( "slow", 0.33 );
+                $(".total_check").hide();
+                $(".container").addClass("inactive");
+
+                e.preventDefault();
+        });
+
         /*
 	*
 	*	GO BACK FUNCTIONALITY
