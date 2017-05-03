@@ -160,7 +160,8 @@ function loadOrderReviewInner(orderId) {
     $('div.my_stars').rateYo().on("rateyo.change", function (e, data) {
         var rating = data.rating;
         properties[5] = rating;
-        sessionStorage.setItem(orderId, JSON.stringify(properties)); 
+        sessionStorage.setItem(orderId, JSON.stringify(properties));
+        sessionStorage.setItem("newRating", rating); 
     });
 
     // Adding overall rating
@@ -251,14 +252,20 @@ $(document).ready(function() {
     $(document).on('click', "button.add_review", function(e) {
 
         var review = $('textarea#review_box').val();
-        $(".customer_comments ul").prepend('<li>\
+        $(".customer_comments ul").prepend('<li class="new">\
 				<p>' + review + '</p>\
 				<div class="stars"></div>\
 			</li>');
         
-        $( "li" ).each(function() {
-            $( this ).toggleClass( "example" );
-        });
+        var stars = sessionStorage.getItem("newRating");
+        for (var star = 0; star < stars; star++) {
+			$(".customer_comments ul").children(".new").children("div.stars").append('<i class="fa fa-star"></i>');
+		}
+        for (var star = 0; star < 5 - stars; star++) {
+			$(".customer_comments ul").children(".new").children("div.stars").append('<i class="fa fa-star inactive"></i>');
+		}
+
+        $(".customer_comments ul").children(".new").removeClass("new");
 
 		e.preventDefault();
 	});
