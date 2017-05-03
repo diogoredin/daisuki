@@ -93,6 +93,17 @@ function loadProduct(id, categoryName) {
 		}
 	}
 
+	//Adding overall rating
+
+	var overall_rating = object.overall_rating;
+	for (var i = 0; i < overall_rating; i++) {
+		$(".overall_rating").children("div.stars").append('<i class="fa fa-star"></i>');
+	}
+	for (var i = 0; i < 5 - overall_rating; i++) {
+		$(".overall_rating").children("div.stars").append('<i class="fa fa-star inactive"></i>');
+	}
+
+
 	// Adding reviews
 	var reviews = object.reviews;
 	var reviewsLength = reviews.length;
