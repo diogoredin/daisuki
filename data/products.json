@@ -20,11 +20,21 @@
                             "info" : "Type of sushi that consist in combining thin slices of Tuna, wrapped in sticky white rice, then wrapped in seaweed/nori and cut into short bite-sized pieces.",
                             "reviews" : [
                                 {
+                                    "classification" : 5,
+                                    "review" : "Wondefull Tuna Roll. The best."
+                                },
+                                {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Delicius tuna roll! Service quick, the fish is fresh and the rolls were a good size."                                    
+
+                                },
+                                {
+                                    "classification" : 4,
+                                    "review" : "Overall the flavors were enjoyable the fish was fresh but the seaweed salad was soggy."                                    
+
                                 }
                             ],
-                            "overall_rating" : 5
+                            "overall_rating" : 4
                         },
                         {   "id"    : 1,
                             "name"  : "Salmon Roll", 
@@ -47,10 +57,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Very good salmon roll. Carefull prepared with fresh fish."
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Excellent Salmon Roll!! The best."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Excellent roll and when is served with liquor or sake can´t be better."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 5
                         },
                         {   "id"    : 2,
                             "name"  : "Cucumber Roll", 
@@ -73,9 +93,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "I am veggy and i like this roll very much."
+                                },
+                                {
+                                    "classification" : 4,
+                                    "review" : "Large size and seaweed very good."                                    
+
+                                },
+                                {
+                                    "classification" : 4,
+                                    "review" : "Very good with vodka."                                    
+                                    
                                 }
-                            ]
+                            ],
+                            "overall_rating" : 4
                         },
                         {   "id"    : 3,
                             "name"  : "Mango Roll",
@@ -98,10 +129,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Very good when you want to eat juice sushi."
+                                },
+                                {
+                                    "classification" : 4,
+                                    "review" : "Very good to eat when it's hot."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Excellent!!"                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4
+                            "overall_rating" : 5
                         },
                         {   "id"    : 4,
                             "name"  : "Avocado Roll", 
@@ -124,10 +165,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Very enjoyable to eat."
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "I just love Sushi!!"                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Very satisfying to eat and a smart choice to eat if you are watching your weight."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4
+                            "overall_rating" : 5
                         },
                         {   "id"    : 5,
                             "name"  : "Inside Out Roll", 
@@ -149,8 +200,18 @@
                             "info" : "Includes avocado, crab, rice, salmon and toasted seaweed.",
                             "reviews" : [
                                 {
+                                    "classification" : 5,
+                                    "review" : "First time eating this roll but i already love it."
+                                },
+                                {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "I am japanese and this is the first time i am eating this roll. Very good."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Excellent!!!"                                    
+                                    
                                 }
                             ],
                             "overall_rating" : 4
@@ -175,11 +236,21 @@
                             "info" : "Traditional form of fermented sushi. Skinned and gutted fish are stuffed with salt, placed in a wooden barrel, doused with salt again.",
                             "reviews" : [
                                 {
+                                    "classification" : 5,
+                                    "review" : "Very good and you will love it especially if you like seafood."
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Excellent. Love it <3."                                    
+
+                                },
+                                {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Very good to it in dinner."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4
+                            "overall_rating" : 5
                         },
                         {   "id"    : 7,
                             "name"  : "Flamed Salmon Roll", 
@@ -202,10 +273,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Very fresh salmon and torched to perfection"
+                                },
+                                {
+                                    "classification" : 4,
+                                    "review" : "Good spicy roll."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Love spicy food."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 5
                         },
                         {   "id"    : 8,
                             "name"  : "Tuna & Shrimp Roll", 
@@ -228,10 +309,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Very enjoyable roll."
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Seafood and fish very fresh. Very good."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Who dont love sushi roll's with seafood and tuna!!!"                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 4
                         },
                         {   "id"    : 9,
                             "name"  : "Nigiri Salmon", 
@@ -254,10 +345,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "I am japanese and i always love to eat nigiri's."
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Very well made. Rice very good with fresh salmon."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Excellent!"                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 5
                         },
                         {   "id"    : 10,
                             "name"  : "Nigiri King Fish", 
@@ -279,11 +380,21 @@
                             "info" : "Consisting of a slice of King Fish over pressed vinegared rice.",
                             "reviews" : [
                                 {
+                                    "classification" : 5,
+                                    "review" : "I do not usually eat this nigiri but when i eat i just can´t eat only one."
+                                },
+                                {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Very good nigiri."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Just love to eat nigiri's."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 5
                         },
                         {   "id"    : 11,
                             "name"  : "Nigiri Tuna", 
@@ -306,10 +417,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Best nigiri."
+                                },
+                                {
+                                    "classification" : 4,
+                                    "review" : "Very good nigiri."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Nigiri with tuna. Simple the best."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 4
                         },
                         {   "id"    : 12,
                             "name"  : "Nigiri Pineapple", 
@@ -331,11 +452,21 @@
                             "info" : "Consisting of a slice of Pineapple over pressed vinegared rice.",
                             "reviews" : [
                                 {
-                                    "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "classification" : 3,
+                                    "review" : "Good nigiri, not the best but it's not bad."
+                                },
+                                {
+                                    "classification" : 3,
+                                    "review" : "Don't like very much pineapple."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Excellent when you are controlling your weight."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 3
                         },
                         {   "id"    : 13,
                             "name"  : "Sashimi Salmon", 
@@ -358,10 +489,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Very fresh salmon."
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Love sashimi salmon."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Excellent sashimi."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 5
                         },
                         {   "id"    : 14,
                             "name"  : "Sashimi Special", 
@@ -384,10 +525,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Very special sashimi."
+                                },
+                                {
+                                    "classification" : 3,
+                                    "review" : "Good sashimi."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Excellent sashimi with all kind of fishes."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 4
                         },
                         {   "id"    : 15,
                             "name"  : "Sashimi White Fish", 
@@ -410,10 +561,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Very good sashimi."
+                                },
+                                {
+                                    "classification" : 4,
+                                    "review" : "Very good."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Love white fish."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 4
                         },
                         {   "id"    : 16,
                             "name"  : "Sashimi Tuna", 
@@ -435,11 +596,21 @@
                             "info" : "Slices of very fresh Tuna served raw, over a bed of shredded daikon radish.",
                             "reviews" : [
                                 {
-                                    "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "classification" : 5,
+                                    "review" : "Love sashimi tuna"
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Best sashimi."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Tuna and sashimi. Best combination."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 5
                         },
                         {   "id"    : 17,
                             "name"  : "Sashimi Red Fish", 
@@ -461,11 +632,21 @@
                             "info" : "Slices of very fresh Red Fish served raw, over a bed of shredded daikon radish.",
                             "reviews" : [
                                 {
+                                    "classification" : 3,
+                                    "review" : "Average sashimi"
+                                },
+                                {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Very good sashimi for people who like red fish."                                    
+
+                                },
+                                {
+                                    "classification" : 3,
+                                    "review" : "Good sashimi."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 4
                         },
                         {   "id"    : 18,
                             "name"  : "Deluxe Sushi Set", 
@@ -488,10 +669,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "All kind of sushi with fish."
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Excellent set of sushi."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Excellent when you are with your kids."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 4
                         },
                         {   "id"    : 19,
                             "name"  : "Deluxe Vegan set", 
@@ -514,10 +705,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Very good set of sushi."
+                                },
+                                {
+                                    "classification" : 4,
+                                    "review" : "Very good when you are controling your weight."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Excellent when you go out with your girlfriend."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 4
                         },
                         {   "id"    : 20,
                             "name"  : "Nigiri Set", 
@@ -540,10 +741,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Excellent when you are with your family."
+                                },
+                                {
+                                    "classification" : 4,
+                                    "review" : "Good nigiri's"                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Excellent set of nigiri's."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 4
                         }
                     ]
     },
@@ -570,10 +781,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Sake is always the best with sushi."
+                                },
+                                {
+                                    "classification" : 4,
+                                    "review" : "Very good sake."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Sake and sushi. What do you want more?"                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 4
                         },
                         {   "id"    : 1,
                             "name"  : "Absolut Vodka",
@@ -596,10 +817,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Vodka forever."
+                                },
+                                {
+                                    "classification" : 4,
+                                    "review" : "Very good vodka."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Always love to drink vodka"                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 5
                         },
                         {   "id"    : 2,
                             "name"  : "Aveleda White Wine", 
@@ -622,10 +853,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Very good wine."
+                                },
+                                {
+                                    "classification" : 2,
+                                    "review" : "Portuguese wine is the best."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Excellent wine."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 5
                         },
                         {   "id"    : 3,
                             "name"  : "Japanese Beer", 
@@ -648,10 +889,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Different from europeon beer but also good"
+                                },
+                                {
+                                    "classification" : 4,
+                                    "review" : "Very good beer."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "I am japanese and always like to drink japanese beer to remeber my hometowm."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 4
                         },
                         {   "id"    : 4,
                             "name"  : "Tonic Gin",
@@ -674,10 +925,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Good to drink with friends."
+                                },
+                                {
+                                    "classification" : 4,
+                                    "review" : "Very good gin."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Very good flavour."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 4
                         },
                         {   "id"    : 5,
                             "name"  : "Coke", 
@@ -699,11 +960,21 @@
                             "info" : "Carbonated soft drink produced by Coca-Cola.",
                             "reviews" : [
                                 {
-                                    "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "classification" : 5,
+                                    "review" : "Good everytime."
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "The best drink."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Coke forever."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 4
                         },
                         {   "id"    : 6,
                             "name"  : "Sprite",
@@ -725,11 +996,21 @@
                             "info" : "Great soda.",
                             "reviews" : [
                                 {
-                                    "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "classification" : 3,
+                                    "review" : "I prefer coca-cola."
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Better than coca-cola."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Love caffeine drink."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 3
                         },
                         {   "id"    : 7,
                             "name"  : "Orange Juice",
@@ -751,11 +1032,21 @@
                             "info" : "Natural Juice made by squeezing oranges.",
                             "reviews" : [
                                 {
+                                    "classification" : 5,
+                                    "review" : "I always like to drink natural juice."
+                                },
+                                {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Very good to weath."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Excellent for when you are controling your weight."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 4
                         },
                         {   "id"    : 8,
                             "name"  : "Bottled Water",
@@ -778,10 +1069,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Just water."
+                                },
+                                {
+                                    "classification" : 4,
+                                    "review" : "Yup water."                                    
+
+                                },
+                                {
+                                    "classification" : 4,
+                                    "review" : "But who don't like water!!!"                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 4
                         }
                     ]
     },
@@ -808,7 +1109,17 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Very good mousse."
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Chocolate mousse is the best."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Excellent mousse."                                    
+                                    
                                 }
                             ],
                             "overall_rating" : 4
@@ -833,11 +1144,21 @@
                             "info" : "Sweet dessert consisting of 3 layers. The main layer consists of cheese, eggs and sugar, the bottom layers consists od a crust base made of crushed cookies and the top layer of strawberries.",
                             "reviews" : [
                                 {
-                                    "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "classification" : 5,
+                                    "review" : "Excellent desert."
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Love cheesecake."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Best desert ever."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4 
+                            "overall_rating" : 4
                         },
                         {   "id"    : 2,
                             "name"  : "Chocolate Muffin", 
@@ -859,11 +1180,21 @@
                             "info" : "Dessert made of milk, chocolate and sugar.",
                             "reviews" : [
                                 {
+                                    "classification" : 2,
+                                    "review" : "Not very good muffin"
+                                },
+                                {
+                                    "classification" : 3,
+                                    "review" : "Good muffin."                                    
+
+                                },
+                                {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Very light after sushi."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4  
+                            "overall_rating" : 3
                         },
                         {   "id"    : 3,
                             "name"  : "Cookie Cake", 
@@ -886,10 +1217,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Good cake."
+                                },
+                                {
+                                    "classification" : 4,
+                                    "review" : "very good after sushi."                                    
+
+                                },
+                                {
+                                    "classification" : 4,
+                                    "review" : "I love cookie cake."                                    
+                                    
                                 }
                             ],
-                            "overall_rating" : 4  
+                            "overall_rating" : 4 
                         },
                         {   "id"    : 4,
                             "name"  : "Chocolate Cake", 
@@ -912,9 +1253,20 @@
                             "reviews" : [
                                 {
                                     "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "review" : "Well chocolate cake is also good after eat sushi."
+                                },
+                                {
+                                    "classification" : 2,
+                                    "review" : "Don't like to eat cake after sushi."                                    
+
+                                },
+                                {
+                                    "classification" : 3,
+                                    "review" : "Not bad."                                    
+                                    
                                 }
-                            ]  
+                            ],
+                            "overall_rating" : 2
                         },
                         {   "id"    : 5,
                             "name"  : "Expresso Coffee", 
@@ -936,11 +1288,21 @@
                             "info" : "Delta.",
                             "reviews" : [
                                 {
-                                    "classification" : 4,
-                                    "review" : "Lorem Ipsum"
+                                    "classification" : 5,
+                                    "review" : "Always good after meal."
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Coffee is the best after meal."                                    
+
+                                },
+                                {
+                                    "classification" : 5,
+                                    "review" : "Can't miss my after meal coffee."                                    
+                                    
                                 }
-                            ],
-                            "overall_rating" : 4  
+                            ] ,
+                            "overall_rating" : 5
                         }
                     ]
     }

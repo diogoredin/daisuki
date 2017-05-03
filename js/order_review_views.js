@@ -162,6 +162,31 @@ function loadOrderReviewInner(orderId) {
         properties[5] = rating;
         sessionStorage.setItem(orderId, JSON.stringify(properties)); 
     });
+
+    // Adding overall rating
+	var overall_rating = product.overall_rating;
+	for (var i = 0; i < overall_rating; i++) {
+		$(".customer_ratings").children("div.stars").append('<i class="fa fa-star"></i>');
+	}
+	for (var i = 0; i < 5 - overall_rating; i++) {
+		$(".customer_ratings").children("div.stars").append('<i class="fa fa-star inactive"></i>');
+	}
+
+	// Adding reviews
+	var reviews = product.reviews;
+	var reviewsLength = reviews.length;
+	for (var i = 0; i < reviewsLength; i++) {
+		$(".customer_comments ul").append('<li class="' + i +'">\
+				<p>' + reviews[i].review + '</p>\
+				<div class="stars"></div>\
+			</li>');
+		for (var star = 0; star < reviews[i].classification; star++) {
+			$(".customer_comments ul").children("." + i).children("div.stars").append('<i class="fa fa-star"></i>');
+		}
+		for (var star = 0; star < 5 - reviews[i].classification; star++) {
+			$(".customer_comments ul").children("." + i).children("div.stars").append('<i class="fa fa-star inactive"></i>');
+		}
+	}
     
 }
 
@@ -213,6 +238,27 @@ $(document).ready(function() {
     	});
 
         $(this).hide();
+
+		e.preventDefault();
+	});
+
+     /*
+	*
+	*	APPEND COMMENT
+	*
+	*/
+
+    $(document).on('click', "button.add_review", function(e) {
+
+        var review = $('textarea#review_box').val();
+        $(".customer_comments ul").prepend('<li>\
+				<p>' + review + '</p>\
+				<div class="stars"></div>\
+			</li>');
+        
+        $( "li" ).each(function() {
+            $( this ).toggleClass( "example" );
+        });
 
 		e.preventDefault();
 	});
