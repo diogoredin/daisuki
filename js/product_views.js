@@ -92,6 +92,22 @@ function loadProduct(id, categoryName) {
 				</li>');
 		}
 	}
+
+	// Adding reviews
+	var reviews = object.reviews;
+	var reviewsLength = reviews.length;
+	for (var i = 0; i < reviewsLength; i++) {
+		$(".customer_comments ul").append('<li class="' + i +'">\
+				<p>' + reviews[i].review + '</p>\
+				<div class="stars"></div>\
+			</li>');
+		for (var star = 0; star < reviews[i].classification; star++) {
+			$(".customer_comments ul").children("." + i).children("div.stars").append('<i class="fa fa-star"></i>');
+		}
+		for (var star = 0; star < 5 - reviews[i].classification; star++) {
+			$(".customer_comments ul").children("." + i).children("div.stars").append('<i class="fa fa-star inactive"></i>');
+		}
+	}
 	
 
 	$('p.desc').append(object.info);
