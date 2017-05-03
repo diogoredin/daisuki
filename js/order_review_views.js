@@ -189,6 +189,8 @@ function loadOrderReviewInner(orderId) {
 		}
 	}
     
+    // Adding orderId to button class
+    $(".add_review").addClass(orderId);
 }
 
 /*
@@ -251,6 +253,31 @@ $(document).ready(function() {
 
     $(document).on('click', "button.add_review", function(e) {
 
+        var orderId = $(this).attr('class').split(' ')[1];
+        var products = JSON.parse(sessionStorage.getItem('products'));
+        var properties = JSON.parse(sessionStorage.getItem(orderId));
+        var categoryTag = properties[1];
+        var productId = properties[0];
+        var product, categoryName, categoryTag;
+
+        switch (categoryTag) {
+            case "maincourses":
+                product = products[0].maincourses[productId];
+                categoryName = "Main Courses";
+                categoryTag = "maincourses";
+                break;
+            case "drinks":
+                product = products[1].drinks[productId];
+                categoryName = "Drinks";
+                categoryTag = "drinks";
+                break;
+            case "deserts":
+                product = products[2].deserts[productId];
+                categoryName = "Deserts";
+                categoryTag = "deserts";
+                break;
+        }        
+
         var stars = sessionStorage.getItem("newRating");
         var review = $('textarea#review_box').val();
 
@@ -270,6 +297,13 @@ $(document).ready(function() {
             sessionStorage.setItem("newRating", 0);
             $(".customer_comments ul").children(".new").removeClass("new");
             $('.my_review_box').fadeOut(1000);
+            
+            var reviewOBJ = {"classification" : stars,
+                            "review" : review};
+            product.reviews.unshift(reviewOBJ);
+            console.log(product.reviews);
+            sessionStorage.setItem('products', JSON.stringify(products));
+
         } else {
             $('.my_review_box').effect( "shake" );
         }
