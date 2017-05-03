@@ -251,21 +251,28 @@ $(document).ready(function() {
 
     $(document).on('click', "button.add_review", function(e) {
 
-        var review = $('textarea#review_box').val();
-        $(".customer_comments ul").prepend('<li class="new">\
-				<p>' + review + '</p>\
-				<div class="stars"></div>\
-			</li>');
-        
         var stars = sessionStorage.getItem("newRating");
-        for (var star = 0; star < stars; star++) {
-			$(".customer_comments ul").children(".new").children("div.stars").append('<i class="fa fa-star"></i>');
-		}
-        for (var star = 0; star < 5 - stars; star++) {
-			$(".customer_comments ul").children(".new").children("div.stars").append('<i class="fa fa-star inactive"></i>');
-		}
+        var review = $('textarea#review_box').val();
 
-        $(".customer_comments ul").children(".new").removeClass("new");
+        if ( review != '' && stars > 0 ) {
+            $(".customer_comments ul").prepend('<li class="new">\
+                    <p>' + review + '</p>\
+                    <div class="stars"></div>\
+                </li>');
+
+            for (var star = 0; star < stars; star++) {
+                $(".customer_comments ul").children(".new").children("div.stars").append('<i class="fa fa-star"></i>');
+            }
+            for (var star = 0; star < 5 - stars; star++) {
+                $(".customer_comments ul").children(".new").children("div.stars").append('<i class="fa fa-star inactive"></i>');
+            }
+
+            sessionStorage.setItem("newRating", 0);
+            $(".customer_comments ul").children(".new").removeClass("new");
+            $('.my_review_box').fadeOut(1000);
+        } else {
+            $('.my_review_box').effect( "shake" );
+        }
 
 		e.preventDefault();
 	});
