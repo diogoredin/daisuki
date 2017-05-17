@@ -174,7 +174,7 @@ $(document).ready(function() {
 		}
 
 		if ( !($(this).hasClass("inactive") ) && 
-			  ( sessionStorage.getItem("Plate") == "off" ) ) {
+			  ( sessionStorage.getItem("Plate") == "off" ) && !($(this).hasClass("check_review")) && !($(this).hasClass("check_tax")) && !($(this).hasClass("check_pay")) ) {
 			
 			// Disable back
 			$(".go_back").removeClass().addClass("go_back").hide();
