@@ -52,8 +52,7 @@ function removePlate() {
                         // Remove Plate
                         $('#page').replaceWith('<div id="page"></div>');
                         $('#submenu').replaceWith('<div id="submenu"></div>');
-                        $('#menu ul').children("li.active").toggleClass("active");
-
+                        $('#menu ul').children("li.active").trigger('click');
                 });
 
         }
