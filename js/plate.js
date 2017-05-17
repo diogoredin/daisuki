@@ -24,7 +24,7 @@ function insertPlate() {
                 $('#page').replaceWith('<div id="page"></div>');
                 $('#page').append('<div id="plate"><img src="graphics/plate.svg" /></div>').hide().fadeIn(1000);
                 $('#submenu').replaceWith('<div id="submenu"></div>');
-                $('#menu ul').children("li.active").toggleClass("active");
+                $('#menu ul').children("li.active").trigger('click');
 
         }
 
