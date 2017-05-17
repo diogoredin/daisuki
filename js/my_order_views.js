@@ -91,7 +91,7 @@ $(document).ready(function() {
         var requestId = $( this ).attr('class').split(' ')[1];
         var request = JSON.parse(sessionStorage.getItem(requestId));
         var total = sessionStorage.getItem("Total");
-        request[5] = -1;
+        request[6] = -1;
         sessionStorage.setItem(requestId, JSON.stringify(request));
         e.target.parentNode.parentNode.removeChild(e.target.parentNode);
 

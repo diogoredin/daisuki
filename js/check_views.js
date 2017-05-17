@@ -81,54 +81,56 @@ function loadCheckProducts() {
     var NoOrders = parseInt(sessionStorage.getItem("NoOrders"));
     var total = 0;
 
-    if ( NoOrders > 0 ) {
-        $("button.confirm_check").show();
-    }
-
     for (var i = 0; i < NoOrders; i++) {
 
         var properties = JSON.parse(sessionStorage.getItem(i));
         var state = parseInt(properties[6]);
 
-        var categoryTag = properties[1];
-        var productId = properties[0];
-        var product, categoryName, categoryTag;
+        if (state == 1) {
 
-        switch (categoryTag) {
-            case "maincourses":
-                product = products[0].maincourses[productId];
-                categoryName = "Main Courses";
-                categoryTag = "maincourses";
-                break;
-            case "drinks":
-                product = products[1].drinks[productId];
-                categoryName = "Drinks";
-                categoryTag = "drinks";
-                break;
-            case "deserts":
-                product = products[2].deserts[productId];
-                categoryName = "Deserts";
-                categoryTag = "deserts";
-                break;
-            }
+            var categoryTag = properties[1];
+            var productId = properties[0];
+            var product, categoryName, categoryTag;
 
-        var date = new Date(properties[2]);
+            switch (categoryTag) {
+                case "maincourses":
+                    product = products[0].maincourses[productId];
+                    categoryName = "Main Courses";
+                    categoryTag = "maincourses";
+                    break;
+                case "drinks":
+                    product = products[1].drinks[productId];
+                    categoryName = "Drinks";
+                    categoryTag = "drinks";
+                    break;
+                case "deserts":
+                    product = products[2].deserts[productId];
+                    categoryName = "Deserts";
+                    categoryTag = "deserts";
+                    break;
+                }
 
-        $('.check_list_review ul').append('<li>\
-            <div class="product_photo">\
-                <img src="data/images/' + product.photo + '" />\
-            </div>\
-            <div class="product_details">\
-                <h3 class="icon-' + categoryTag + '">' + categoryName + '</h3>\
-                <h1>' + product.name + ' ' + properties[7] + 'X</h1>\
-                <p>Purchased in ' + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + '</p>\
-                <p>' + Number(product.price * properties[7]).toFixed(2) + '$</p>\
-            </div>\
-        </li>');
+            var date = new Date(properties[2]);
 
-        // Update Total
-        total = total + product.price * properties[7];
+            $('.check_list_review ul').append('<li>\
+                <div class="product_photo">\
+                    <img src="data/images/' + product.photo + '" />\
+                </div>\
+                <div class="product_details">\
+                    <h3 class="icon-' + categoryTag + '">' + categoryName + '</h3>\
+                    <h1>' + product.name + ' ' + properties[7] + 'X</h1>\
+                    <p>Purchased in ' + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + '</p>\
+                    <p>' + Number(product.price * properties[7]).toFixed(2) + '$</p>\
+                </div>\
+            </li>');
 
+            // Update Total
+            total = total + product.price * properties[7];
+        }
+
+        if ( total > 0 ) {
+            $("button.confirm_check").show();
+        }
     }
 
     $('.total_message h4').replaceWith('<h4 class="icon-price">Total = ' + Number(total).toFixed(2) + '$</h4>');
@@ -152,39 +154,41 @@ function loadCheckList() {
         var properties = JSON.parse(sessionStorage.getItem(i));
         var state = parseInt(properties[6]);
 
-        var categoryTag = properties[1];
-        var productId = properties[0];
-        var product, categoryName, categoryTag;
+        if (state == 1) {
 
-        switch (categoryTag) {
-            case "maincourses":
-                product = products[0].maincourses[productId];
-                categoryName = "Main Courses";
-                categoryTag = "maincourses";
-                break;
-            case "drinks":
-                product = products[1].drinks[productId];
-                categoryName = "Drinks";
-                categoryTag = "drinks";
-                break;
-            case "deserts":
-                product = products[2].deserts[productId];
-                categoryName = "Deserts";
-                categoryTag = "deserts";
-                break;
-            }
+            var categoryTag = properties[1];
+            var productId = properties[0];
+            var product, categoryName, categoryTag;
 
-        var date = new Date(properties[2]);
+            switch (categoryTag) {
+                case "maincourses":
+                    product = products[0].maincourses[productId];
+                    categoryName = "Main Courses";
+                    categoryTag = "maincourses";
+                    break;
+                case "drinks":
+                    product = products[1].drinks[productId];
+                    categoryName = "Drinks";
+                    categoryTag = "drinks";
+                    break;
+                case "deserts":
+                    product = products[2].deserts[productId];
+                    categoryName = "Deserts";
+                    categoryTag = "deserts";
+                    break;
+                }
 
-        $('.check_tax_inner ul.products').append('<li>\
-                    <p class="product_name">' + product.name + ' ' + properties[7] + 'x</p>\
-                    <p class="product_price">' + Number(product.price * properties[7]).toFixed(2) + '$</p>\
-                </li>\
-        </li>');
+            var date = new Date(properties[2]);
 
-        // Update Total
-        total = total + product.price * properties[7];
+            $('.check_tax_inner ul.products').append('<li>\
+                        <p class="product_name">' + product.name + ' ' + properties[7] + 'x</p>\
+                        <p class="product_price">' + Number(product.price * properties[7]).toFixed(2) + '$</p>\
+                    </li>\
+            </li>');
 
+            // Update Total
+            total = total + product.price * properties[7];
+        }
     }
 
     // Set global State to On
